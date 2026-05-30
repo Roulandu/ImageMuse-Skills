@@ -1,4 +1,4 @@
 interface:
   display_name: "Image2 Fashion Lookbook"
   short_description: "Adult garment-first lookbooks"
-  default_prompt: "使用 $image2-fashion-lingerie-lookbook 生成以服装设计、版型和面料为重点的成人时尚 Lookbook 中文提示词。"
+  default_prompt: "使用 $image2-fashion-lingerie-lookbook 生成默认模特为原创成年东方女性（二十多岁及以上）、以服装设计、版型和面料为重点的成人时尚 Lookbook 中文提示词。"

@@ -12,14 +12,14 @@ Use this skill when the user provides a rejected prompt, a poor result descripti
 1. Load `../_shared/references/adult-glamour-boundaries.md` for red lines and gray zones.
 2. Load `../_shared/references/failure-repair-recipes.md` for diagnosis and repair patterns.
 3. Classify the failure into one or more buckets: prompt text risk, semantic intent risk, risk stacking, generation drift, final-image risk, quality/anatomy failure, or style mismatch.
-4. Preserve supportable user intent and remove or reframe unsafe details.
+4. Preserve supportable user intent and remove or reframe unsafe details. When the subject is missing, automatic, or unsafe, repair it to an original adult East Asian woman, mid-20s or older; respect explicit safe user-specified subject identities.
 5. Produce a minimal repair first. If the original direction is too risky, produce a safer fashion/editorial alternative.
 
 ## Diagnosis Buckets
 
 - **Rejected before generation**: remove direct red terms, real-person sexualization, explicit content, minor-coded sexualization, coercive framing, or body-part close-up language.
 - **Generated too conservative**: increase fashion expression, silhouette design, garment fit, lighting richness, camera clarity, and styling specificity; do not ask for "more sexy".
-- **Face looks too young**: specify mature adult face structure, mid-20s or older, non-childlike proportions, composed expression, and adult styling.
+- **Face looks too young**: specify mature adult East Asian face structure by default, mid-20s or older, non-childlike proportions, composed expression, and adult styling.
 - **Too suggestive or soft-porn-coded**: return to editorial, commercial portrait, product lookbook, natural posture, and broader framing.
 - **Body or hands malformed**: add realistic anatomy, natural limb placement, stable posture, correct hand structure, and avoid extreme twisting or close cropping.
 - **Not high-end enough**: add cohesive palette, material detail, intentional lighting, negative space, lens choice, and commercial/editorial context.

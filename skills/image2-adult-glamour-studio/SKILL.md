@@ -17,7 +17,8 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 
 ## Defaults
 
-- Subject: original adult woman, mid-20s or older, not resembling any real person.
+- Subject: original adult East Asian woman, mid-20s or older, not resembling any real person; in Chinese prompts, "原创成年东方女性，二十多岁及以上".
+- Subject override: respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, or automatic.
 - Direction: mature glamour portrait, fashion/editorial framing, polished commercial taste.
 - Scene: bright studio, tasteful interior, city apartment, window light, editorial set, or other non-private/non-voyeuristic context.
 - Pose: natural standing or seated posture, relaxed shoulders, graceful three-quarter turn, eye-level camera.

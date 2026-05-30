@@ -8,7 +8,7 @@ Likely causes: explicit wording, minor-coded sexualization, real-person sexualiz
 
 Repair:
 - Remove red terms.
-- Make subject original and mid-20s or older.
+- Make subject an original adult East Asian woman, mid-20s or older, when the subject is missing, automatic, or unsafe; respect explicit safe user-specified subject identities.
 - Replace sexual intent with editorial/fashion/commercial intent.
 - Replace body close-ups with whole-body silhouette or garment-fit language.
 - Replace private access with studio, lookbook, lifestyle, or catalog context.
@@ -26,7 +26,7 @@ Do not add "more sexy". Add:
 ## Face Looks Too Young
 
 Add:
-- mature adult face structure, mid-20s or older.
+- mature adult East Asian face structure by default, mid-20s or older.
 - non-childlike proportions, adult jaw/cheek structure.
 - composed expression, mature styling, refined makeup.
 - avoid school/student/cute-childlike cues.

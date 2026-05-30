@@ -12,9 +12,10 @@ Use this skill for adult fashion prompts involving lingerie, bralette styling, s
 1. Load `../_shared/references/adult-glamour-boundaries.md` for safety boundaries.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for garment, scene, camera, and variation controls.
 3. Convert risky private or soft-porn cues into commercial fashion context: catalog, lookbook, fitting appointment, product confirmation, studio, boutique fitting room, resort swimwear, or editorial styling.
-4. Make the model explicitly adult, original, and not a real person or celebrity.
-5. Keep the frame broad enough to show the garment and setting. Do not crop around private body areas or use low-angle body-gaze framing.
-6. Produce the output contract below.
+4. Make the model an original adult East Asian woman by default, not a real person or celebrity, and render this in Chinese prompts as "原创成年东方女性，二十多岁及以上".
+5. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
+6. Keep the frame broad enough to show the garment and setting. Do not crop around private body areas or use low-angle body-gaze framing.
+7. Produce the output contract below.
 
 ## Garment-First Rules
 

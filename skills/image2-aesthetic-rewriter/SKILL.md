@@ -17,8 +17,9 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 
 ## Rewrite Rules
 
-- Make the person explicitly adult, original, and not based on any real person, celebrity, influencer, or private image.
-- Prefer age wording like "adult woman in her mid-20s or older" when the request includes glamour, lingerie, swimwear, private interiors, or body-line emphasis.
+- Make the person an original adult East Asian woman by default, and not based on any real person, celebrity, influencer, or private image.
+- Prefer age wording like "original adult East Asian woman in her mid-20s or older" when the request includes glamour, lingerie, swimwear, private interiors, or body-line emphasis.
+- Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
 - Replace desire words with aesthetic intent: mature confidence, refined beauty, healthy proportions, graceful posture, tailored garments, editorial light, polished commercial framing.
 - Replace body-part targeting with whole-body or garment-context language. If body shape matters, describe proportion, posture, silhouette, and fit instead of close-ups or fixation.
 - Replace intimate or risky scenes with public, commercial, lifestyle, studio, or clearly non-exploitative settings.

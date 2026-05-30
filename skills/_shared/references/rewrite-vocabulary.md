@@ -4,7 +4,7 @@ Use this reference to convert crude or risky adult glamour wording into mature, 
 
 ## Stable Green Vocabulary
 
-adult original woman, mature confidence, refined female beauty, elegant posture, composed expression, natural smile, healthy proportions, balanced silhouette, graceful body line, shoulder and neck poise, tailored garment, fashion editorial, commercial portrait, brand lookbook, polished styling, soft natural light, clean background, cinematic color, garment texture, character design, tasteful glamour.
+original adult East Asian woman, mature confidence, refined female beauty, elegant posture, composed expression, natural smile, healthy proportions, balanced silhouette, graceful body line, shoulder and neck poise, tailored garment, fashion editorial, commercial portrait, brand lookbook, polished styling, soft natural light, clean background, cinematic color, garment texture, character design, tasteful glamour.
 
 ## Yellow Terms To Reframe
 

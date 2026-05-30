@@ -33,7 +33,9 @@ Use Simplified Chinese for all user-facing output, including final Image2 prompt
 
 ## Required Safe Defaults
 
-- State "original adult woman, mid-20s or older" for any glamour, lingerie, swimwear, or body-line request.
+- State "original adult East Asian woman, mid-20s or older" for any glamour, lingerie, swimwear, or body-line request when the user has not specified a safe subject identity.
+- In Chinese final prompts, render the default subject as "原创成年东方女性，二十多岁及以上".
+- Respect explicit safe user-specified subject identities; do not overwrite them with the East Asian default.
 - State "not based on a real person, celebrity, influencer, or private image" when the request is photorealistic or social-media-adjacent.
 - Use eye-level or editorial camera language by default.
 - Keep framing broad enough to include face, posture, garment, and setting.

@@ -9,10 +9,11 @@ Generate all user-facing sections, final prompts, negative constraints, repair p
 ## Parameter Locking
 
 Respect safe user-specified parameters. Only auto-fill fields that are blank, unspecified, or explicitly set to automatic. If a locked parameter is unsafe, mark it as reframed or removed in the output instead of silently preserving it.
+Use the default East Asian subject only for blank, unspecified, or automatic subject fields. Do not overwrite explicit safe user-specified subject identities.
 
 ## Core Fields
 
-- Subject: original adult woman, mid-20s or older.
+- Subject: original adult East Asian woman, mid-20s or older; in Chinese prompts, "原创成年东方女性，二十多岁及以上".
 - Identity guard: not a celebrity, influencer, public figure, private person, uploaded face, or real social profile.
 - Style: glamour portrait, fashion editorial, commercial portrait, brand lookbook, fitting-room product confirmation, resort swimwear catalog, cinematic lifestyle portrait.
 - Face direction: mature oval face, natural round face, elegant angular face, cinematic story face, refined East Asian features, natural life-like face; avoid childlike proportions and generic AI influencer face.
