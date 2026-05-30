@@ -12,21 +12,22 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 1. Read the user request and identify the original intent in one sentence.
 2. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes sexuality, nudity, lingerie, swimwear, private settings, real people, celebrity likeness, age-coded wording, coercive framing, or platform/social identity.
 3. Load `../_shared/references/rewrite-vocabulary.md` when rewriting crude wording into aesthetic language.
-4. Load `../_shared/references/required-prompt-anchors.md` and include its anchor groups in **最终中文提示词**.
+4. Load `../_shared/references/required-prompt-anchors.md`. Include its basic anchors in **最终中文提示词**, then add intent anchors only when the original request or safe rewrite target matches swimwear, maid/sweet styling, over-the-shoulder gaze, or S-curve figure.
 5. Refuse or redirect any request whose core target is explicit sexual content, soft porn, real-person sexualization, non-consensual framing, or minor-coded sexualization.
 6. If the request is supportable, rewrite the prompt using the output contract below.
 
 ## Rewrite Rules
 
 - Make the person an original adult East Asian woman by default, and not based on any real person, celebrity, influencer, or private image.
-- Prefer age wording like "original adult East Asian woman in her mid-20s or older" when the request includes glamour, lingerie, swimwear, private interiors, or body-line emphasis.
+- Prefer age wording like "original adult East Asian woman, age 20 or older" when the request includes glamour, lingerie, swimwear, private interiors, or body-line emphasis.
 - Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
 - Replace desire words with aesthetic intent: mature confidence, refined beauty, healthy proportions, graceful posture, tailored garments, editorial light, polished commercial framing.
 - Replace body-part targeting with whole-body or garment-context language. If body shape matters, describe proportion, posture, silhouette, and fit instead of close-ups or fixation.
 - Replace intimate or risky scenes with public, commercial, lifestyle, studio, or clearly non-exploitative settings.
 - Keep camera language neutral or editorial: eye-level, natural perspective, fashion portrait, three-quarter view, half-body, full-body, catalog composition.
 - Add negative constraints when risk is present, but keep them concise and relevant.
-- Preserve supportable mature body-proportion, natural posture, bright interior, fantasy character-art styling, slight-turn gaze, and soft S-curve intent by using the required prompt anchors.
+- Preserve supportable mature body-proportion, natural posture, bright interior, elegant clothing, and matching intent anchors by using the required prompt anchors.
+- Do not turn mature figure, chest contour, S-curve, or fit language into body-part close-ups, low-angle body gaze, or isolated anatomy emphasis.
 - When the original request is too explicit, too young-coded, or too suggestive, keep only the safe anchor-compatible intent and rewrite the rest into mature, original, non-explicit editorial/fashion language.
 
 ## Output Format
@@ -42,7 +43,7 @@ Return the following Chinese sections:
 5. **负面限制词**: 中文逗号分隔列表。
 6. **可选变化参数**: 3-6 个中文可调项，例如色调、镜头、服装材质、场景、姿态或画幅比例。
 
-The **最终中文提示词** must fully carry the required prompt anchors. Other sections may summarize them briefly.
+The **最终中文提示词** must fully carry the triggered required prompt anchors. Other sections may summarize them briefly.
 
 ## Refusal And Redirection
 

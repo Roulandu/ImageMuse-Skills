@@ -1,4 +1,4 @@
 interface:
   display_name: "Image2 Risk Debugger"
   short_description: "Repair failed glamour prompts"
-  default_prompt: "使用 $image2-risk-debugger 诊断这个 Image2 提示词问题，并输出默认主体为原创成年东方女性（二十多岁及以上）、包含成熟丰腴体态、自然端正姿态、明亮室内与高级幻想/时尚人像锚点的合规中文修复提示词。"
+  default_prompt: "使用 $image2-risk-debugger 诊断这个 Image2 提示词问题，并输出默认主体为原创成年东方女性（20岁及以上）、包含基础成人、成熟丰腴体态、自然端正姿态、明亮室内、优雅服装锚点的合规中文修复提示词；按失败原因追加泳装、女仆甜美、回眸或 S 型身材锚点。"

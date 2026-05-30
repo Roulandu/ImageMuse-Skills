@@ -13,7 +13,7 @@ Use the default East Asian subject only for blank, unspecified, or automatic sub
 
 ## Core Fields
 
-- Subject: original adult East Asian woman, mid-20s or older; in Chinese prompts, "原创成年东方女性，二十多岁及以上".
+- Subject: original adult East Asian woman, age 20 or older; in Chinese prompts, "原创成年东方女性，20岁及以上".
 - Identity guard: not a celebrity, influencer, public figure, private person, uploaded face, or real social profile.
 - Style: glamour portrait, fashion editorial, commercial portrait, brand lookbook, fitting-room product confirmation, resort swimwear catalog, cinematic lifestyle portrait.
 - Face direction: mature oval face, natural round face, elegant angular face, cinematic story face, refined East Asian features, natural life-like face; avoid childlike proportions and generic AI influencer face.

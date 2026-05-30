@@ -11,9 +11,9 @@ Use this skill for adult fashion prompts involving lingerie, bralette styling, s
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` for safety boundaries.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for garment, scene, camera, and variation controls.
-3. Load `../_shared/references/required-prompt-anchors.md` and include its anchor groups in **最终中文提示词** as garment-fit, whole-body silhouette, lookbook posture, and bright interior/fantasy styling direction.
+3. Load `../_shared/references/required-prompt-anchors.md`. Include its basic anchors in **最终中文提示词** as garment-fit, whole-body silhouette, lookbook posture, and bright interior styling direction; add the swimwear Lookbook anchor whenever the user asks for swimwear, beach/pool, resort, summer vacation, or swim catalog imagery.
 4. Convert risky private or soft-porn cues into commercial fashion context: catalog, lookbook, fitting appointment, product confirmation, studio, boutique fitting room, resort swimwear, or editorial styling.
-5. Make the model an original adult East Asian woman by default, not a real person or celebrity, and render this in Chinese prompts as "原创成年东方女性，二十多岁及以上".
+5. Make the model an original adult East Asian woman by default, not a real person or celebrity, and render this in Chinese prompts as "原创成年东方女性，20岁及以上".
 6. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
 7. Keep the frame broad enough to show the garment and setting. Do not crop around private body areas or use low-angle body-gaze framing.
 8. Produce the output contract below.
@@ -21,6 +21,7 @@ Use this skill for adult fashion prompts involving lingerie, bralette styling, s
 ## Garment-First Rules
 
 - Describe garment type, coverage, support structure, material, trim, color, fit, texture, and styling purpose.
+- For swimwear, always frame the result as a high-end swimwear brand Lookbook and emphasize cut, fabric, color, use context, and fresh summer atmosphere.
 - Describe the scene as professional or lifestyle-commercial, not secret, leaked, voyeuristic, or intimate-for-viewer.
 - Use natural or catalog-friendly posture: standing in front of a mirror, relaxed studio stance, resort walkway, poolside lookbook, dressing-room fit confirmation.
 - Keep lingerie and swimwear non-explicit: lined lace, opaque fabric, appropriate coverage, no exposure, no transparent nudity, no slipping garments.
@@ -40,7 +41,7 @@ Return:
 5. **负面限制词**
 6. **可选变化参数**
 
-The **最终中文提示词** must fully carry the required prompt anchors. Other sections may summarize them briefly.
+The **最终中文提示词** must fully carry the triggered required prompt anchors. Other sections may summarize them briefly.
 
 ## 负面限制词起点
 
