@@ -27,6 +27,7 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 - Camera: portrait lens, eye-level or slightly elevated editorial angle by default, half-body or three-quarter-body portrait framing. Use full-body/full-length framing only when the user explicitly asks for it.
 - Visual emphasis: face, expression, styling, garment fit, light, silhouette, color harmony, and overall composition.
 - Prompt anchors: always include age, mature figure, natural posture, bright interior scene, and elegant clothing from `required-prompt-anchors.md`; add maid/sweet fantasy styling, over-the-shoulder gaze, and soft S-curve figure only when requested or useful for the user's stated intent.
+- Verbatim figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include this sentence exactly as written: "上半身身形丰腴，胸部轮廓自然饱满，整体身形圆润匀称，身体比例协调，腰肩线条自然，曲线流畅，整体凸显丰腴健康成熟的女性体态。"
 
 ## Quality Guidance
 

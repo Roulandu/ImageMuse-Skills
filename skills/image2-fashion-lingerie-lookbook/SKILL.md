@@ -35,6 +35,7 @@ Use this skill for adult fashion prompts involving lingerie, bralette styling, s
 - Apply the basic anchors as garment-fit, mature whole-person silhouette, natural lookbook posture, bright commercial or interior scene, and elegant clothing direction.
 - Add intent anchors only when the user request matches them: swimwear/resort/pool/beach catalog imagery, maid or sweet fantasy styling, over-the-shoulder gaze, S-curve figure, or an explicit repair need.
 - Keep anchors subordinate to the garment-first Lookbook purpose. Do not turn age, mature figure, posture, or clothing anchors into chest, waist, hip, private-area, or lingerie-detail close-ups.
+- Unless the user provides another safe body/figure description, the **最终中文提示词** must include this sentence exactly as written: "上半身身形丰腴，胸部轮廓自然饱满，整体身形圆润匀称，身体比例协调，腰肩线条自然，曲线流畅，整体凸显丰腴健康成熟的女性体态。"
 - Default framing is half-body or three-quarter-body. Use full-body/full-length Lookbook framing only when the user explicitly requests it or when a safe product catalog requirement genuinely needs the full outfit.
 
 ## Output Format
