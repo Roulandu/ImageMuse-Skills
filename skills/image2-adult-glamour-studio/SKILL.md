@@ -11,9 +11,10 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` if the user request includes risk-sensitive elements.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for parameter choices when the user wants a structured prompt or provides multiple controls.
-3. Establish locked parameters: subject, age/adult status, originality, style, scene, garment, posture, camera, lighting, aspect ratio, and quality target.
-4. Fill missing parameters conservatively with mature, non-explicit defaults.
-5. Produce the output contract below.
+3. Load `../_shared/references/required-prompt-anchors.md` and include its anchor groups in **最终中文提示词**.
+4. Establish locked parameters: subject, age/adult status, originality, style, scene, garment, posture, camera, lighting, aspect ratio, and quality target.
+5. Fill missing parameters conservatively with mature, non-explicit defaults.
+6. Produce the output contract below.
 
 ## Defaults
 
@@ -25,12 +26,14 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 - Clothing: tailored dress, knitwear, structured top, fashion separates, eveningwear, or other stylish non-explicit wardrobe unless the user chooses another supportable fashion context.
 - Camera: portrait lens, eye-level or slightly elevated editorial angle, half-body to full-body framing.
 - Visual emphasis: face, expression, styling, garment fit, light, silhouette, color harmony, and overall composition.
+- Prompt anchors: include mature full-figure proportion, natural standing/seated posture, bright interior/home scene, adult fantasy pink-themed character styling, slight turn/back-to-camera gaze, and soft S-curve dynamic posture from `required-prompt-anchors.md`.
 
 ## Quality Guidance
 
 - Avoid generic AI influencer beauty. Add specific but realistic face memory points, hair styling, makeup texture, garment material, and lighting.
 - Use "mature", "confident", "composed", "elegant", "editorial", "commercial portrait", and "fashion-led silhouette" instead of crude sensual language.
 - When the user wants more visual tension, add contrast through gaze, pose rhythm, fabric structure, negative space, lighting, or palette rather than sexualized action.
+- Treat body-shape wording as whole-person silhouette and garment-fit direction, not as body-part fixation.
 
 ## Output Format
 
@@ -44,6 +47,8 @@ Return:
 4. **最终中文提示词**
 5. **负面限制词**
 6. **可选变化参数**
+
+The **最终中文提示词** must fully carry the required prompt anchors. Other sections may summarize them briefly.
 
 ## Boundaries
 

@@ -12,8 +12,9 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 1. Read the user request and identify the original intent in one sentence.
 2. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes sexuality, nudity, lingerie, swimwear, private settings, real people, celebrity likeness, age-coded wording, coercive framing, or platform/social identity.
 3. Load `../_shared/references/rewrite-vocabulary.md` when rewriting crude wording into aesthetic language.
-4. Refuse or redirect any request whose core target is explicit sexual content, soft porn, real-person sexualization, non-consensual framing, or minor-coded sexualization.
-5. If the request is supportable, rewrite the prompt using the output contract below.
+4. Load `../_shared/references/required-prompt-anchors.md` and include its anchor groups in **最终中文提示词**.
+5. Refuse or redirect any request whose core target is explicit sexual content, soft porn, real-person sexualization, non-consensual framing, or minor-coded sexualization.
+6. If the request is supportable, rewrite the prompt using the output contract below.
 
 ## Rewrite Rules
 
@@ -25,6 +26,8 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 - Replace intimate or risky scenes with public, commercial, lifestyle, studio, or clearly non-exploitative settings.
 - Keep camera language neutral or editorial: eye-level, natural perspective, fashion portrait, three-quarter view, half-body, full-body, catalog composition.
 - Add negative constraints when risk is present, but keep them concise and relevant.
+- Preserve supportable mature body-proportion, natural posture, bright interior, fantasy character-art styling, slight-turn gaze, and soft S-curve intent by using the required prompt anchors.
+- When the original request is too explicit, too young-coded, or too suggestive, keep only the safe anchor-compatible intent and rewrite the rest into mature, original, non-explicit editorial/fashion language.
 
 ## Output Format
 
@@ -38,6 +41,8 @@ Return the following Chinese sections:
 4. **最终中文提示词**: 可直接用于 Image2 的中文提示词。
 5. **负面限制词**: 中文逗号分隔列表。
 6. **可选变化参数**: 3-6 个中文可调项，例如色调、镜头、服装材质、场景、姿态或画幅比例。
+
+The **最终中文提示词** must fully carry the required prompt anchors. Other sections may summarize them briefly.
 
 ## Refusal And Redirection
 
