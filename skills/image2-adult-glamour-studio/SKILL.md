@@ -13,7 +13,7 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 2. Load `../_shared/references/portrait-fashion-parameters.md` for parameter choices when the user wants a structured prompt or provides multiple controls.
 3. Load `../_shared/references/required-prompt-anchors.md`. Include its basic anchors in **最终中文提示词**, then add intent anchors only when the user asks for sweet/maid styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
 4. Establish locked parameters: subject, age/adult status, originality, style, scene, garment, posture, camera, lighting, aspect ratio, and quality target.
-5. Fill missing parameters conservatively with mature, non-explicit defaults. For blank posture or camera direction, default to a front-facing or slight three-quarter camera-facing subject and an eye-level or slight high editorial camera.
+5. Fill missing parameters conservatively with mature, non-explicit defaults. For blank posture or camera direction, default to a front-facing or slight three-quarter camera-facing subject, an eye-level or slight high editorial camera, and half-body or three-quarter-body portrait framing.
 6. Produce the output contract below.
 
 ## Defaults
@@ -24,7 +24,7 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 - Scene: bright studio, tasteful interior, city apartment, window light, editorial set, or other non-private/non-voyeuristic context.
 - Pose: natural standing or seated posture, relaxed shoulders, front-facing toward camera or graceful slight three-quarter turn while the face and body still naturally orient toward camera.
 - Clothing: tailored dress, knitwear, structured top, fashion separates, eveningwear, or other stylish non-explicit wardrobe unless the user chooses another supportable fashion context.
-- Camera: portrait lens, eye-level or slightly elevated editorial angle by default, half-body to full-body framing.
+- Camera: portrait lens, eye-level or slightly elevated editorial angle by default, half-body or three-quarter-body portrait framing. Use full-body/full-length framing only when the user explicitly asks for it.
 - Visual emphasis: face, expression, styling, garment fit, light, silhouette, color harmony, and overall composition.
 - Prompt anchors: always include age, mature figure, natural posture, bright interior scene, and elegant clothing from `required-prompt-anchors.md`; add maid/sweet fantasy styling, over-the-shoulder gaze, and soft S-curve figure only when requested or useful for the user's stated intent.
 
@@ -32,7 +32,7 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 
 - Avoid generic AI influencer beauty. Add specific but realistic face memory points, hair styling, makeup texture, garment material, and lighting.
 - Use "mature", "confident", "composed", "elegant", "editorial", "commercial portrait", and "fashion-led silhouette" instead of crude sensual language.
-- Respect explicit safe user-specified posture and camera direction. Otherwise use the default camera-facing posture and eye-level or slight high editorial camera; reframe unsafe low-angle body gaze, voyeuristic, or body-part-focused directions.
+- Respect explicit safe user-specified posture and camera direction. Otherwise use the default camera-facing posture, half-body or three-quarter-body framing, and eye-level or slight high editorial camera; reframe unsafe low-angle body gaze, voyeuristic, or body-part-focused directions.
 - When the user wants more visual tension, add contrast through gaze, pose rhythm, fabric structure, negative space, lighting, or palette rather than sexualized action.
 - Treat body-shape wording as whole-person silhouette and garment-fit direction, not as body-part fixation.
 
