@@ -38,7 +38,7 @@ Repair:
 - Use natural standing/seated posture with the subject front-facing or slight three-quarter toward camera.
 - Use eye-level or slight high editorial camera.
 - Broaden frame to include face, garment, posture, and setting.
-- Remove slipping garments, low-angle gaze, wet/bedroom/intimate cues, and body-part focal language.
+- Remove exposure-driven or undressing-like slipping garments, low-angle gaze, wet/bedroom/intimate cues, and body-part focal language. Do not remove the default one-shoulder strap naturally resting lower when it remains a restrained garment styling detail without exposure.
 
 ## Body Or Hands Malformed
 

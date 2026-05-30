@@ -22,12 +22,12 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 - Prefer age wording like "original adult East Asian woman, age 20 or older" when the request includes glamour, lingerie, swimwear, private interiors, or body-line emphasis.
 - Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
 - Respect explicit safe user-specified posture and camera direction. If posture or camera direction is missing, default to a front-facing or slight three-quarter camera-facing subject and an eye-level or slight high editorial camera.
-- Replace desire words with aesthetic intent: mature confidence, refined beauty, healthy proportions, graceful posture, tailored garments, editorial light, polished commercial framing.
+- Replace desire words with aesthetic intent: mature confidence, refined beauty, healthy proportions, graceful posture, the default elegant slip-dress garment when clothing is unspecified, editorial light, polished commercial framing.
 - Replace body-part targeting with whole-body or garment-context language. If body shape matters, describe proportion, posture, silhouette, and fit instead of close-ups or fixation.
 - Replace intimate or risky scenes with public, commercial, lifestyle, studio, or clearly non-exploitative settings.
 - Keep camera language neutral or editorial: eye-level, slight high editorial angle, natural perspective, fashion portrait, front-facing or slight three-quarter view toward camera, half-body, full-body, catalog composition.
 - Add negative constraints when risk is present, but keep them concise and relevant.
-- Preserve supportable mature body-proportion, natural posture, bright interior, elegant clothing, and matching intent anchors by using the required prompt anchors.
+- Preserve supportable mature body-proportion, natural posture, bright interior, explicit safe clothing when provided, or the default elegant slip-dress clothing anchor when clothing is unspecified, plus matching intent anchors by using the required prompt anchors.
 - Do not turn mature figure, chest contour, S-curve, or fit language into body-part close-ups, low-angle body gaze, or isolated anatomy emphasis.
 - When the original request is too explicit, too young-coded, or too suggestive, keep only the safe anchor-compatible intent and rewrite the rest into mature, original, non-explicit editorial/fashion language.
 

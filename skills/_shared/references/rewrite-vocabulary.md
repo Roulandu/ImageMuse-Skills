@@ -4,7 +4,7 @@ Use this reference to convert crude or risky adult glamour wording into mature, 
 
 ## Stable Green Vocabulary
 
-original adult East Asian woman, mature confidence, refined female beauty, elegant posture, composed expression, natural smile, healthy proportions, balanced silhouette, graceful body line, shoulder and neck poise, tailored garment, fashion editorial, commercial portrait, brand lookbook, polished styling, soft natural light, clean background, cinematic color, garment texture, character design, tasteful glamour.
+original adult East Asian woman, mature confidence, refined female beauty, elegant posture, composed expression, natural smile, healthy proportions, balanced silhouette, graceful body line, shoulder and neck poise, default elegant slip-dress garment when clothing is unspecified, fashion editorial, commercial portrait, brand lookbook, polished styling, soft natural light, clean background, cinematic color, garment texture, character design, tasteful glamour.
 Default orientation vocabulary: front-facing toward camera, slight three-quarter turn toward camera, face and body naturally oriented toward camera, eye-level portrait, slight high editorial angle.
 
 ## Yellow Terms To Reframe
@@ -24,7 +24,7 @@ Default orientation vocabulary: front-facing toward camera, slight three-quarter
 
 ## Red Terms To Remove Or Refuse
 
-诱惑, 挑逗, 勾引, 露点, 裸露, 私密部位, 成人写真 as sexual content, 擦边 as target, 情趣 as sexualized product framing, 未成年少女感, 萝莉, 幼态性感, 学生感, 偷拍, 男友视角 as intimate control, 醉酒脆弱, 压迫亲密, 抓下巴, 胸部特写, 臀部特写, 腿根特写, 湿身诱惑, 衣服滑落, 低机位凝视.
+诱惑, 挑逗, 勾引, 露点, 裸露, 私密部位, 成人写真 as sexual content, 擦边 as target, 情趣 as sexualized product framing, 未成年少女感, 萝莉, 幼态性感, 学生感, 偷拍, 男友视角 as intimate control, 醉酒脆弱, 压迫亲密, 抓下巴, 胸部特写, 臀部特写, 腿根特写, 湿身诱惑, 暴露式或脱衣暗示的衣服滑落, 低机位凝视. The default one-shoulder strap naturally resting lower is not a red term when it stays non-explicit and garment-led.
 
 ## Rewrite Formula
 

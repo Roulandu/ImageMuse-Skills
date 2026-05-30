@@ -25,7 +25,7 @@ Use this skill when the user provides a rejected prompt, a poor result descripti
 - **Too suggestive or soft-porn-coded**: return to editorial, commercial portrait, product lookbook, natural front-facing or slight three-quarter camera-facing posture, and broader framing.
 - **Body or hands malformed**: add realistic anatomy, natural limb placement, stable posture, correct hand structure, and avoid extreme twisting or close cropping.
 - **Not high-end enough**: add cohesive palette, material detail, intentional lighting, negative space, lens choice, and commercial/editorial context.
-- **Too explicit, too young-coded, or too risky**: preserve only safe age, mature body-proportion, natural posture, bright interior, elegant clothing, and matching intent anchors from the required prompt anchors; remove or reframe the risky remainder.
+- **Too explicit, too young-coded, or too risky**: preserve only safe age, mature body-proportion, natural posture, bright interior, explicit safe clothing when provided or the default slip-dress clothing anchor when clothing is unspecified, and matching intent anchors from the required prompt anchors; remove or reframe the risky remainder.
 
 ## Output Format
 

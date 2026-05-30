@@ -25,14 +25,14 @@ Use this skill for adult fashion prompts involving lingerie, bralette styling, s
 - For swimwear, always frame the result as a high-end swimwear brand Lookbook and emphasize cut, fabric, color, use context, and fresh summer atmosphere.
 - Describe the scene as professional or lifestyle-commercial, not secret, leaked, voyeuristic, or intimate-for-viewer.
 - Use natural or catalog-friendly posture: front-facing or slight three-quarter toward camera, standing in front of a mirror with face/garment/setting included, relaxed studio stance, resort walkway, poolside lookbook, dressing-room fit confirmation.
-- Keep lingerie and swimwear non-explicit: lined lace, opaque fabric, appropriate coverage, no exposure, no transparent nudity, no slipping garments.
+- Keep lingerie and swimwear non-explicit: lined lace, opaque fabric, appropriate coverage, no exposure, no transparent nudity, no exposure-driven or undressing-like slipping garments. The default one-shoulder strap naturally resting lower is allowed only as a restrained garment styling detail.
 - Avoid "private SNS record", "boyfriend view", "sent to someone", "hidden camera", or similar framing that implies non-public sexualized access.
 - Apply required prompt anchors only as overall mature body proportion, garment fit, natural posture, and lookbook composition. Do not make the chest, waist, hips, lingerie details, or any private area the focal crop.
 
 ## Required Prompt Anchors
 
 - Always load `../_shared/references/required-prompt-anchors.md` and include its basic anchors in the **最终中文提示词**.
-- Apply the basic anchors as garment-fit, mature whole-person silhouette, natural lookbook posture, bright commercial or interior scene, and elegant clothing direction.
+- Apply the basic anchors as garment-fit, mature whole-person silhouette, natural lookbook posture, bright commercial or interior scene, explicit safe clothing when provided, or the default elegant slip-dress clothing anchor when clothing is unspecified.
 - Add intent anchors only when the user request matches them: swimwear/resort/pool/beach catalog imagery, maid or sweet fantasy styling, over-the-shoulder gaze, S-curve figure, or an explicit repair need.
 - Keep anchors subordinate to the garment-first Lookbook purpose. Do not turn age, mature figure, posture, or clothing anchors into chest, waist, hip, private-area, or lingerie-detail close-ups.
 - Unless the user provides another safe body/figure description, the **最终中文提示词** must include this sentence exactly as written: "上半身身形丰腴，胸部轮廓自然饱满，整体身形圆润匀称，身体比例协调，腰肩线条自然，曲线流畅，整体凸显丰腴健康成熟的女性体态。"
