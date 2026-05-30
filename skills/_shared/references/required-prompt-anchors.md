@@ -7,6 +7,8 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 - Include the **basic anchors** in every **最终中文提示词**: age, mature figure, natural posture, bright interior scene, and elegant clothing.
 - Include the **intent anchors** only when the user request, rewrite target, or repair need matches that intent: swimwear, maid/sweet fantasy styling, over-the-shoulder gaze, or S-curve figure.
 - Keep all anchors as whole-person, garment-fit, editorial portrait, lookbook, or character-design language.
+- When the user has not specified posture or camera orientation, make the subject face the camera by default: front-facing, or a slight three-quarter turn while the face and body still naturally orient toward the camera.
+- Use back-facing, over-the-shoulder, strong side-facing, or looking-away poses only when the user explicitly asks for them or when a repair target clearly needs that intent anchor.
 - Do not turn "胸部轮廓自然饱满" into a chest close-up, isolated body-part focus, low-angle body gaze, or soft-porn framing.
 - Use "20岁及以上成年女性" or "20岁及以上成年幻想系女性角色" for adult status. Do not use teen/student/childlike cues.
 - Other output sections may summarize the anchors instead of repeating every long phrase.
@@ -23,7 +25,7 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 
 ### 3. Natural Posture
 
-自然站姿，端正坐姿，轻微侧身，肩颈舒展，姿态从容优雅，动作自然不夸张。
+自然站姿，端正坐姿，人物正面面向镜头，或轻微三分之四侧身但脸部与身体仍自然朝向镜头，肩颈舒展，姿态从容优雅，动作自然不夸张。
 
 ### 4. Bright Interior Scene
 
@@ -49,7 +51,7 @@ Use when the user asks for maid styling, sweet pink styling, fantasy character a
 
 ### 8. Over-The-Shoulder Gaze
 
-Use when the user asks for 回眸, slight turn, looking back at camera, three-quarter turn, or stronger fashion portrait tension.
+Use only when the user asks for 回眸, looking back at camera, back-facing/side-turn posture, or stronger fashion portrait tension beyond the default front-facing/slight three-quarter camera-facing posture.
 
 人物身体轻微侧转，头部自然回望镜头，肩颈线条舒展，姿态优雅从容，整体呈现高级时尚人像感。
 

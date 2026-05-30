@@ -5,6 +5,7 @@ Use this reference to convert crude or risky adult glamour wording into mature, 
 ## Stable Green Vocabulary
 
 original adult East Asian woman, mature confidence, refined female beauty, elegant posture, composed expression, natural smile, healthy proportions, balanced silhouette, graceful body line, shoulder and neck poise, tailored garment, fashion editorial, commercial portrait, brand lookbook, polished styling, soft natural light, clean background, cinematic color, garment texture, character design, tasteful glamour.
+Default orientation vocabulary: front-facing toward camera, slight three-quarter turn toward camera, face and body naturally oriented toward camera, eye-level portrait, slight high editorial angle.
 
 ## Yellow Terms To Reframe
 
@@ -32,8 +33,9 @@ original adult East Asian woman, mature confidence, refined female beauty, elega
 3. Whole-body posture and silhouette.
 4. Garment fit and material.
 5. Bright or commercial context.
-6. Editorial camera and lighting.
-7. Safety boundaries and negative constraints.
+6. Front-facing or slight three-quarter camera-facing orientation.
+7. Eye-level or slight high editorial camera and lighting.
+8. Safety boundaries and negative constraints.
 
 ## Short Negative Constraint Template
 

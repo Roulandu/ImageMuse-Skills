@@ -37,6 +37,7 @@ Use Simplified Chinese for all user-facing output, including final Image2 prompt
 - In Chinese final prompts, render the default subject as "原创成年东方女性，20岁及以上".
 - Respect explicit safe user-specified subject identities; do not overwrite them with the East Asian default.
 - State "not based on a real person, celebrity, influencer, or private image" when the request is photorealistic or social-media-adjacent.
-- Use eye-level or editorial camera language by default.
+- When the user has not specified posture or camera direction, make the subject front-facing toward camera, or slightly three-quarter toward camera with the face and body still visible.
+- Use eye-level or slight high editorial camera language by default.
 - Keep framing broad enough to include face, posture, garment, and setting.
 - Add concise negative constraints for minors, real-person likeness, explicit nudity, body-part close-ups, low-angle gaze, coercion, voyeurism, and malformed anatomy when relevant.

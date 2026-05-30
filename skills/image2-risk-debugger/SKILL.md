@@ -14,14 +14,15 @@ Use this skill when the user provides a rejected prompt, a poor result descripti
 3. Load `../_shared/references/required-prompt-anchors.md`. Include its basic anchors in the repaired **最终中文提示词**, then add matching intent anchors when repairing swimwear, maid/sweet styling, 回眸/side-turn posture, S-curve/body-shape issues, stiffness, or weak fashion tension.
 4. Classify the failure into one or more buckets: prompt text risk, semantic intent risk, risk stacking, generation drift, final-image risk, quality/anatomy failure, or style mismatch.
 5. Preserve supportable user intent and remove or reframe unsafe details. When the subject is missing, automatic, or unsafe, repair it to an original adult East Asian woman, age 20 or older; respect explicit safe user-specified subject identities.
-6. Produce a minimal repair first. If the original direction is too risky, produce a safer fashion/editorial alternative.
+6. Respect explicit safe user-specified posture and camera direction. If posture or camera direction is missing or unsafe, repair it to a front-facing or slight three-quarter camera-facing subject and an eye-level or slight high editorial camera.
+7. Produce a minimal repair first. If the original direction is too risky, produce a safer fashion/editorial alternative.
 
 ## Diagnosis Buckets
 
 - **Rejected before generation**: remove direct red terms, real-person sexualization, explicit content, minor-coded sexualization, coercive framing, or body-part close-up language.
 - **Generated too conservative**: increase fashion expression, silhouette design, garment fit, lighting richness, camera clarity, and styling specificity; do not ask for "more sexy".
 - **Face looks too young**: specify mature adult East Asian face structure by default, age 20 or older, non-childlike proportions, composed expression, and adult styling.
-- **Too suggestive or soft-porn-coded**: return to editorial, commercial portrait, product lookbook, natural posture, and broader framing.
+- **Too suggestive or soft-porn-coded**: return to editorial, commercial portrait, product lookbook, natural front-facing or slight three-quarter camera-facing posture, and broader framing.
 - **Body or hands malformed**: add realistic anatomy, natural limb placement, stable posture, correct hand structure, and avoid extreme twisting or close cropping.
 - **Not high-end enough**: add cohesive palette, material detail, intentional lighting, negative space, lens choice, and commercial/editorial context.
 - **Too explicit, too young-coded, or too risky**: preserve only safe age, mature body-proportion, natural posture, bright interior, elegant clothing, and matching intent anchors from the required prompt anchors; remove or reframe the risky remainder.

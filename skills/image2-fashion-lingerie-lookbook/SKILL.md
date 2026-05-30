@@ -15,15 +15,16 @@ Use this skill for adult fashion prompts involving lingerie, bralette styling, s
 4. Convert risky private or soft-porn cues into commercial fashion context: catalog, lookbook, fitting appointment, product confirmation, studio, boutique fitting room, resort swimwear, or editorial styling.
 5. Make the model an original adult East Asian woman by default, not a real person or celebrity, and render this in Chinese prompts as "原创成年东方女性，20岁及以上".
 6. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
-7. Keep the frame broad enough to show the garment and setting. Do not crop around private body areas or use low-angle body-gaze framing.
-8. Produce the output contract below.
+7. Respect explicit safe user-specified posture and camera direction. If missing, default to a front-facing or slight three-quarter camera-facing model and an eye-level or slight high editorial camera.
+8. Keep the frame broad enough to show the face, garment, posture, and setting. Do not crop around private body areas or use low-angle body-gaze framing.
+9. Produce the output contract below.
 
 ## Garment-First Rules
 
 - Describe garment type, coverage, support structure, material, trim, color, fit, texture, and styling purpose.
 - For swimwear, always frame the result as a high-end swimwear brand Lookbook and emphasize cut, fabric, color, use context, and fresh summer atmosphere.
 - Describe the scene as professional or lifestyle-commercial, not secret, leaked, voyeuristic, or intimate-for-viewer.
-- Use natural or catalog-friendly posture: standing in front of a mirror, relaxed studio stance, resort walkway, poolside lookbook, dressing-room fit confirmation.
+- Use natural or catalog-friendly posture: front-facing or slight three-quarter toward camera, standing in front of a mirror with face/garment/setting included, relaxed studio stance, resort walkway, poolside lookbook, dressing-room fit confirmation.
 - Keep lingerie and swimwear non-explicit: lined lace, opaque fabric, appropriate coverage, no exposure, no transparent nudity, no slipping garments.
 - Avoid "private SNS record", "boyfriend view", "sent to someone", "hidden camera", or similar framing that implies non-public sexualized access.
 - Apply required prompt anchors only as overall mature body proportion, garment fit, natural posture, and lookbook composition. Do not make the chest, waist, hips, lingerie details, or any private area the focal crop.

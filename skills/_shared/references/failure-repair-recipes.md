@@ -20,7 +20,7 @@ Do not add "more sexy". Add:
 - Better garment fit and material detail.
 - More intentional posture and silhouette.
 - Richer lighting and color contrast.
-- Editorial camera direction.
+- Eye-level or slight high editorial camera direction, with the subject front-facing or slight three-quarter toward camera unless the user explicitly requested another safe pose.
 - Clearer mature confidence and face expression.
 
 ## Face Looks Too Young
@@ -35,7 +35,7 @@ Add:
 
 Repair:
 - Return the image to commercial portrait, fashion editorial, or product lookbook.
-- Use natural standing/seated posture.
+- Use natural standing/seated posture with the subject front-facing or slight three-quarter toward camera.
 - Use eye-level or slight high editorial camera.
 - Broaden frame to include face, garment, posture, and setting.
 - Remove slipping garments, low-angle gaze, wet/bedroom/intimate cues, and body-part focal language.

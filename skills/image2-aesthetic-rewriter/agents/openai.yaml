@@ -1,4 +1,4 @@
 interface:
   display_name: "Image2 Aesthetic Rewriter"
   short_description: "Rewrite glamour intent safely"
-  default_prompt: "使用 $image2-aesthetic-rewriter 将这个图像想法改写成默认主体为原创成年东方女性（20岁及以上）、成熟、高级、非露骨的中文 Image2 提示词，加入基础成人、成熟丰腴体态、自然端正姿态、明亮室内、优雅服装锚点，并按意图追加泳装、女仆甜美、回眸或 S 型身材锚点。"
+  default_prompt: "使用 $image2-aesthetic-rewriter 将这个图像想法改写成默认主体为原创成年东方女性（20岁及以上）、成熟、高级、非露骨的中文 Image2 提示词，加入基础成人、成熟丰腴体态、自然端正姿态、默认正面或轻微三分之四侧身面向镜头、正视或轻微俯视 editorial 镜头、明亮室内、优雅服装锚点，并按意图追加泳装、女仆甜美、回眸或 S 型身材锚点。"
