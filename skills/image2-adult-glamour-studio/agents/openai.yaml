@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 Adult Glamour Studio"
+  short_description: "Adult editorial glamour prompts"
+  default_prompt: "使用 $image2-adult-glamour-studio 生成成人原创魅力写真方向的中文 Image2 提示词，采用时尚/editorial 构图。"

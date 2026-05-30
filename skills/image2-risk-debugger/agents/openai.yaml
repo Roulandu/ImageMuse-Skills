@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 Risk Debugger"
+  short_description: "Repair failed glamour prompts"
+  default_prompt: "使用 $image2-risk-debugger 诊断这个 Image2 提示词问题，并输出合规的中文修复提示词。"

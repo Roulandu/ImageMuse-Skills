@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 Aesthetic Rewriter"
+  short_description: "Rewrite glamour intent safely"
+  default_prompt: "使用 $image2-aesthetic-rewriter 将这个图像想法改写成成熟、高级、非露骨的中文 Image2 提示词。"
