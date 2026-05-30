@@ -17,7 +17,7 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 
 ### 1. Age
 
-20岁及以上成年女性，成年女性角色，成熟自然的脸型，温柔甜美但不幼态，气质成熟、优雅、自信。
+20岁及以上成年女性，成年女性角色，可爱甜美的脸型，温柔甜美但不幼态，气质轻盈美丽、优雅、自信。
 
 ### 2. Mature Figure
 
@@ -33,7 +33,7 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 
 ### 5. Elegant Clothing
 
-剪裁优雅，材质柔软，版型合身，贴合身体但不过度暴露，整体得体高级。
+剪裁优雅，材质柔软，版型合身，贴合身体，整体得体高级。
 
 ## Intent Anchors
 
@@ -47,7 +47,7 @@ Use when the user asks for swimwear, resort wear, beach/pool styling, summer vac
 
 Use when the user asks for maid styling, sweet pink styling, fantasy character art, cute-but-adult styling, or dreamy character design.
 
-20岁及以上成年幻想系女性角色，甜美梦幻的粉色主题服饰，整体造型精致可爱，气质成熟温柔，姿态端正自然，服装设计偏角色美术与幻想风造型。
+20岁及以上成年幻想系女性角色，甜美梦幻的粉色主题服饰，整体造型精致可爱，气质轻盈美丽、温柔，姿态端正自然，服装设计偏角色美术与幻想风造型。
 
 ### 8. Over-The-Shoulder Gaze
 
