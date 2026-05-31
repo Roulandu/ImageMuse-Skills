@@ -7,6 +7,7 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 - Include the **basic anchors** in every **最终中文提示词**: age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the default slip-dress clothing anchor when clothing is unspecified.
 - Include the **intent anchors** only when the user request, rewrite target, or repair need matches that intent: swimwear, maid/sweet fantasy styling, over-the-shoulder gaze, or S-curve figure.
 - Keep all anchors as whole-person, garment-fit, editorial portrait, lookbook, or character-design language.
+- When the user has not specified a corresponding face direction, default to: 可爱甜美的脸型，温柔甜美但不幼态，气质轻盈美丽、优雅、自信。
 - When the user has not specified posture or camera orientation, make the subject face the camera by default: front-facing, or a slight three-quarter turn while the face and body still naturally orient toward the camera.
 - Use back-facing, over-the-shoulder, strong side-facing, or looking-away poses only when the user explicitly asks for them or when a repair target clearly needs that intent anchor.
 - Do not turn "胸部轮廓自然饱满" into a chest close-up, isolated body-part focus, low-angle body gaze, or soft-porn framing.
