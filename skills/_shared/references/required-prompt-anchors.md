@@ -21,7 +21,7 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 
 ### 2. Mature Figure
 
-上半身身形丰腴，胸部轮廓自然饱满，整体身形圆润匀称，身体比例协调，腰肩线条自然，曲线流畅，整体凸显丰腴健康成熟的女性体态。
+上半身身形丰腴，胸部轮廓自然饱满，整体身形纤细匀称，身体比例协调，腰肩线条自然，曲线流畅，整体凸显轻盈健康的女性体态。
 
 ### 3. Natural Posture
 
@@ -61,4 +61,4 @@ Use only when the user asks for 回眸, looking back at camera, back-facing/side
 
 Use when the user asks for S 型身材, curves, body rhythm, full-body silhouette, or when repairing stiff/awkward body shape.
 
-身体呈自然柔和的 S 型动态姿态，肩、腰、胯形成流畅的节奏感，身形圆润匀称，比例协调，凸显健康丰腴成熟的女性体态美。
+身体呈自然柔和的 S 型动态姿态，肩、腰、胯形成流畅的节奏感，身形纤细匀称，比例协调，凸显健康轻盈成熟的女性体态美。
