@@ -26,11 +26,11 @@ Use this skill to create Image2 prompts whose final image is a finished characte
 - Direction: mature fashion/editorial cover image, commercial poster polish, high-end character key visual.
 - Text: if unspecified, invent random original Chinese/English text such as a fictional masthead, main title, subtitle, several short cover lines, issue/date/price-like decorative details, and slogan.
 - Scene: bright studio, tasteful interior, city apartment, editorial set, campaign backdrop, fashion studio, or other non-private/non-voyeuristic context.
-- Clothing: if the user has not specified clothing, use "服装为剪裁优雅的吊带睡裙，材质细腻，版型合身，贴合身体，吊带一侧肩部自然滑落。"; if the user explicitly specifies safe clothing, preserve that garment instead.
+- Clothing: if the user has not specified clothing, randomly choose one of these fixed Chinese clothing phrases each time: "服装为剪裁优雅的吊带睡裙，材质细腻，版型合身，贴合身体，吊带一侧肩部自然滑落。" or "服装为剪裁优雅的短款深V款高级精致浅白色吊带背心，材质细腻，版型合身，贴合身体，腰部自然漏出，吊带两侧肩部自然滑落，下半身穿着白色蕾丝边内裤，精致且高级。"; if the user explicitly specifies safe clothing, preserve that garment instead.
 - Camera: portrait lens, eye-level or slightly elevated editorial angle by default, half-body or three-quarter-body cover framing unless a full-body poster is requested.
 - Aspect ratio: default to vertical `2:3` or `3:4`; use `9:16`, `1:1`, `16:9`, or other ratios only when requested or useful for the poster format.
 - Visual emphasis: face, expression, styling, garment fit, silhouette, cover hierarchy, readable fictional typography, color harmony, and finished print-design composition.
-- Prompt anchors: always include age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the default slip-dress clothing anchor when clothing is unspecified.
+- Prompt anchors: always include age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the random default clothing anchor when clothing is unspecified.
 - Verbatim figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include this sentence exactly as written: "上半身身形丰腴，胸部轮廓自然饱满，整体身形纤细匀称，身体比例协调，腰肩线条自然，曲线流畅，整体凸显轻盈健康的女性体态。"
 
 ## Poster And Cover Text Rules

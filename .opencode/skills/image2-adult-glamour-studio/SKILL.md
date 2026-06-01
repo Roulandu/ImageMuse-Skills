@@ -23,10 +23,10 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 - Direction: mature glamour portrait, fashion/editorial framing, polished commercial taste.
 - Scene: bright studio, tasteful interior, city apartment, window light, editorial set, or other non-private/non-voyeuristic context.
 - Pose: natural standing or seated posture, relaxed shoulders, front-facing toward camera or graceful slight three-quarter turn while the face and body still naturally orient toward camera.
-- Clothing: if the user has not specified clothing, use "服装为剪裁优雅的吊带睡裙，材质细腻，版型合身，贴合身体，吊带一侧肩部自然滑落。"; if the user explicitly specifies safe clothing, preserve that garment instead.
+- Clothing: if the user has not specified clothing, randomly choose one of these fixed Chinese clothing phrases each time: "服装为剪裁优雅的吊带睡裙，材质细腻，版型合身，贴合身体，吊带一侧肩部自然滑落。" or "服装为剪裁优雅的短款深V款高级精致浅白色吊带背心，材质细腻，版型合身，贴合身体，腰部自然漏出，吊带两侧肩部自然滑落，下半身穿着白色蕾丝边内裤，精致且高级。"; if the user explicitly specifies safe clothing, preserve that garment instead.
 - Camera: portrait lens, eye-level or slightly elevated editorial angle by default, half-body or three-quarter-body portrait framing. Use full-body/full-length framing only when the user explicitly asks for it.
 - Visual emphasis: face, expression, styling, garment fit, light, silhouette, color harmony, and overall composition.
-- Prompt anchors: always include age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the default slip-dress clothing anchor from `required-prompt-anchors.md` when clothing is unspecified; add maid/sweet fantasy styling, over-the-shoulder gaze, and soft S-curve figure only when requested or useful for the user's stated intent.
+- Prompt anchors: always include age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the random default clothing anchor from `required-prompt-anchors.md` when clothing is unspecified; add maid/sweet fantasy styling, over-the-shoulder gaze, and soft S-curve figure only when requested or useful for the user's stated intent.
 - Verbatim figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include this sentence exactly as written: "上半身身形丰腴，胸部轮廓自然饱满，整体身形纤细匀称，身体比例协调，腰肩线条自然，曲线流畅，整体凸显轻盈健康的女性体态。"
 
 ## Quality Guidance

@@ -21,7 +21,7 @@ Respect safe user-specified posture and camera direction. When posture or camera
 - Face direction: mature oval face, natural round face, elegant angular face, cinematic story face, refined East Asian features, natural life-like face; avoid childlike proportions and generic AI influencer face.
 - Mood: composed, confident, calm, relaxed, elegant, softly expressive, cinematic, polished.
 - Body direction: healthy proportions, balanced silhouette, soft mature figure, natural waistline, graceful posture, realistic anatomy.
-- Garment: if the user has not specified clothing, use "服装为剪裁优雅的吊带睡裙，材质细腻，版型合身，贴合身体，吊带一侧肩部自然滑落。"; if the user explicitly specifies safe clothing, preserve that garment instead.
+- Garment: if the user has not specified clothing, randomly choose one of these fixed Chinese clothing phrases each time: "服装为剪裁优雅的吊带睡裙，材质细腻，版型合身，贴合身体，吊带一侧肩部自然滑落。" or "服装为剪裁优雅的短款深V款高级精致浅白色吊带背心，材质细腻，版型合身，贴合身体，腰部自然漏出，吊带两侧肩部自然滑落，下半身穿着白色蕾丝边内裤，精致且高级。"; if the user explicitly specifies safe clothing, preserve that garment instead.
 - Garment details: material, lining, coverage, support, seams, trim, color, texture, fit, styling purpose.
 - Scene: studio, bright interior, window seat, city apartment, boutique fitting room, product studio, resort poolside, fashion set, lifestyle editorial location.
 - Camera: eye-level portrait or slight high editorial angle by default, half-body, three-quarter, full-body, catalog view, mirror view with face/garment/setting included.

@@ -4,7 +4,7 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 
 ## Inclusion Rule
 
-- Include the **basic anchors** in every **最终中文提示词**: age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the default slip-dress clothing anchor when clothing is unspecified.
+- Include the **basic anchors** in every **最终中文提示词**: age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the random default clothing anchor when clothing is unspecified.
 - Include the **intent anchors** only when the user request, rewrite target, or repair need matches that intent: swimwear, maid/sweet fantasy styling, over-the-shoulder gaze, or S-curve figure.
 - Keep all anchors as whole-person, garment-fit, editorial portrait, lookbook, or character-design language.
 - When the user has not specified a corresponding face direction, default to: 可爱甜美的脸型，温柔甜美但不幼态，气质轻盈美丽、优雅、自信。
@@ -34,9 +34,11 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 
 ### 5. Elegant Clothing
 
-Use only when the user has not specified a safe garment. If the user explicitly specifies safe clothing, preserve the user's garment instead of replacing it with this default.
+Use only when the user has not specified a safe garment. If the user explicitly specifies safe clothing, preserve the user's garment instead of replacing it with this default. When clothing is unspecified, randomly choose one of these fixed Chinese clothing phrases each time:
 
 服装为剪裁优雅的吊带睡裙，材质细腻，版型合身，贴合身体，吊带一侧肩部自然滑落。
+
+服装为剪裁优雅的短款深V款高级精致浅白色吊带背心，材质细腻，版型合身，贴合身体，腰部自然漏出，吊带两侧肩部自然滑落，下半身穿着白色蕾丝边内裤，精致且高级。
 
 ## Intent Anchors
 
