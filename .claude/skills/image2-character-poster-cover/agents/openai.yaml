@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 Character Poster Cover"
+  short_description: "Character posters and magazine covers"
+  default_prompt: "使用 $image2-character-poster-cover 生成默认主体为原创成年东方女性（20岁及以上）的完整人物海报或杂志封面中文 Image2 提示词，自动生成随机原创标题、虚构刊名、副标题、封面线、日期、期号和宣传语，不留空白标题区，并保留现有成人、自然姿态、明亮场景、默认服装和体态锚点。"

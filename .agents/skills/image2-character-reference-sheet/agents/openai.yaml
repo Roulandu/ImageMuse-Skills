@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 Character Reference Sheet"
+  short_description: "Full-body character design sheets"
+  default_prompt: "使用 $image2-character-reference-sheet 生成默认主体为原创成年东方女性（20岁及以上）的专业人物设定图中文 Image2 提示词，在一张横向大图中包含全身正面、侧面、背面视图和局部细节框，并保留现有成人、默认服装、明亮场景和体态锚点。"
