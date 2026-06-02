@@ -11,7 +11,7 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes sexuality, lingerie, swimwear, private settings, real people, celebrity likeness, age-coded wording, coercive framing, or platform/social identity.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for subject, garment, scene, camera, lighting, style, and aspect-ratio choices.
-3. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape reference when the user specifies a face shape or when a default face direction is needed; add intent anchors only when the user asks for swimwear, maid/sweet fantasy styling, S-curve figure, or another matching intent.
+3. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the user asks for swimwear, maid/sweet fantasy styling, S-curve figure, or another matching intent.
 4. Establish locked parameters: subject, age/adult status, originality, character genre, outfit, hairstyle, photoreal face memory points, body proportion, views, detail panels, background, aspect ratio, and quality target.
 5. Default to a single horizontal photorealistic studio reference sheet with full-body front view, full-body side view, full-body back view, and 3-5 detail callout panels. One callout must be a clear face close-up used to lock the same face, hairstyle, makeup, and expression across all views.
 6. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
@@ -24,7 +24,7 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 - Output type: professional character reference sheet, one large image, full-body turnaround and detail board.
 - Direction: mature photorealistic studio reference sheet, realistic fashion fitting reference, commercial photography feel, polished but non-explicit.
 - Realism target: prioritize a life-like adult face over illustration polish: realistic adult facial structure, subtle natural asymmetry, real skin texture, visible pores, light skin imperfections, natural makeup texture, believable eyes, and a calm natural expression.
-- Default face direction override: for this reference-sheet skill, replace generic cute-sweet face defaults with "成熟自然的成年东方女性面部结构，非幼态，非网红模板脸，具有可记忆但原创的五官特征，真实皮肤纹理，自然不对称，眼神自然有生活感". Keep any safe user-specified face direction if provided.
+- Face realism requirement: do not add a `face-shape-reference.md` face shape unless the user explicitly triggers it. For the mandatory face close-up and identity consistency, use "成熟自然的成年东方女性面部结构，非幼态，非网红模板脸，具有可记忆但原创的五官特征，真实皮肤纹理，自然不对称，眼神自然有生活感". Keep any safe user-specified face direction if provided.
 - Layout: wide canvas with three full-body views arranged left to right: front view, side view, back view; add small detail panels around the views without covering the character.
 - Background: white, pale gray, or light neutral design-board background with subtle guide lines or labels; no busy environment unless requested.
 - Pose: stable neutral A-pose or relaxed natural standing posture for all views, feet visible, arms readable, body proportions aligned across views.
@@ -35,7 +35,7 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 - Prompt anchors: always include age, mature figure, natural posture, bright interior/light neutral background, and explicit safe clothing when provided or the random default clothing anchor when clothing is unspecified.
 - Final prompt face requirement: the **最终中文提示词** must explicitly include a clear face close-up callout outside the three full-body views, and must state that all views share the same face, hairstyle, makeup, expression logic, body proportions, outfit, colors, materials, and accessories.
 - Figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include exactly one randomly chosen mature-figure anchor from `required-prompt-anchors.md`.
-- Hairstyle: if the user has not specified a safe hairstyle or hair direction, randomly choose exactly one hairstyle prompt from `hairstyle-reference.md`; if the user specifies a safe hairstyle, preserve it. Use the same selected or preserved hairstyle across the front, side, back, and face close-up callout views.
+- Hairstyle: do not add a default or random hairstyle unless the user explicitly specifies a safe hairstyle/hair direction or asks for a random hairstyle. When hairstyle is triggered, preserve the user's safe hairstyle or choose exactly one hairstyle prompt from `hairstyle-reference.md`; use it consistently across the front, side, back, and face close-up callout views.
 
 ## Reference Sheet Rules
 
@@ -50,7 +50,7 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 ## Quality Guidance
 
 - Prioritize clean silhouettes, consistent scale, symmetrical alignment, readable clothing construction, and believable anatomy.
-- Include the selected or preserved hairstyle in the final prompt and keep it consistent across all views. Add exact design language when useful: photorealistic studio reference sheet, realistic character turnaround, commercial photography feel, clean line organization, neutral standing pose, near-orthographic full-body views, material callouts.
+- Include explicitly triggered hairstyle in the final prompt and keep it consistent across all views. Add exact design language when useful: photorealistic studio reference sheet, realistic character turnaround, commercial photography feel, clean line organization, neutral standing pose, near-orthographic full-body views, material callouts.
 - For realistic prompts, ask for a photorealistic studio reference sheet or realistic fashion fitting reference, not candid photography, private-leak framing, polished fashion concept art, or painterly design-board rendering.
 - Make face realism explicit in the final prompt: real skin texture, pores, subtle skin imperfections, natural makeup texture, believable eye reflections, adult bone structure, natural facial asymmetry, and no generic AI influencer beauty.
 - Use labels sparingly and simply; Image2 may distort long text, so prefer short labels and visual callouts over paragraphs.
@@ -70,7 +70,7 @@ Return:
 6. **负面限制词**
 7. **可选变化参数**
 
-The **最终中文提示词** must fully carry the triggered required prompt anchors, the selected or preserved hairstyle from `hairstyle-reference.md`, the one-image full-body front/side/back reference-sheet layout, the mandatory face close-up callout, and the photoreal face requirements. It should explicitly include Chinese wording equivalent to: 写实参考表、真实面部、皮肤纹理、脸部近景 callout、同一张脸一致性. Other sections may summarize them briefly.
+The **最终中文提示词** must fully carry the triggered required prompt anchors, the one-image full-body front/side/back reference-sheet layout, the mandatory face close-up callout, and the photoreal face requirements. Include hairstyle from `hairstyle-reference.md` only when the user explicitly triggers hairstyle. It should explicitly include Chinese wording equivalent to: 写实参考表、真实面部、皮肤纹理、脸部近景 callout、同一张脸一致性. Other sections may summarize them briefly.
 
 The **负面限制词** must include relevant safety and quality constraints, including: 塑料皮肤、蜡像感、AI 网红脸、过度磨皮、动漫脸、插画脸、娃娃脸、五官过度对称、眼睛过大、脸部细节缺失.
 

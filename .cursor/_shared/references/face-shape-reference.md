@@ -1,6 +1,6 @@
 # Face Shape Reference
 
-Use this reference when the user specifies a face shape, or when `required-prompt-anchors.md` asks for a random default face direction.
+Use this reference only when the user specifies a face shape or explicitly asks for a random face shape.
 
 ## 1. 瓜子脸 / 柔和瓜子脸
 

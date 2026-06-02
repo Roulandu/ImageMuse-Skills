@@ -4,9 +4,9 @@ Use this reference when an Image2 skill needs a mature, original, non-explicit h
 
 ## Usage Rules
 
-- If the user does not specify hairstyle, hair length, hair color, bangs, updo, ponytail, wet-hair styling, or another hair direction, randomly choose exactly one hairstyle prompt from the list below each time.
-- If the user specifies a safe hairstyle, preserve the user's hairstyle instead of replacing it.
-- The selected or preserved hairstyle must appear in the **最终中文提示词**.
+- Use this reference only when the user explicitly specifies hairstyle, hair length, hair color, bangs, updo, ponytail, wet-hair styling, another hair direction, or asks for a random hairstyle.
+- If the user specifies a safe hairstyle, preserve the user's hairstyle instead of replacing it. If the user explicitly asks for a random hairstyle, randomly choose exactly one hairstyle prompt from the list below.
+- The selected or preserved hairstyle must appear in the **最终中文提示词** only when hairstyle is explicitly triggered.
 - Treat hairstyle as styling, identity, and mood direction only. Do not use it to imply minor-coded aesthetics, real-person likeness, explicit sexuality, voyeurism, or body-part-focused framing.
 - Keep the selected hairstyle compatible with the user's scene, outfit, poster/reference-sheet format, and safety boundaries.
 
