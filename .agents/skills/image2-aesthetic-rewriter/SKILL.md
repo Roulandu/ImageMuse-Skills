@@ -12,7 +12,7 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 1. Read the user request and identify the original intent in one sentence.
 2. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes sexuality, nudity, lingerie, swimwear, private settings, real people, celebrity likeness, age-coded wording, coercive framing, or platform/social identity.
 3. Load `../_shared/references/rewrite-vocabulary.md` when rewriting crude wording into aesthetic language.
-4. Load `../_shared/references/required-prompt-anchors.md`. Include its basic anchors in **最终中文提示词**, then add intent anchors only when the original request or safe rewrite target matches swimwear, maid/sweet styling, over-the-shoulder gaze, or S-curve figure.
+4. Load `../_shared/references/required-prompt-anchors.md` and `../_shared/references/face-shape-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape reference when the user specifies a face shape or when a default face direction is needed; add intent anchors only when the original request or safe rewrite target matches swimwear, maid/sweet styling, over-the-shoulder gaze, or S-curve figure.
 5. Refuse or redirect any request whose core target is explicit sexual content, soft porn, real-person sexualization, non-consensual framing, or minor-coded sexualization.
 6. If the request is supportable, rewrite the prompt using the output contract below.
 

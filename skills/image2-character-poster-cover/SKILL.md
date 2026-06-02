@@ -11,7 +11,7 @@ Use this skill to create Image2 prompts whose final image is a finished characte
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes sexuality, lingerie, swimwear, private settings, real people, celebrity likeness, age-coded wording, coercive framing, or platform/social identity.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for subject, garment, scene, camera, lighting, style, and aspect-ratio choices.
-3. Load `../_shared/references/required-prompt-anchors.md`. Include its basic anchors in **最终中文提示词**, then add intent anchors only when the user asks for swimwear, maid/sweet fantasy styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
+3. Load `../_shared/references/required-prompt-anchors.md` and `../_shared/references/face-shape-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape reference when the user specifies a face shape or when a default face direction is needed; add intent anchors only when the user asks for swimwear, maid/sweet fantasy styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
 4. Establish locked parameters: output type, subject, age/adult status, originality, poster/cover genre, garment, posture, camera, lighting, text system, layout density, aspect ratio, and quality target.
 5. When the user has not specified cover/poster text, generate random original text: fictional magazine or poster name, main title, subtitle, cover lines, column tags, issue number, date, price-like decorative string, and a short slogan. Do not leave blank title areas.
 6. Make all text fictional and copyright-safe. Do not use real magazine names, real brand names, real logos, real copyright IDs, real ISSN/ISBN numbers, real celebrity names, or real campaign slogans.
@@ -31,7 +31,7 @@ Use this skill to create Image2 prompts whose final image is a finished characte
 - Aspect ratio: default to vertical `2:3` or `3:4`; use `9:16`, `1:1`, `16:9`, or other ratios only when requested or useful for the poster format.
 - Visual emphasis: face, expression, styling, garment fit, silhouette, cover hierarchy, readable fictional typography, color harmony, and finished print-design composition.
 - Prompt anchors: always include age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the random default clothing anchor when clothing is unspecified.
-- Verbatim figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include this sentence exactly as written: "上半身身形丰腴，胸部轮廓自然饱满，整体身形纤细匀称，身体比例协调，腰肩线条自然，曲线流畅，整体凸显轻盈健康的女性体态。"
+- Figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include exactly one randomly chosen mature-figure anchor from `required-prompt-anchors.md`.
 
 ## Poster And Cover Text Rules
 

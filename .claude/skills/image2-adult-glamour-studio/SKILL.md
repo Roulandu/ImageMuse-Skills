@@ -11,7 +11,7 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` if the user request includes risk-sensitive elements.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for parameter choices when the user wants a structured prompt or provides multiple controls.
-3. Load `../_shared/references/required-prompt-anchors.md`. Include its basic anchors in **最终中文提示词**, then add intent anchors only when the user asks for sweet/maid styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
+3. Load `../_shared/references/required-prompt-anchors.md` and `../_shared/references/face-shape-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape reference when the user specifies a face shape or when a default face direction is needed; add intent anchors only when the user asks for sweet/maid styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
 4. Establish locked parameters: subject, age/adult status, originality, style, scene, garment, posture, camera, lighting, aspect ratio, and quality target.
 5. Fill missing parameters conservatively with mature, non-explicit defaults. For blank posture or camera direction, default to a front-facing or slight three-quarter camera-facing subject, an eye-level or slight high editorial camera, and half-body or three-quarter-body portrait framing.
 6. Produce the output contract below.
@@ -27,7 +27,7 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 - Camera: portrait lens, eye-level or slightly elevated editorial angle by default, half-body or three-quarter-body portrait framing. Use full-body/full-length framing only when the user explicitly asks for it.
 - Visual emphasis: face, expression, styling, garment fit, light, silhouette, color harmony, and overall composition.
 - Prompt anchors: always include age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the random default clothing anchor from `required-prompt-anchors.md` when clothing is unspecified; add maid/sweet fantasy styling, over-the-shoulder gaze, and soft S-curve figure only when requested or useful for the user's stated intent.
-- Verbatim figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include this sentence exactly as written: "上半身身形丰腴，胸部轮廓自然饱满，整体身形纤细匀称，身体比例协调，腰肩线条自然，曲线流畅，整体凸显轻盈健康的女性体态。"
+- Figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include exactly one randomly chosen mature-figure anchor from `required-prompt-anchors.md`.
 
 ## Quality Guidance
 

@@ -11,7 +11,7 @@ Use this skill when the user provides a rejected prompt, a poor result descripti
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` for red lines and gray zones.
 2. Load `../_shared/references/failure-repair-recipes.md` for diagnosis and repair patterns.
-3. Load `../_shared/references/required-prompt-anchors.md`. Include its basic anchors in the repaired **最终中文提示词**, then add matching intent anchors when repairing swimwear, maid/sweet styling, 回眸/side-turn posture, S-curve/body-shape issues, stiffness, or weak fashion tension.
+3. Load `../_shared/references/required-prompt-anchors.md` and `../_shared/references/face-shape-reference.md`. Include required basic anchors in the repaired **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape reference when the user specifies a face shape or when a default face direction is needed; add matching intent anchors when repairing swimwear, maid/sweet styling, 回眸/side-turn posture, S-curve/body-shape issues, stiffness, or weak fashion tension.
 4. Classify the failure into one or more buckets: prompt text risk, semantic intent risk, risk stacking, generation drift, final-image risk, quality/anatomy failure, or style mismatch.
 5. Preserve supportable user intent and remove or reframe unsafe details. When the subject is missing, automatic, or unsafe, repair it to an original adult East Asian woman, age 20 or older; respect explicit safe user-specified subject identities.
 6. Respect explicit safe user-specified posture and camera direction. If posture or camera direction is missing or unsafe, repair it to a front-facing or slight three-quarter camera-facing subject and an eye-level or slight high editorial camera.

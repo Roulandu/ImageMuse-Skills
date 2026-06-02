@@ -11,7 +11,7 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes sexuality, lingerie, swimwear, private settings, real people, celebrity likeness, age-coded wording, coercive framing, or platform/social identity.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for subject, garment, scene, camera, lighting, style, and aspect-ratio choices.
-3. Load `../_shared/references/required-prompt-anchors.md`. Include its basic anchors in **最终中文提示词**, then add intent anchors only when the user asks for swimwear, maid/sweet fantasy styling, S-curve figure, or another matching intent.
+3. Load `../_shared/references/required-prompt-anchors.md` and `../_shared/references/face-shape-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape reference when the user specifies a face shape or when a default face direction is needed; add intent anchors only when the user asks for swimwear, maid/sweet fantasy styling, S-curve figure, or another matching intent.
 4. Establish locked parameters: subject, age/adult status, originality, character genre, outfit, hairstyle, photoreal face memory points, body proportion, views, detail panels, background, aspect ratio, and quality target.
 5. Default to a single horizontal photorealistic studio reference sheet with full-body front view, full-body side view, full-body back view, and 3-5 detail callout panels. One callout must be a clear face close-up used to lock the same face, hairstyle, makeup, and expression across all views.
 6. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
@@ -34,7 +34,7 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 - Visual emphasis: character consistency, full-body proportions, photoreal face design, skin texture, hairstyle, outfit construction, fabric, accessories, back details, side silhouette, readable detail panels.
 - Prompt anchors: always include age, mature figure, natural posture, bright interior/light neutral background, and explicit safe clothing when provided or the random default clothing anchor when clothing is unspecified.
 - Final prompt face requirement: the **最终中文提示词** must explicitly include a clear face close-up callout outside the three full-body views, and must state that all views share the same face, hairstyle, makeup, expression logic, body proportions, outfit, colors, materials, and accessories.
-- Verbatim figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include this sentence exactly as written: "上半身身形丰腴，胸部轮廓自然饱满，整体身形纤细匀称，身体比例协调，腰肩线条自然，曲线流畅，整体凸显轻盈健康的女性体态。"
+- Figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include exactly one randomly chosen mature-figure anchor from `required-prompt-anchors.md`.
 
 ## Reference Sheet Rules
 

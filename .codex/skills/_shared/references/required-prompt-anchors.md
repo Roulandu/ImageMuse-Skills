@@ -7,7 +7,7 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 - Include the **basic anchors** in every **最终中文提示词**: age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the random default clothing anchor when clothing is unspecified.
 - Include the **intent anchors** only when the user request, rewrite target, or repair need matches that intent: swimwear, maid/sweet fantasy styling, over-the-shoulder gaze, or S-curve figure.
 - Keep all anchors as whole-person, garment-fit, editorial portrait, lookbook, or character-design language.
-- When the user has not specified a corresponding face direction, default to: 可爱甜美的脸型，温柔甜美但不幼态，气质轻盈美丽、优雅、自信。
+- When the user has not specified a corresponding face direction, randomly choose one face-shape description from `face-shape-reference.md` and include it in the final Chinese prompt. When the user specifies a safe face direction, preserve the user's direction instead.
 - When the user has not specified posture or camera orientation, make the subject face the camera by default: front-facing, or a slight three-quarter turn while the face and body still naturally orient toward the camera.
 - Use back-facing, over-the-shoulder, strong side-facing, or looking-away poses only when the user explicitly asks for them or when a repair target clearly needs that intent anchor.
 - Do not turn "胸部轮廓自然饱满" into a chest close-up, isolated body-part focus, low-angle body gaze, or soft-porn framing.
@@ -22,7 +22,13 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 
 ### 2. Mature Figure
 
+Randomly choose exactly one of these two fixed Chinese mature-figure anchors each time. Do not include both in the same final Chinese prompt unless the user explicitly asks for both:
+
 上半身身形丰腴，胸部轮廓自然饱满，整体身形纤细匀称，身体比例协调，腰肩线条自然，曲线流畅，整体凸显轻盈健康的女性体态。
+
+---
+
+人物身形为丰腴曲线型，整体匀称、自然协调，胸部饱满自然，胸部轮廓清晰但得体，腰线明确，腰胯转折明显，臀腿曲线圆润流畅，肩颈线柔和，整体形成优雅吸睛的 S 型身姿。线条强调为强，重点突出脖颈、锁骨、肩线、胸部自然曲线、腰线、腰胯转折、小腹线条与大腿线条，但表达保持高级、克制、干净，不低俗、不夸张、不变形。
 
 ### 3. Natural Posture
 
