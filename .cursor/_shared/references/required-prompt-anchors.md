@@ -8,6 +8,7 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 - Include the **intent anchors** only when the user request, rewrite target, or repair need matches that intent: swimwear, maid/sweet fantasy styling, over-the-shoulder gaze, or S-curve figure.
 - Keep all anchors as whole-person, garment-fit, editorial portrait, lookbook, or character-design language.
 - When the user has not specified a corresponding face direction, randomly choose one face-shape description from `face-shape-reference.md` and include it in the final Chinese prompt. When the user specifies a safe face direction, preserve the user's direction instead.
+- In the final Chinese prompt, express age, face shape, hairstyle, and mature figure once each. If the chosen face-shape description already includes temperament words, do not repeat the age anchor's temperament words nearby.
 - When the user has not specified posture or camera orientation, make the subject face the camera by default: front-facing, or a slight three-quarter turn while the face and body still naturally orient toward the camera.
 - Use back-facing, over-the-shoulder, strong side-facing, or looking-away poses only when the user explicitly asks for them or when a repair target clearly needs that intent anchor.
 - Do not turn "胸部轮廓自然饱满" into a chest close-up, isolated body-part focus, low-angle body gaze, or soft-porn framing.
@@ -18,7 +19,7 @@ Use this reference for all four Image2 adult glamour/fashion skills when produci
 
 ### 1. Age
 
-20岁及以上成年女性，成年女性角色，可爱甜美的脸型，温柔甜美但不幼态，气质轻盈美丽、优雅、自信。
+20岁及以上成年女性，成年女性角色，成年感明确，非幼态，气质自然、自信、优雅。
 
 ### 2. Mature Figure
 
