@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 Court Babe Portrait"
+  short_description: "球场宝贝、球队宝贝和啦啦队写真提示词"
+  default_prompt: "使用 $image2-court-babe-portrait 生成球场宝贝写真中文提示词；可指定主体、表情、服装、身材、球队场馆背景和图片风格，默认比例为 3:4，照片分辨率8k。"
