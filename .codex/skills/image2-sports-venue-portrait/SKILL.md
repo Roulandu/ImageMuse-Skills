@@ -34,7 +34,7 @@ Default outfit options:
 
 If the user chooses one of the default outfit options, expand it into a complete outfit prompt with color, fabric, fit, accessories, team-themed details, and sports venue suitability.
 
-If the user does not choose an outfit, randomly generate a suitable outfit description for an adult court babe portrait. Good random directions include team-color crop top and short skirt, sporty fitted performance outfit, polished cheerleader uniform, tasteful bikini styling for a summer stadium or poolside sports promo scene, or fashion-editorial sportswear.
+If the user does not choose an outfit, randomly generate a suitable outfit description for an adult sports-venue portrait. Good random directions include team-color crop top and short skirt, sporty fitted performance outfit, polished cheerleader uniform, tasteful bikini styling for a summer stadium or poolside sports promo scene, or fashion-editorial sportswear.
 
 If the user specifies another safe outfit, preserve the user's outfit direction and refine it into a complete prompt.
 
@@ -88,7 +88,7 @@ Never use real team logos, protected marks, readable jersey branding, or exact t
 
 If the user does not specify a team, randomly generate one sports venue background, such as NBA-style basketball arena, European football stadium, summer beach volleyball court, night baseball stadium, or modern multipurpose sports arena.
 
-## Court Babe Portrait Guidance
+## Sports Venue Portrait Guidance
 
 - Keep the subject adult, original, and photorealistic.
 - Prioritize face realism, natural expression, full outfit visibility, confident posture, stadium atmosphere, team-color styling, and realistic camera feel.

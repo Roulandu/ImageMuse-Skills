@@ -10,6 +10,22 @@ Describe 'validate-skills' {
     $LASTEXITCODE | Should -Be 0
   }
 
+  It 'uses sports-venue terminology in public skill files' {
+    $root = Resolve-Path "$PSScriptRoot/.."
+    $skillFiles = @(
+      "$root/skills/image2-sports-venue-portrait/SKILL.md",
+      "$root/.agents/skills/image2-sports-venue-portrait/SKILL.md",
+      "$root/.claude/skills/image2-sports-venue-portrait/SKILL.md",
+      "$root/.codex/skills/image2-sports-venue-portrait/SKILL.md",
+      "$root/.cursor/image2-sports-venue-portrait/SKILL.md",
+      "$root/.opencode/skills/image2-sports-venue-portrait/SKILL.md"
+    )
+
+    foreach ($skillFile in $skillFiles) {
+      Get-Content -Raw $skillFile | Should -Not -Match '(?i)court-babe|court babe'
+    }
+  }
+
   It 'reports a missing mirror' {
     $root = Join-Path $TestDrive 'repo'
     New-Item -ItemType Directory -Force "$root/skills/demo" | Out-Null
