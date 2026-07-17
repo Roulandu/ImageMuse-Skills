@@ -5,6 +5,10 @@ description: Create mature, original, non-explicit adult glamour portrait prompt
 
 # Image2 Adult Glamour Studio
 
+## Shared Contract And Route Selection
+
+Read `../_shared/core/parameter-schema.md` and `../_shared/core/output-contract.md` before writing. Create the parameter-lock record, then choose a **single compatible route** from `../_shared/routes/route-registry.md`; record its `routeId` in the director expansion. Do not blend or list multiple primary routes. Use overlays only when they preserve the selected route and locked parameters.
+
 ## Workflow
 
 Use this skill to create Image2 prompts for adult glamour portraits where the main value is refined attractiveness, styling, posture, lighting, and editorial taste. This is not a soft-porn prompt generator.
@@ -14,7 +18,7 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 3. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the user asks for sweet/maid styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
 4. Establish locked parameters: subject, age/adult status, originality, style, scene, garment, posture, camera, lighting, aspect ratio, and quality target.
 5. Fill missing parameters conservatively with mature, non-explicit defaults. For blank posture or camera direction, default to a front-facing or slight three-quarter camera-facing subject, an eye-level or slight high editorial camera, and half-body or three-quarter-body portrait framing.
-6. Produce the output contract below.
+6. Produce the shared output contract. In complete mode, use its fixed order; this skill's glamour-specific decisions belong in **导演扩展**. In concise mode, return only the contracted prompt and negative constraints.
 
 ## Defaults
 

@@ -5,6 +5,10 @@ description: Rewrite crude, explicit, risky, or low-taste adult glamour image re
 
 # Image2 Aesthetic Rewriter
 
+## Shared Contract And Risk Classification
+
+Read `../_shared/core/parameter-schema.md` and `../_shared/core/output-contract.md` before writing. Create the parameter-lock record, classify the request as `low`, `medium`, or `high` risk, and state the classification plus any reframe in **导演扩展**. Select one compatible `routeId` from `../_shared/routes/route-registry.md`; never use variants to bypass a safety reframe.
+
 ## Workflow
 
 Use this skill to transform rough adult-attraction intent into a mature visual direction. Do not help the user bypass safety systems or preserve soft-porn intent. Preserve adult attractiveness by shifting the frame toward fashion, editorial portraiture, commercial lookbook, character design, lighting, posture, garment quality, and overall body proportion.
@@ -14,7 +18,7 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 3. Load `../_shared/references/rewrite-vocabulary.md` when rewriting crude wording into aesthetic language.
 4. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the original request explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the original request or safe rewrite target matches swimwear, maid/sweet styling, over-the-shoulder gaze, or S-curve figure.
 5. Refuse or redirect any request whose core target is explicit sexual content, soft porn, real-person sexualization, non-consensual framing, or minor-coded sexualization.
-6. If the request is supportable, rewrite the prompt using the output contract below.
+6. If the request is supportable, rewrite it using the shared output contract and offer exactly three safe prompt variants: **保守**, **平衡**, and **表现力**. They must keep the same locked safe intent; only styling intensity, composition, and lighting may vary.
 
 ## Rewrite Rules
 
@@ -36,7 +40,9 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 
 Return all user-facing content in Simplified Chinese unless the user explicitly asks for another language. The final Image2 prompt, negative constraints, and variation knobs must be Chinese. Keep technical style tokens such as `Image2`, `GPT Image 2`, `Lookbook`, `editorial`, `RAW`, `8K`, lens names, and aspect ratios when they improve model clarity.
 
-Return the following Chinese sections:
+In complete mode, use the shared fixed section order. Put risk classification and the three variants (保守、平衡、表现力) in **导演扩展**. In concise mode, return only the shared concise sections.
+
+For a complete response, include:
 
 1. **意图摘要**: 用一句中文描述安全后的视觉目标。
 2. **已锁定参数**: 只保留可支持的用户细节；将不安全细节标为“已改写”或“已移除”。

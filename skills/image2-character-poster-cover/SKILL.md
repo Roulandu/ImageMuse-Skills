@@ -5,6 +5,10 @@ description: Create complete original character poster, magazine cover, editoria
 
 # Image2 Character Poster Cover
 
+## Shared Contract And Delivery Alternatives
+
+Read `../_shared/core/parameter-schema.md` and `../_shared/core/output-contract.md` before writing. Create the parameter-lock record and select one compatible `routeId` from `../_shared/routes/route-registry.md`. In complete mode, **导演扩展** must provide two clearly labelled deliverables: a copy-bearing poster prompt with fictional readable copy, and a **text-free blank-layout** alternative that preserves the hierarchy, safe margins, and reserved text zones but contains no text. In concise mode, return only the contracted final prompt and negative constraints; default to the copy-bearing version unless the user explicitly requests the blank layout.
+
 ## Workflow
 
 Use this skill to create Image2 prompts whose final image is a finished character poster or magazine cover, not a plain portrait with empty title space.
@@ -17,7 +21,7 @@ Use this skill to create Image2 prompts whose final image is a finished characte
 6. Make all text fictional and copyright-safe. Do not use real magazine names, real brand names, real logos, real copyright IDs, real ISSN/ISBN numbers, real celebrity names, or real campaign slogans.
 7. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
 8. Respect explicit safe user-specified posture and camera direction. If missing, default to a front-facing or slight three-quarter camera-facing subject and an eye-level or slight high editorial camera.
-9. Produce the output contract below.
+9. Produce the shared output contract, including both delivery alternatives when `outputMode` is `complete`.
 
 ## Defaults
 

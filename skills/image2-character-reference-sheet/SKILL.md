@@ -5,6 +5,10 @@ description: Create professional photorealistic character reference sheet, full-
 
 # Image2 Character Reference Sheet
 
+## Shared Contract And Identity Lock
+
+Read `../_shared/core/parameter-schema.md` and `../_shared/core/output-contract.md` before writing. Create the parameter-lock record and select one compatible `routeId` from `../_shared/routes/route-registry.md`. In **导演扩展**, define identity anchors for face structure, skin details, hairstyle, body proportions, outfit colors/materials, and accessories; every view must repeat those anchors. Add explicit outfit, expression, and prop callouts. Provide a **typography fallback**: if labels may render poorly, use numbered callouts with a compact legend rather than long text labels.
+
 ## Workflow
 
 Use this skill to create Image2 prompts for a professional photorealistic character reference sheet in one large image. The image should show a consistent character across full-body front, side, and back views, with a mandatory face close-up callout and optional garment/detail callouts.
@@ -16,7 +20,7 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 5. Default to a single horizontal photorealistic studio reference sheet with full-body front view, full-body side view, full-body back view, and 3-5 detail callout panels. One callout must be a clear face close-up used to lock the same face, hairstyle, makeup, and expression across all views.
 6. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
 7. Respect explicit safe user-specified clothing; when unspecified, use the existing default elegant slip-dress clothing anchor.
-8. Produce the output contract below.
+8. Produce the shared output contract. In complete mode, place the identity anchors, required callouts, and typography fallback in **导演扩展**; in concise mode, return only the contracted prompt and negative constraints.
 
 ## Defaults
 
