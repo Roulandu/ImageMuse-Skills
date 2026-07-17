@@ -10,4 +10,21 @@ Describe 'validate-skills' {
     Set-Content "$root/skills/demo/SKILL.md" "---`nname: demo`ndescription: demo`n---`n# Demo"
     { & "$PSScriptRoot/../tools/validate-skills.ps1" -Root $root } | Should -Throw '*Missing mirror:*demo*'
   }
+
+  It 'reports a byte-different mirror' {
+    $root = Join-Path $TestDrive 'repo'
+    $source = "$root/skills/demo/SKILL.md"
+    New-Item -ItemType Directory -Force (Split-Path $source) | Out-Null
+    Set-Content $source "---`nname: demo`ndescription: demo`n---`n# Demo"
+    $bytes = [System.IO.File]::ReadAllBytes($source)
+
+    foreach ($mirror in @('.agents/skills', '.claude/skills', '.codex/skills', '.cursor', '.opencode/skills')) {
+      $target = "$root/$mirror/demo/SKILL.md"
+      New-Item -ItemType Directory -Force (Split-Path $target) | Out-Null
+      [System.IO.File]::WriteAllBytes($target, $bytes)
+    }
+
+    [System.IO.File]::WriteAllBytes("$root/.agents/skills/demo/SKILL.md", [byte[]](0xEF, 0xBB, 0xBF) + $bytes)
+    { & "$PSScriptRoot/../tools/validate-skills.ps1" -Root $root } | Should -Throw '*Mirror differs:*.agents/skills/demo*'
+  }
 }
