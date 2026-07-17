@@ -11,10 +11,11 @@ Use this skill to create Image2 prompts for wedding dress photography, bridal po
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes adult attractiveness, body-shape emphasis, private settings, real people, age-coded wording, or risk-sensitive styling.
 2. Load `../_shared/references/portrait-fashion-parameters.md` when the user asks for structured choices, varied camera language, scene options, or fashion/photo quality controls.
-3. Establish locked parameters: subject, expression, body description, wedding dress clothing, image style, scene, camera/framing, aspect ratio, and resolution.
-4. Respect safe user-specified subject, expression, body, clothing, and style. Use the defaults only when the user leaves those fields blank, unspecified, or automatic.
-5. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
-6. If image style is specified, generate the output contract below.
+3. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
+4. Establish locked parameters: subject, expression, body description, wedding dress clothing, image style, scene, camera/framing, aspect ratio, and resolution.
+5. Respect safe user-specified subject, expression, body, clothing, and style. Use the defaults only when the user leaves those fields blank, unspecified, or automatic.
+6. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
+7. If image style is specified, generate the output contract below.
 
 ## Defaults And Overrides
 
@@ -36,22 +37,11 @@ If the user does not specify an image style, ask the user to choose one of these
 
 If the user specifies another safe image style, use the user's style description instead of the two defaults.
 
-## Body Prompt Rules
+## 体态比例与礼服合身度
 
-Default body prompt:
+Use whole-person, adult bridal proportions and dress fit instead of bust-size menus. Capture only what helps the garment read correctly: balanced shoulders and waist, natural posture, hem and train length, neckline coverage, bodice support, seam placement, fabric drape, and ease of movement. Preserve a safe user-specified body description only as a silhouette and tailoring direction.
 
-`身材:人物拥有完美的身材。上围尺寸正常，腰也十分的纤细。`
-
-Offer these bust-size options when the user asks for body choices or does not specify the body prompt:
-
-- 正常：`身材:人物拥有完美的身材。上围尺寸正常，腰也十分的纤细。`
-- 偏大：`身材:人物拥有完美的身材。上围尺寸偏大，腰也十分的纤细。`
-- 很大：`身材:人物拥有完美的身材。上围尺寸很大，腰也十分的纤细。`
-- 巨大：`身材:人物拥有极度夸张的身材。上围尺寸巨大并且自然下垂，绝对不是圆球假体胸型，腰也十分的纤细。`
-
-If the user enters a custom body prompt or body description, generate the body prompt according to the user's description.
-
-Use body descriptions only as whole-person silhouette, adult bridal fashion proportion, and wedding dress fit direction. Do not turn body wording into body-part fixation, private-area focus, low-angle body gaze, exposed nudity, transparent nudity, or close-up framing.
+When a default is needed, use: `体态比例自然匀称，站姿舒展；礼服肩线、腰线与裙摆贴合得体，面料垂坠自然，行动自如。`
 
 ## Wedding Portrait Guidance
 
@@ -61,6 +51,10 @@ Use body descriptions only as whole-person silhouette, adult bridal fashion prop
 - Use eye-level or slightly elevated camera language by default. Avoid low-angle body-gaze framing.
 - Good default scenes include bright wedding studio, white chapel interior, garden wedding venue, seaside wedding walkway, hotel bridal suite with bright window light, or minimalist editorial studio.
 - Good random bridal dress directions include satin A-line wedding dress, lace mermaid wedding dress, off-shoulder tulle wedding dress, square-neck minimalist silk wedding dress, long-sleeve lace cathedral bridal look, or modern Chinese bridal-inspired white gown.
+
+## 叙事路线
+
+Choose one route when requested or infer the least-assumptive route from the scene: **纪实婚礼**（仪式、誓言、宾客互动）, **影棚肖像**（布光、背景、礼服细节）, **旅行婚拍**（目的地、天气、行程感）, or **中式婚礼**（中式礼服、传统建筑、喜庆但不堆砌文字）. Keep the selected route consistent with the dress, location, pose, and camera language.
 
 ## Output Format
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 Sports Venue Portrait"
+  short_description: "成人、原创、非露骨的体育场馆人像提示词"
+  default_prompt: "使用 $image2-sports-venue-portrait 生成中文体育场馆人像提示词；可指定主体、表情、服装、运动类型、场馆、球队色彩和赛前/赛中/赛后故事，默认比例为 3:4，照片分辨率8k。"

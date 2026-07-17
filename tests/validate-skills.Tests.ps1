@@ -4,6 +4,12 @@ Describe 'validate-skills' {
     $LASTEXITCODE | Should -Be 0
   }
 
+  It 'finds the new director in every mirror' {
+    $root = Resolve-Path "$PSScriptRoot/.."
+    & "$root/tools/validate-skills.ps1" -Root $root
+    $LASTEXITCODE | Should -Be 0
+  }
+
   It 'reports a missing mirror' {
     $root = Join-Path $TestDrive 'repo'
     New-Item -ItemType Directory -Force "$root/skills/demo" | Out-Null

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 Portrait Director"
+  short_description: "Route governed Image2 portrait direction"
+  default_prompt: "Use $image2-portrait-director to select one portrait route and produce a governed Chinese Image2 prompt."

@@ -5,6 +5,10 @@ description: Create professional photorealistic character reference sheet, full-
 
 # Image2 Character Reference Sheet
 
+## Shared Contract And Identity Lock
+
+Read `../_shared/core/parameter-schema.md` and `../_shared/core/output-contract.md` before writing. Create the parameter-lock record and select one compatible `routeId` from `../_shared/routes/route-registry.md`. In **导演扩展**, define identity anchors for face structure, skin details, hairstyle, body proportions, outfit colors/materials, and accessories; every view must repeat those anchors. Add explicit outfit, expression, and prop callouts. Provide a **typography fallback**: if labels may render poorly, use numbered callouts with a compact legend rather than long text labels.
+
 ## Workflow
 
 Use this skill to create Image2 prompts for a professional photorealistic character reference sheet in one large image. The image should show a consistent character across full-body front, side, and back views, with a mandatory face close-up callout and optional garment/detail callouts.
@@ -16,7 +20,7 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 5. Default to a single horizontal photorealistic studio reference sheet with full-body front view, full-body side view, full-body back view, and 3-5 detail callout panels. One callout must be a clear face close-up used to lock the same face, hairstyle, makeup, and expression across all views.
 6. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
 7. Respect explicit safe user-specified clothing; when unspecified, use the existing default elegant slip-dress clothing anchor.
-8. Produce the output contract below.
+8. Produce the shared output contract. In complete mode, place the identity anchors, required callouts, and typography fallback in **导演扩展**; in concise mode, return only the contracted prompt and negative constraints.
 
 ## Defaults
 
@@ -56,19 +60,18 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 - Use labels sparingly and simply; Image2 may distort long text, so prefer short labels and visual callouts over paragraphs.
 - Treat body-shape wording as whole-person proportion and garment-fit direction, not as body-part emphasis.
 
-## Output Format
+## Shared Complete-Mode Format
 
 Return all user-facing content in Simplified Chinese unless the user explicitly asks for another language. The final Image2 prompt, negative constraints, and variation knobs must be Chinese. Keep technical style tokens such as `Image2`, `GPT Image 2`, `Lookbook`, `editorial`, `RAW`, `8K`, labels such as `FRONT/SIDE/BACK`, and aspect ratios when they improve model clarity.
 
-Return:
+In complete mode, return exactly this order:
 
 1. **意图摘要**
 2. **已锁定参数**
-3. **设定图版面说明**
-4. **风险/质量说明**
-5. **最终中文提示词**
-6. **负面限制词**
-7. **可选变化参数**
+3. **导演扩展**: include the identity anchors, reference-sheet layout, outfit/expression/prop callouts, quality guidance, and typography fallback.
+4. **最终中文提示词**
+5. **负面限制词**
+6. **可选变化参数**: offer 3-6 safe adjustments such as callout emphasis, material detail, neutral background, lighting, pose, or canvas.
 
 The **最终中文提示词** must fully carry the triggered required prompt anchors, the one-image full-body front/side/back reference-sheet layout, the mandatory face close-up callout, and the photoreal face requirements. Include hairstyle from `hairstyle-reference.md` only when the user explicitly triggers hairstyle. It should explicitly include Chinese wording equivalent to: 写实参考表、真实面部、皮肤纹理、脸部近景 callout、同一张脸一致性. Other sections may summarize them briefly.
 

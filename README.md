@@ -18,7 +18,7 @@
 
 然后补充主题、风格、服装、场景、画幅比例，或说明遇到的问题。
 
-## 7 个 Skill
+## 9 个 Skill
 
 ### `$image2-aesthetic-rewriter`
 
@@ -159,3 +159,14 @@
 - 绕过审查或规避安全系统的写法
 
 如果原始请求包含这些内容，skill 会拒绝或改写相关部分，并把可支持的方向转成成熟、原创、非露骨的时尚/editorial 表达。
+## Current skill entry points
+
+This repository now publishes nine skills. Start with `$image2-portrait-director` when you want a structured route recommendation, then use the selected specialist skill.
+
+- `$image2-portrait-director` — routes a request to the appropriate portrait workflow.
+- `$image2-sports-venue-portrait` — creates tasteful adult sports-venue and arena portrait prompts.
+
+```text
+Use $image2-portrait-director to choose the best skill for an adult portrait concept in a basketball arena.
+Use $image2-sports-venue-portrait to create a professional basketball-arena portrait prompt for an adult subject.
+```

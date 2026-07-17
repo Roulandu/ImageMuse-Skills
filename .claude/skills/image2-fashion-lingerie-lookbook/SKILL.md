@@ -11,15 +11,21 @@ Use this skill for adult fashion prompts involving lingerie, bralette styling, s
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` for safety boundaries.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for garment, scene, camera, and variation controls.
-3. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词** as garment-fit, whole-body silhouette, lookbook posture, and bright interior styling direction, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add the swimwear Lookbook anchor whenever the user asks for swimwear, beach/pool, resort, summer vacation, or swim catalog imagery.
-4. Convert risky private or soft-porn cues into commercial fashion context: catalog, lookbook, fitting appointment, product confirmation, studio, boutique fitting room, resort swimwear, or editorial styling.
-5. Make the model an original adult East Asian woman by default, not a real person or celebrity, and render this in Chinese prompts as "原创成年东方女性，20岁及以上".
-6. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
-7. Respect explicit safe user-specified posture and camera direction. If missing, default to a front-facing or slight three-quarter camera-facing model, an eye-level or slight high editorial camera, and half-body or three-quarter-body Lookbook framing.
-8. Keep the frame broad enough to show the face, garment, posture, and setting. Default to half-body or three-quarter-body composition unless the user explicitly asks for full-body/full-length framing or a catalog need requires it. Do not crop around private body areas or use low-angle body-gaze framing.
-9. Produce the output contract below.
+3. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
+4. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词** as garment-fit, whole-body silhouette, lookbook posture, and bright interior styling direction, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add the swimwear Lookbook anchor whenever the user asks for swimwear, beach/pool, resort, summer vacation, or swim catalog imagery.
+5. Convert risky private or soft-porn cues into commercial fashion context: catalog, lookbook, fitting appointment, product confirmation, studio, boutique fitting room, resort swimwear, or editorial styling.
+6. Make the model an original adult East Asian woman by default, not a real person or celebrity, and render this in Chinese prompts as "原创成年东方女性，20岁及以上".
+7. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
+8. Respect explicit safe user-specified posture and camera direction. If missing, default to a front-facing or slight three-quarter camera-facing model, an eye-level or slight high editorial camera, and half-body or three-quarter-body Lookbook framing.
+9. Keep the frame broad enough to show the face, garment, posture, and setting. Default to half-body or three-quarter-body composition unless the user explicitly asks for full-body/full-length framing or a catalog need requires it. Do not crop around private body areas or use low-angle body-gaze framing.
+10. Produce the output contract below.
 
 ## Garment-First Rules
+
+- For catalog requests, provide **正面、侧面、背面** views with matched framing, pose, lighting, and garment state; do not turn the views into body-part crops.
+- State fabric, construction, opacity, stretch, texture, and fit at the relevant seams or support points so the garment remains identifiable across views.
+- For SKU color variants, change only the approved colorway and preserve the same product construction, styling, model, camera setup, and catalog background unless the user requests another controlled variant.
+- Check product consistency: silhouette, trim, closures, pattern placement, coverage, and accessories must agree across all catalog views and color variants.
 
 - Describe garment type, coverage, support structure, material, trim, color, fit, texture, and styling purpose.
 - For swimwear, always frame the result as a high-end swimwear brand Lookbook and emphasize cut, fabric, color, use context, and fresh summer atmosphere.
