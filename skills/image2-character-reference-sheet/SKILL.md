@@ -60,19 +60,18 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 - Use labels sparingly and simply; Image2 may distort long text, so prefer short labels and visual callouts over paragraphs.
 - Treat body-shape wording as whole-person proportion and garment-fit direction, not as body-part emphasis.
 
-## Output Format
+## Shared Complete-Mode Format
 
 Return all user-facing content in Simplified Chinese unless the user explicitly asks for another language. The final Image2 prompt, negative constraints, and variation knobs must be Chinese. Keep technical style tokens such as `Image2`, `GPT Image 2`, `Lookbook`, `editorial`, `RAW`, `8K`, labels such as `FRONT/SIDE/BACK`, and aspect ratios when they improve model clarity.
 
-Return:
+In complete mode, return exactly this order:
 
 1. **意图摘要**
 2. **已锁定参数**
-3. **设定图版面说明**
-4. **风险/质量说明**
-5. **最终中文提示词**
-6. **负面限制词**
-7. **可选变化参数**
+3. **导演扩展**: include the identity anchors, reference-sheet layout, outfit/expression/prop callouts, quality guidance, and typography fallback.
+4. **最终中文提示词**
+5. **负面限制词**
+6. **可选变化参数**: offer 3-6 safe adjustments such as callout emphasis, material detail, neutral background, lighting, pose, or canvas.
 
 The **最终中文提示词** must fully carry the triggered required prompt anchors, the one-image full-body front/side/back reference-sheet layout, the mandatory face close-up callout, and the photoreal face requirements. Include hairstyle from `hairstyle-reference.md` only when the user explicitly triggers hairstyle. It should explicitly include Chinese wording equivalent to: 写实参考表、真实面部、皮肤纹理、脸部近景 callout、同一张脸一致性. Other sections may summarize them briefly.
 

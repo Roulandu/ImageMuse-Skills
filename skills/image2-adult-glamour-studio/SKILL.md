@@ -42,18 +42,18 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 - When the user wants more visual tension, add contrast through gaze, pose rhythm, fabric structure, negative space, lighting, or palette rather than sexualized action.
 - Treat body-shape wording as whole-person silhouette and garment-fit direction, not as body-part fixation.
 
-## Output Format
+## Shared Complete-Mode Format
 
 Return all user-facing content in Simplified Chinese unless the user explicitly asks for another language. The final Image2 prompt, negative constraints, and variation knobs must be Chinese. Keep technical style tokens such as `Image2`, `GPT Image 2`, `Lookbook`, `editorial`, `RAW`, `8K`, lens names, and aspect ratios when they improve model clarity.
 
-Return:
+In complete mode, return exactly this order:
 
 1. **意图摘要**
 2. **已锁定参数**
-3. **风险/质量说明**
+3. **导演扩展**: state the single compatible route, glamour-specific lighting/composition decisions, safety reframes, and quality guidance.
 4. **最终中文提示词**
 5. **负面限制词**
-6. **可选变化参数**
+6. **可选变化参数**: offer 3-6 safe adjustments such as palette, lens, material, setting, pose, or canvas.
 
 The **最终中文提示词** must fully carry the triggered required prompt anchors. Include hairstyle from `hairstyle-reference.md` only when the user explicitly triggers hairstyle. Other sections may summarize them briefly.
 

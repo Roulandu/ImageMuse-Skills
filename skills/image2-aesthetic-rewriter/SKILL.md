@@ -36,17 +36,15 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 - Do not turn mature figure, chest contour, S-curve, or fit language into body-part close-ups, low-angle body gaze, or isolated anatomy emphasis.
 - When the original request is too explicit, too young-coded, or too suggestive, keep only the safe anchor-compatible intent and rewrite the rest into mature, original, non-explicit editorial/fashion language.
 
-## Output Format
+## Shared Complete-Mode Format
 
 Return all user-facing content in Simplified Chinese unless the user explicitly asks for another language. The final Image2 prompt, negative constraints, and variation knobs must be Chinese. Keep technical style tokens such as `Image2`, `GPT Image 2`, `Lookbook`, `editorial`, `RAW`, `8K`, lens names, and aspect ratios when they improve model clarity.
 
-In complete mode, use the shared fixed section order. Put risk classification and the three variants (保守、平衡、表现力) in **导演扩展**. In concise mode, return only the shared concise sections.
-
-For a complete response, include:
+In concise mode, return only the shared concise sections. In complete mode, return exactly this order:
 
 1. **意图摘要**: 用一句中文描述安全后的视觉目标。
 2. **已锁定参数**: 只保留可支持的用户细节；将不安全细节标为“已改写”或“已移除”。
-3. **风险/质量说明**: 用简短中文要点说明主要风险降级和质量提升。
+3. **导演扩展**: state the risk classification, reframe, selected route, quality rationale, and the 保守、平衡、表现力 variants.
 4. **最终中文提示词**: 可直接用于 Image2 的中文提示词。
 5. **负面限制词**: 中文逗号分隔列表。
 6. **可选变化参数**: 3-6 个中文可调项，例如色调、镜头、服装材质、场景、姿态或画幅比例。

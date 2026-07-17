@@ -55,19 +55,18 @@ Use this skill to create Image2 prompts whose final image is a finished characte
 - Treat body-shape wording as whole-person silhouette and garment-fit direction, not as body-part fixation.
 - Reframe unsafe low-angle body gaze, voyeuristic framing, explicit sexual wording, or private-access cues into mature editorial poster language.
 
-## Output Format
+## Shared Complete-Mode Format
 
 Return all user-facing content in Simplified Chinese unless the user explicitly asks for another language. The final Image2 prompt, negative constraints, and variation knobs must be Chinese. Keep technical style tokens such as `Image2`, `GPT Image 2`, `Lookbook`, `editorial`, `RAW`, `8K`, lens names, and aspect ratios when they improve model clarity.
 
-Return:
+In complete mode, return exactly this order:
 
 1. **意图摘要**
 2. **已锁定参数**
-3. **随机封面/海报文字**
-4. **风险/质量说明**
-5. **最终中文提示词**
-6. **负面限制词**
-7. **可选变化参数**
+3. **导演扩展**: include fictional copy, layout and quality decisions, plus the copy-bearing version and the text-free blank-layout alternative.
+4. **最终中文提示词**
+5. **负面限制词**
+6. **可选变化参数**: offer 3-6 safe adjustments such as hierarchy, palette, lens, setting, pose, or canvas.
 
 The **最终中文提示词** must fully carry the triggered required prompt anchors and the generated fictional poster/cover text. Include hairstyle from `hairstyle-reference.md` only when the user explicitly triggers hairstyle. Other sections may summarize them briefly.
 
