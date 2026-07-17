@@ -1,4 +1,4 @@
 interface:
-  display_name: "Image2 Wedding Portrait"
-  short_description: "婚纱摄影写真提示词"
+  display_name: "Image2 婚纱人像"
+  short_description: "生成写实婚纱摄影、新娘肖像与婚礼时尚提示词"
   default_prompt: "使用 $image2-wedding-portrait 生成婚纱摄影写真中文提示词；默认主体为“20岁出头的中国美人。”，默认表情为“自然的笑容。”，默认体态与礼服合身度为自然匀称、站姿舒展、肩线腰线与裙摆贴合得体，默认尺寸为“3:4，照片分辨率8k”。可选择纪实婚礼、影棚肖像、旅行婚拍或中式婚礼路线。"

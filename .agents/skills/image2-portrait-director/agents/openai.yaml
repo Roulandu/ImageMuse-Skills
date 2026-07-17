@@ -1,4 +1,4 @@
 interface:
-  display_name: "Image2 Portrait Director"
-  short_description: "Route governed Image2 portrait direction"
+  display_name: "Image2 人像导演"
+  short_description: "为 Image2 人像需求选择受控路线并输出合规中文提示词"
   default_prompt: "Use $image2-portrait-director to select one portrait route and produce a governed Chinese Image2 prompt."
