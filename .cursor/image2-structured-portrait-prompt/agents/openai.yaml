@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 结构化人像提示词"
+  short_description: "将零散人像方向整理成固定字段清单和可直接生图的完整中文提示词"
+  default_prompt: "使用 $image2-structured-portrait-prompt 把我的人像摄影方向整理为固定中文字段清单，并生成可直接用于 Image2 的完整提示词。"

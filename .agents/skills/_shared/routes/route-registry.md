@@ -19,4 +19,4 @@ The director selects exactly one Route ID as `routeId`. Each route may use compa
 
 ## Specialty delegation
 
-Delegate bridal requests to `image2-wedding-portrait`. Delegate fashion lookbook requests to `image2-fashion-lingerie-lookbook`. Delegate sports venue, team-babe, cheerleader, stadium, basketball, or football requests to `image2-sports-venue-portrait` (the sports specialty target). The specialty skill constraints outrank the selected route under the conflict-resolution contract.
+Delegate requests for a fixed Chinese portrait field list, structured portrait brief, or the field sequence “摄影风格 / 写真方向 / 场景方向 / 服装方向” to `image2-structured-portrait-prompt`; it uses its own fixed output contract. Delegate bridal requests to `image2-wedding-portrait`. Delegate fashion lookbook requests to `image2-fashion-lingerie-lookbook`. Delegate sports venue, team-babe, cheerleader, stadium, basketball, or football requests to `image2-sports-venue-portrait` (the sports specialty target). The specialty skill constraints outrank the selected route under the conflict-resolution contract.
