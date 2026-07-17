@@ -15,6 +15,8 @@ All final user-facing output is Simplified Chinese unless the user asks otherwis
 
 The final prompt includes all locked safe parameters, route additions, and supplemental defaults. Negative constraints are relevant, concise, and written in Chinese.
 
+Machine-readable fixed-order identifiers are `intent-summary`, `locked-parameters`, `director-expansion`, `final-chinese-prompt`, `negative-constraints`, and `variation-knobs`.
+
 ## Concise mode
 
 `outputMode: concise` contains only these two sections, in order:
@@ -23,3 +25,7 @@ The final prompt includes all locked safe parameters, route additions, and suppl
 2. `负面限制词`
 
 Do not include analysis, route names, lock records, or variation controls in concise mode.
+
+## Direct-image gate
+
+The output contract permits image generation only for interaction mode `direct-image` when the user explicitly says `直接出图`. All other requests, including `prompt` and `reference-image`, return text according to complete or concise mode. A reference image changes only authorised, role-locked prompt inputs; it is not permission to generate an image.
