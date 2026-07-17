@@ -1,18 +1,19 @@
 ---
-name: image2-court-babe-portrait
-description: Create Chinese court babe, team babe, cheerleader, stadium portrait, sports venue glamour, and basketball or football arena photo prompts for GPT Image 2 / Image2. Use when Codex needs adult, original, tasteful, non-explicit sports-themed female portrait prompts with optional subject, expression, outfit, body, team venue, iPhone straight-out or professional DSLR photo style controls.
+name: image2-sports-venue-portrait
+description: Create adult, original, non-explicit sports-venue portrait prompts for GPT Image 2 / Image2, with sport, venue, team-color, and event-story controls.
 ---
 
-# Image2 Court Babe Portrait
+# Image2 Sports Venue Portrait
 
 ## Workflow
 
 Use this skill to create Image2 prompts for 球场宝贝写真、球队宝贝写真、啦啦队写真、体育场馆写真、篮球馆写真、足球场写真、比基尼球场写真, and other adult sports-themed portrait prompts. The output should be tasteful, adult, photorealistic, and non-explicit.
 
-1. Establish locked parameters: subject, expression, body prompt, outfit, image style, team or venue background, aspect ratio, and resolution.
-2. Respect safe user-specified subject, expression, body, outfit, team, venue, and style. Use defaults only when the user leaves those fields blank, unspecified, or automatic.
-3. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
-4. If image style is specified, generate the output contract below.
+1. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
+2. Establish locked parameters: subject, expression, body prompt, outfit, image style, sport type, venue, team-color palette, event story, aspect ratio, and resolution.
+3. Respect safe user-specified subject, expression, body, outfit, team, venue, and style. Use defaults only when the user leaves those fields blank, unspecified, or automatic.
+4. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
+5. If image style is specified, generate the output contract below.
 
 ## Defaults And Overrides
 
@@ -71,6 +72,10 @@ Use body descriptions only as adult whole-person silhouette, sports portrait sty
 
 ## Team And Background Rules
 
+Lock the sport type (for example basketball, football, baseball, volleyball, tennis, or athletics), venue, and a team-color palette of two or three colors. Treat color as atmosphere, clothing trim, and lighting direction only—never as a claim of affiliation.
+
+Choose or preserve one event-story beat: **赛前**（arrival, warm-up, tunnel, calm anticipation）, **赛中**（sideline energy, performance break, crowd atmosphere, no implied participation), or **赛后**（cool-down, emptying stands, reflective arena light). Keep the story beat consistent with lighting, crowd density, outfit practicality, and pose.
+
 Ask or encourage the user to enter a favorite team when the team is missing, for example `NBA-马刺队` or `西甲-巴塞罗那`.
 
 If the user specifies a team, generate a corresponding venue background description based on the sport and team context:
@@ -79,7 +84,7 @@ If the user specifies a team, generate a corresponding venue background descript
 - For football or soccer teams, describe a large outdoor stadium, green pitch, grandstand, team-color flags, floodlights, matchday atmosphere, sideline, or tunnel entrance.
 - For other sports teams, describe the matching professional sports venue and team-color atmosphere.
 
-Avoid using real protected team logos as text or exact trademark marks in the image prompt. Prefer team colors, venue atmosphere, abstract emblem-like design, or non-readable signage when needed.
+Never use real team logos, protected marks, readable jersey branding, or exact trademark designs. Prefer team colors, venue atmosphere, abstract non-branded emblems, and non-readable signage.
 
 If the user does not specify a team, randomly generate one sports venue background, such as NBA-style basketball arena, European football stadium, summer beach volleyball court, night baseball stadium, or modern multipurpose sports arena.
 
