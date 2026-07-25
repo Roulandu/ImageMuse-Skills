@@ -1,6 +1,6 @@
 ---
 name: image2-sports-venue-portrait
-description: Create adult, original, non-explicit sports-venue portrait prompts for GPT Image 2 / Image2, with sport, venue, team-color, and event-story controls.
+description: 生成运动场馆人像提示词，用于需要体育场馆、赛场、球队配色、赛事故事感的成年原创人像时，结合运动项目、场馆环境、队色元素和事件叙事生成提示词。
 ---
 
 # Image2 Sports Venue Portrait

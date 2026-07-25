@@ -1,6 +1,6 @@
 ﻿---
 name: image2-fashion-lingerie-lookbook
-description: Create mature, original, non-explicit adult lingerie, swimwear, fit-check, and fashion lookbook prompts for GPT Image 2 / Image2. Use for garment-first adult fashion imagery focused on product design, fit, fabric, styling, catalog context, and commercial presentation while avoiding soft porn, body-part fixation, minor-coded aesthetics, real-person sexualization, and private-leak framing.
+description: 生成内衣泳装时尚画册提示词，用于内衣、泳装、试穿、家居服等贴身服饰的产品级人像时，主打面料质感、版型剪裁、目录式陈列和商业呈现，避免身体部位凝视、真人相似和私拍感。
 ---
 
 # Image2 Fashion Lingerie Lookbook

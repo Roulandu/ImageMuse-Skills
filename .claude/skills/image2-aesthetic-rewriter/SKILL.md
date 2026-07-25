@@ -1,6 +1,6 @@
 ﻿---
 name: image2-aesthetic-rewriter
-description: Rewrite crude, explicit, risky, or low-taste adult glamour image requests into mature, original, non-explicit GPT Image 2 / Image2 prompts. Use when the user asks to make a sexy idea high-end, compliant, editorial, restrained, fashion-led, or usable for image2 without targeting soft porn, real-person sexualization, minor-coded aesthetics, or safety bypassing.
+description: 改写低俗性感人像需求为高端合规版本，用于用户提出的想法过于直白、低俗、性感、风险高或品味不佳，需要改写为成熟、原创、非露骨、时尚化、可安全用于 Image2 的提示词时。
 ---
 
 # Image2 Aesthetic Rewriter

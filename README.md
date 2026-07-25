@@ -2,7 +2,7 @@
 
 面向 Image2 / GPT Image 2 的中文人像提示词 Skill 集合，用于把人物、五官、身形、服装、场景、动作、光线、镜头和画幅整理成稳定、清晰、可直接使用的生图提示词。
 
-仓库当前提供 **10 个 Skill**，覆盖通用人像导演、固定字段 Prompt、成人魅力写真、美学改写、服装 Lookbook、婚纱、体育场馆、人物海报、人物设定图和失败修复。默认处理原创、成年、非露骨的人像需求；用户提供安全的明确设定时，优先保留用户设定。
+仓库当前提供 **11 个 Skill**，覆盖通用人像导演、创意提示词生成、固定字段 Prompt、成人魅力写真、美学改写、服装 Lookbook、婚纱、体育场馆、人物海报、人物设定图和失败修复。默认处理原创、成年、非露骨的人像需求；用户提供安全的明确设定时，优先保留用户设定。
 
 ## 快速开始
 
@@ -25,6 +25,7 @@
 | Skill | 适合的需求 |
 | --- | --- |
 | [`$image2-portrait-director`](skills/image2-portrait-director/SKILL.md) | 不确定路线，希望先选择摄影风格、视觉 Route 或专业 Skill |
+| [`$image2-portrait-prompt-crafter`](skills/image2-portrait-prompt-crafter/SKILL.md) | 一句话描述 → 创意人像提示词，含九大维度知识库与专业摄影参数 |
 | [`$image2-structured-portrait-prompt`](skills/image2-structured-portrait-prompt/SKILL.md) | 把完整或零散方向整理成固定 16 字段清单和一段完整 Prompt |
 | [`$image2-adult-glamour-studio`](skills/image2-adult-glamour-studio/SKILL.md) | 高级女性人像、魅力写真、时尚 editorial、商业肖像、电影感人像 |
 | [`$image2-aesthetic-rewriter`](skills/image2-aesthetic-rewriter/SKILL.md) | 把粗糙、低俗、风险高或容易失败的想法改成成熟高级版本 |
@@ -35,7 +36,7 @@
 | [`$image2-character-reference-sheet`](skills/image2-character-reference-sheet/SKILL.md) | 人物三视图、全身转面、面部特写和服装材质设定板 |
 | [`$image2-risk-debugger`](skills/image2-risk-debugger/SKILL.md) | 提示词被拒、结果太保守、脸偏幼、构图太擦边、身体或手部变形 |
 
-## 10 个 Skill
+## 11 个 Skill
 
 ### `$image2-portrait-director`｜人像导演
 
@@ -43,6 +44,14 @@
 
 ```text
 使用 $image2-portrait-director，为“清冷书店阅读生活照”选择合适路线，要求落地窗自然光、半身到大腿、9:16。
+```
+
+### `$image2-portrait-prompt-crafter`｜创意人像提示词生成
+
+根据一句话描述或零散灵感，结合专业摄影知识库（人物特征、构图、光线、焦段、姿势、场景、服装、风格、后期九大维度，240+ 条目），生成创意性、画面感强的人像提示词。输出包含画面构想、结构化标签、完整 Image2 提示词和负面提示词四部分。
+
+```text
+使用 $image2-portrait-prompt-crafter，生成一张穿白裙的女生在樱花树下的人像提示词。
 ```
 
 ### `$image2-structured-portrait-prompt`｜结构化人像提示词
@@ -161,6 +170,7 @@
 
 特殊输出：
 
+- `$image2-portrait-prompt-crafter`：画面构想 + 结构化标签（8 维度）+ 完整 Image2 提示词 + 负面提示词。
 - `$image2-structured-portrait-prompt`：固定 16 字段清单 + 最终中文提示词 + 负面限制词 + 可选变化参数。
 - `$image2-aesthetic-rewriter`：在导演扩展中提供保守、平衡、表现力三个变体。
 - `$image2-risk-debugger`：增加诊断结果与修复策略。

@@ -1,6 +1,6 @@
 ﻿---
 name: image2-risk-debugger
-description: Diagnose rejected, over-conservative, too-risky, too-young-looking, malformed, or low-quality adult glamour and fashion prompts for GPT Image 2 / Image2, then produce compliant repair prompts. Use when Image2 refuses a prompt, makes the image too conservative, looks minor-coded, becomes too suggestive, distorts anatomy, loses style, or needs safer high-end revision.
+description: 诊断并修复有问题的人像提示词，用于 Image2 拒绝生成、输出过于保守、人物显幼态、提示词过于暴露、人体结构畸形、风格丢失或需要更安全的高端修订版本时。
 ---
 
 # Image2 Risk Debugger

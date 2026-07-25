@@ -1,6 +1,6 @@
 ﻿---
 name: image2-character-reference-sheet
-description: Create professional photorealistic character reference sheet, full-body turnaround, three-view character sheet, outfit detail sheet, and realistic face-detail prompt outputs for GPT Image 2 / Image2. Use when Codex needs one large image containing an original adult character's full-body front view, side view, back view, mandatory face close-up callout, consistent clothing, hairstyle, proportions, materials, accessories, and readable design-board layout while preserving the same adult, safe, non-explicit Image2 glamour/fashion defaults and anchors used by the existing skills.
+description: 生成角色参考表与三视图提示词，用于需要一张图包含原创成年角色全身正面、侧面、背面及面部特写的设定参考时，保持服装、发型、比例、材质、配饰一致，采用设计稿版式布局。
 ---
 
 # Image2 Character Reference Sheet

@@ -1,6 +1,6 @@
 ---
 name: image2-structured-portrait-prompt
-description: Use when 用户需要把完整或零散的人像摄影方向整理为固定中文字段清单，并生成可直接用于 Image2 / GPT Image 2 的完整中文生图提示词。
+description: 生成结构化人像摄影提示词，用于用户需要按固定中文字段清单（16 项）组织需求、输出严格契约格式的 Image2 中文生图提示词时，适用于批量生产、标准化商业棚拍和需要精确控制每个参数的场景。
 ---
 
 # Image2 结构化人像提示词

@@ -1,6 +1,6 @@
 ﻿---
 name: image2-adult-glamour-studio
-description: Create mature, original, non-explicit adult glamour portrait prompts for GPT Image 2 / Image2 with fashion, editorial, cinematic, or commercial portrait framing. Use for adult glamour photos, high-end female portraits, mature beauty, refined attractiveness, fashion-led body silhouette, and polished visual direction that avoids soft porn, real-person sexualization, non-consensual framing, and minor-coded aesthetics.
+description: 生成高端成人魅力人像提示词，用于需要时尚杂志、电影感、商业肖像、氛围感路线的成年原创人像时，主打精致光影、高级质感和时尚化身体表达，避免软色情、真人相似和幼态审美。
 ---
 
 # Image2 Adult Glamour Studio

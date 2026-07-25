@@ -1,6 +1,6 @@
 ﻿---
 name: image2-character-poster-cover
-description: Create complete original character poster, magazine cover, editorial cover, campaign key visual, and promotional poster prompts for GPT Image 2 / Image2. Use when Codex needs a finished poster or magazine-cover image with an original adult character, random fictional title text, cover lines, issue/date/price-like details, commercial layout, and mature non-explicit fashion/editorial styling while avoiding real brands, real magazine names, real logos, real copyright identifiers, real-person sexualization, minor-coded aesthetics, and soft-porn framing.
+description: 生成角色海报与杂志封面提示词，用于需要完整原创角色海报、杂志封面、时尚大片封面、商业主视觉时，包含虚构标题文字、封面文案、刊期价格等商业版式元素，避免真实品牌、真实杂志名和真人相似。
 ---
 
 # Image2 Character Poster Cover

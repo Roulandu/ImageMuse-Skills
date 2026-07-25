@@ -1,6 +1,6 @@
 ---
 name: image2-wedding-portrait
-description: Create Chinese wedding dress photography, bridal portrait, wedding editorial, and bridal fashion prompt outputs for GPT Image 2 / Image2. Use when Codex needs photorealistic wedding portrait prompts with adult subject defaults, optional subject/expression/body/style overrides, AI-randomized or user-specified bridal dress descriptions, iPhone straight-out or professional DSLR photo texture, and tasteful non-explicit bridal glamour.
+description: 生成婚纱新娘人像提示词，用于需要中式西式婚纱、新娘肖像、婚礼大片、婚纱时尚方向的人像时，支持主体/表情/身形/风格自定义，iPhone 直出或专业 DSLR 质感，品味级非暴露新娘魅力。
 ---
 
 # Image2 Wedding Portrait

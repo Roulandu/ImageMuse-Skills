@@ -1,6 +1,6 @@
 ---
 name: image2-portrait-director
-description: Direct Image2 portrait requests to one governed visual route and produce a contract-compliant Chinese result.
+description: 调度 Image2 人像请求到对应视觉路线并生成合规中文结果，用于用户提出人像摄影需求但未明确具体风格或路线时，统一识别需求、选择最佳生成路径并输出合同级提示词。
 ---
 
 # Image2 Portrait Director
