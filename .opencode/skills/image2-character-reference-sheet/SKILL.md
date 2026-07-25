@@ -15,12 +15,13 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes sexuality, lingerie, swimwear, private settings, real people, celebrity likeness, age-coded wording, coercive framing, or platform/social identity.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for subject, garment, scene, camera, lighting, style, and aspect-ratio choices.
-3. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the user asks for swimwear, maid/sweet fantasy styling, S-curve figure, or another matching intent.
-4. Establish locked parameters: subject, age/adult status, originality, character genre, outfit, hairstyle, photoreal face memory points, body proportion, views, detail panels, background, aspect ratio, and quality target.
-5. Default to a single horizontal photorealistic studio reference sheet with full-body front view, full-body side view, full-body back view, and 3-5 detail callout panels. One callout must be a clear face close-up used to lock the same face, hairstyle, makeup, and expression across all views.
-6. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
-7. Respect explicit safe user-specified clothing; when unspecified, use the existing default elegant slip-dress clothing anchor.
-8. Produce the shared output contract. In complete mode, place the identity anchors, required callouts, and typography fallback in **导演扩展**; in concise mode, return only the contracted prompt and negative constraints.
+3. Load `../_shared/references/image2-canvas-parameters.md` for aspect ratio, orientation, resolution/quality, image count, and output format defaults.
+4. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the user asks for swimwear, maid/sweet fantasy styling, S-curve figure, or another matching intent.
+5. Establish locked parameters: subject, age/adult status, originality, character genre, outfit, hairstyle, photoreal face memory points, body proportion, views, detail panels, background, aspect ratio, and quality target.
+6. Default to a single horizontal photorealistic studio reference sheet with full-body front view, full-body side view, full-body back view, and 3-5 detail callout panels. One callout must be a clear face close-up used to lock the same face, hairstyle, makeup, and expression across all views.
+7. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
+8. Respect explicit safe user-specified clothing; when unspecified, use the existing default elegant slip-dress clothing anchor.
+9. Produce the shared output contract. In complete mode, place the identity anchors, required callouts, and typography fallback in **导演扩展**; in concise mode, return only the contracted prompt and negative constraints.
 
 ## Defaults
 
@@ -34,7 +35,7 @@ Use this skill to create Image2 prompts for a professional photorealistic charac
 - Pose: stable neutral A-pose or relaxed natural standing posture for all views, feet visible, arms readable, body proportions aligned across views.
 - Clothing: if the user has not specified clothing, randomly choose one of these fixed Chinese clothing phrases each time: "服装为剪裁优雅的吊带睡裙，材质细腻，版型合身，贴合身体，吊带一侧肩部自然滑落。" or "服装为剪裁优雅的短款深V款高级精致浅白色吊带背心，材质细腻，版型合身，贴合身体，腰部自然漏出，吊带两侧肩部自然滑落，下半身穿着白色蕾丝边内裤，精致且高级。"; if the user explicitly specifies safe clothing, preserve that garment instead.
 - Camera: orthographic or near-orthographic design-sheet view, full-body framing, consistent scale across views, no dramatic perspective distortion.
-- Aspect ratio: default to horizontal `16:9` or `4:3`; use vertical only if the user explicitly asks.
+- Aspect ratio: default to horizontal `16:9` or `4:3`; use vertical only if the user explicitly asks. Always pair with orientation wording (e.g. `16:9横版构图`), add resolution/quality wording (`超高清，高分辨率，细节清晰`), and state explicitly that it is one single image. See `image2-canvas-parameters.md`.
 - Visual emphasis: character consistency, full-body proportions, photoreal face design, skin texture, hairstyle, outfit construction, fabric, accessories, back details, side silhouette, readable detail panels.
 - Prompt anchors: always include age, mature figure, natural posture, bright interior/light neutral background, and explicit safe clothing when provided or the random default clothing anchor when clothing is unspecified.
 - Final prompt face requirement: the **最终中文提示词** must explicitly include a clear face close-up callout outside the three full-body views, and must state that all views share the same face, hairstyle, makeup, expression logic, body proportions, outfit, colors, materials, and accessories.

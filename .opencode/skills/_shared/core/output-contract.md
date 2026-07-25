@@ -15,6 +15,8 @@ All final user-facing output is Simplified Chinese unless the user asks otherwis
 
 The final prompt includes all locked safe parameters, route additions, and supplemental defaults. Negative constraints are relevant, concise, and written in Chinese.
 
+The final Chinese prompt (最终中文提示词) must start with a canvas parameters block that covers five dimensions: aspect ratio, orientation, resolution/image quality, image count, and output format/purpose. Use the template from `../references/image2-canvas-parameters.md`. At minimum, include 比例 + 方向 + 画质描述 + 图片数量；根据场景补充用途/格式说明。标注为"补充默认值"的参数也要写进最终提示词。
+
 Machine-readable fixed-order identifiers are `intent-summary`, `locked-parameters`, `director-expansion`, `final-chinese-prompt`, `negative-constraints`, and `variation-knobs`.
 
 ## Concise mode

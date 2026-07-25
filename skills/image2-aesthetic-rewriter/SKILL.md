@@ -15,10 +15,11 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 
 1. Read the user request and identify the original intent in one sentence.
 2. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes sexuality, nudity, lingerie, swimwear, private settings, real people, celebrity likeness, age-coded wording, coercive framing, or platform/social identity.
-3. Load `../_shared/references/rewrite-vocabulary.md` when rewriting crude wording into aesthetic language.
-4. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the original request explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the original request or safe rewrite target matches swimwear, maid/sweet styling, over-the-shoulder gaze, or S-curve figure.
-5. Refuse or redirect any request whose core target is explicit sexual content, soft porn, real-person sexualization, non-consensual framing, or minor-coded sexualization.
-6. If the request is supportable, rewrite it using the shared output contract and offer exactly three safe prompt variants: **保守**, **平衡**, and **表现力**. They must keep the same locked safe intent; only styling intensity, composition, and lighting may vary.
+  3. Load `../_shared/references/rewrite-vocabulary.md` when rewriting crude wording into aesthetic language.
+  4. Load `../_shared/references/image2-canvas-parameters.md` for aspect ratio, orientation, resolution/quality, image count, and output format defaults.
+  5. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the original request explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the original request or safe rewrite target matches swimwear, maid/sweet styling, over-the-shoulder gaze, or S-curve figure.
+  6. Refuse or redirect any request whose core target is explicit sexual content, soft porn, real-person sexualization, non-consensual framing, or minor-coded sexualization.
+  7. If the request is supportable, rewrite it using the shared output contract and offer exactly three safe prompt variants: **保守**, **平衡**, and **表现力**. They must keep the same locked safe intent; only styling intensity, composition, and lighting may vary.
 
 ## Rewrite Rules
 
@@ -29,6 +30,7 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 - Replace desire words with aesthetic intent: mature confidence, refined beauty, healthy proportions, graceful posture, the default elegant slip-dress garment when clothing is unspecified, editorial light, polished commercial framing.
 - Replace body-part targeting with whole-body or garment-context language. If body shape matters, describe proportion, posture, silhouette, and fit instead of close-ups or fixation.
 - Replace intimate or risky scenes with public, commercial, lifestyle, studio, or clearly non-exploitative settings.
+- For blank canvas parameters, apply defaults from `image2-canvas-parameters.md` and mark them as supplemental defaults; pair aspect ratio with orientation wording, include resolution/quality and image count.
 - Keep camera language neutral or editorial: eye-level, slight high editorial angle, natural perspective, fashion portrait, front-facing or slight three-quarter view toward camera, half-body, full-body, catalog composition.
 - Add negative constraints when risk is present, but keep them concise and relevant.
 - Preserve supportable mature body-proportion, natural posture, bright interior, explicit safe clothing when provided, or the default elegant slip-dress clothing anchor when clothing is unspecified, plus matching intent anchors by using the required prompt anchors.

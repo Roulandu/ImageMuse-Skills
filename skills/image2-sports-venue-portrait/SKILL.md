@@ -21,7 +21,7 @@ Use this skill to create Image2 prompts for 球场宝贝写真、球队宝贝写
 - Subject override: if the user enters another safe subject, replace the default subject with the user's subject description.
 - Expression default: `自然的笑容。`
 - Expression override: if the user enters another safe expression, replace the default expression with the user's expression description.
-- Aspect ratio and resolution default: `3:4，照片分辨率8k`
+- Aspect ratio and resolution default: `3:4竖版构图，超高清，高分辨率，细节清晰`。See `../_shared/references/image2-canvas-parameters.md` for orientation, image count, and output format defaults.
 - Originality guard: keep the person original and adult. Do not generate prompts that imitate a real celebrity, public figure, influencer, private person, uploaded face, or social-profile identity.
 
 ## Outfit Rules
@@ -115,7 +115,7 @@ When image style is available, return:
 4. **负面限制词**
 5. **可选变化参数**
 
-The **最终中文提示词** must include the locked subject, expression, body prompt, outfit description with the required suffix, team or venue background, selected or user-provided image style, and `3:4，照片分辨率8k` unless the user explicitly overrides the aspect ratio or resolution.
+The **最终中文提示词** must include the locked subject, expression, body prompt, outfit description with the required suffix, team or venue background, selected or user-provided image style, and canvas parameters (aspect ratio + orientation + resolution/quality + image count) unless the user explicitly overrides them. Default canvas wording: `3:4竖版构图，超高清，高分辨率，细节清晰，生成1张独立图片，不要合并，不要拼图`。
 
 ## 负面限制词起点
 

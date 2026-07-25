@@ -10,7 +10,7 @@ Every director route accepts this canonical parameter record:
 | `action` | 动作 | Preserve a safe pose or activity. |
 | `camera` | 镜头 | Covers framing, angle, lens, and viewpoint. |
 | `lighting` | 光线 | Covers time, source, direction, and quality. |
-| `canvas` | 画幅 | Covers aspect ratio, resolution, and crop. |
+| `canvas` | 画幅 | Covers aspect ratio, orientation, resolution/image quality, image count, and output format/purpose. See `../references/image2-canvas-parameters.md` for the full reference. |
 | `purpose` | 用途 | Covers delivery context such as editorial or commerce. |
 | `outputMode` | 输出模式 | Selects `complete` or `concise`. |
 

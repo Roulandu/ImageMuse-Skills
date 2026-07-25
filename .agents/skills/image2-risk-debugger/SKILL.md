@@ -11,9 +11,10 @@ Use this skill when the user provides a rejected prompt, a poor result descripti
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` for red lines and gray zones.
 2. Load `../_shared/references/failure-repair-recipes.md` for diagnosis and repair patterns.
-3. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
-4. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in the repaired **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the prompt explicitly specifies that direction or asks for a random face shape/hairstyle; add matching intent anchors when repairing swimwear, maid/sweet styling, 回眸/side-turn posture, S-curve/body-shape issues, stiffness, or weak fashion tension.
-5. Classify the failure, preserve supportable intent, and return the smallest repair plus a safe alternative when necessary.
+3. Load `../_shared/references/image2-canvas-parameters.md` for aspect ratio, orientation, resolution/quality, image count, and output format defaults.
+  4. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
+  5. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in the repaired **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the prompt explicitly specifies that direction or asks for a random face shape/hairstyle; add matching intent anchors when repairing swimwear, maid/sweet styling, 回眸/side-turn posture, S-curve/body-shape issues, stiffness, or weak fashion tension.
+  6. Classify the failure, preserve supportable intent, and return the smallest repair plus a safe alternative when necessary.
 
 ## Diagnosis Buckets
 

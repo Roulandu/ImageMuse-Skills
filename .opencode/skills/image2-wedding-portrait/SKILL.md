@@ -23,7 +23,7 @@ Use this skill to create Image2 prompts for wedding dress photography, bridal po
 - Subject override: if the user enters another safe subject, replace the default subject with the user's subject description.
 - Expression default: `自然的笑容。`
 - Expression override: if the user enters another safe expression, replace the default expression with the user's expression description.
-- Aspect ratio and resolution default: `3:4，照片分辨率8k`
+- Aspect ratio and resolution default: `3:4竖版构图，超高清，高分辨率，细节清晰`。See `../_shared/references/image2-canvas-parameters.md` for orientation, image count, and output format defaults.
 - Wedding dress clothing: if the user specifies wedding dress clothing, preserve the user's clothing description. If unspecified, randomly generate a bridal dress description each time, including silhouette, neckline, fabric, embroidery or lace, veil, accessories, train length, fit, and scene-appropriate styling.
 - Required clothing suffix: every wedding dress clothing description must end with this exact sentence: `女性穿着得体，衣着设计大方性感展现魅力。`
 - Treat the clothing suffix as tasteful adult bridal fashion language, not as an instruction for nudity, exposure, private-area emphasis, or body-part close-ups.
@@ -74,7 +74,7 @@ When image style is available, return:
 5. **负面限制词**
 6. **可选变化参数**
 
-The **最终中文提示词** must include the locked subject, expression, body prompt, wedding dress clothing description with the required suffix, selected or user-provided image style, and `3:4，照片分辨率8k` unless the user explicitly overrides the aspect ratio or resolution.
+The **最终中文提示词** must include the locked subject, expression, body prompt, wedding dress clothing description with the required suffix, selected or user-provided image style, and canvas parameters (aspect ratio + orientation + resolution/quality + image count) unless the user explicitly overrides them. Default canvas wording: `3:4竖版构图，超高清，高分辨率，细节清晰，生成1张独立图片，不要合并，不要拼图`。
 
 ## 负面限制词起点
 

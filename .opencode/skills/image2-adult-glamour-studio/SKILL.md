@@ -14,11 +14,12 @@ Read `../_shared/core/parameter-schema.md` and `../_shared/core/output-contract.
 Use this skill to create Image2 prompts for adult glamour portraits where the main value is refined attractiveness, styling, posture, lighting, and editorial taste. This is not a soft-porn prompt generator.
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` if the user request includes risk-sensitive elements.
-2. Load `../_shared/references/portrait-fashion-parameters.md` for parameter choices when the user wants a structured prompt or provides multiple controls.
-3. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the user asks for sweet/maid styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
-4. Establish locked parameters: subject, age/adult status, originality, style, scene, garment, posture, camera, lighting, aspect ratio, and quality target.
-5. Fill missing parameters conservatively with mature, non-explicit defaults. For blank posture or camera direction, default to a front-facing or slight three-quarter camera-facing subject, an eye-level or slight high editorial camera, and half-body or three-quarter-body portrait framing.
-6. Produce the shared output contract. In complete mode, use its fixed order; this skill's glamour-specific decisions belong in **导演扩展**. In concise mode, return only the contracted prompt and negative constraints.
+  2. Load `../_shared/references/portrait-fashion-parameters.md` for parameter choices when the user wants a structured prompt or provides multiple controls.
+  3. Load `../_shared/references/image2-canvas-parameters.md` for aspect ratio, orientation, resolution/quality, image count, and output format defaults.
+  4. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the user asks for sweet/maid styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
+  5. Establish locked parameters: subject, age/adult status, originality, style, scene, garment, posture, camera, lighting, aspect ratio, and quality target.
+  6. Fill missing parameters conservatively with mature, non-explicit defaults. For blank posture or camera direction, default to a front-facing or slight three-quarter camera-facing subject, an eye-level or slight high editorial camera, and half-body or three-quarter-body portrait framing. For blank canvas parameters, apply defaults from `image2-canvas-parameters.md` and mark them as supplemental defaults.
+  7. Produce the shared output contract. In complete mode, use its fixed order; this skill's glamour-specific decisions belong in **导演扩展**. In concise mode, return only the contracted prompt and negative constraints.
 
 ## Defaults
 
@@ -29,6 +30,7 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 - Pose: natural standing or seated posture, relaxed shoulders, front-facing toward camera or graceful slight three-quarter turn while the face and body still naturally orient toward camera.
 - Clothing: if the user has not specified clothing, randomly choose one of these fixed Chinese clothing phrases each time: "服装为剪裁优雅的吊带睡裙，材质细腻，版型合身，贴合身体，吊带一侧肩部自然滑落。" or "服装为剪裁优雅的短款深V款高级精致浅白色吊带背心，材质细腻，版型合身，贴合身体，腰部自然漏出，吊带两侧肩部自然滑落，下半身穿着白色蕾丝边内裤，精致且高级。"; if the user explicitly specifies safe clothing, preserve that garment instead.
 - Camera: portrait lens, eye-level or slightly elevated editorial angle by default, half-body or three-quarter-body portrait framing. Use full-body/full-length framing only when the user explicitly asks for it.
+- Canvas: default to `3:4竖版构图，超高清，高分辨率，细节清晰，适合人像写真` and `生成1张独立图片，不要合并，不要拼图`; override with user-locked values. See `image2-canvas-parameters.md` for defaults by scene type.
 - Visual emphasis: face, expression, styling, garment fit, light, silhouette, color harmony, and overall composition.
 - Prompt anchors: always include age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the random default clothing anchor from `required-prompt-anchors.md` when clothing is unspecified; add maid/sweet fantasy styling, over-the-shoulder gaze, and soft S-curve figure only when requested or useful for the user's stated intent.
 - Figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include exactly one randomly chosen mature-figure anchor from `required-prompt-anchors.md`.

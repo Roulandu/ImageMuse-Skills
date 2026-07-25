@@ -14,8 +14,9 @@ Before making a decision, load these documents in order:
 3. `../_shared/core/conflict-resolution.md`
 4. `../_shared/core/quality-gates.md`
 5. `../_shared/core/output-contract.md`
-6. `../_shared/routes/route-registry.md`
-7. Exactly one matching file from `../_shared/routes/{routeId}.md`.
+6. `../_shared/references/image2-canvas-parameters.md`
+7. `../_shared/routes/route-registry.md`
+8. Exactly one matching file from `../_shared/routes/{routeId}.md`.
 
 ## Direction workflow
 

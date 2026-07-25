@@ -27,7 +27,7 @@ Respect safe user-specified posture and camera direction. When posture or camera
 - Camera: eye-level portrait or slight high editorial angle by default, half-body, three-quarter, full-body, catalog view, mirror view with face/garment/setting included.
 - Lighting: soft window light, natural daylight, low-contrast studio light, warm fitting-room light, cinematic softbox, clean commercial lighting.
 - Palette: low-saturation neutrals, cream and gray, rose and ivory, cool gray-blue, black and white, resort blue and white, jewel-tone evening palette.
-- Output ratio: 9:16, 3:4, 2:3, 1:1, 16:9.
+- Output ratio: 9:16, 3:4, 2:3, 1:1, 16:9. See `image2-canvas-parameters.md` for full canvas specification including orientation, resolution/quality, image count, and output format/purpose defaults.
 
 ## Quality Additions
 

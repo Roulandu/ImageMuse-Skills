@@ -11,14 +11,15 @@ Use this skill for adult fashion prompts involving lingerie, bralette styling, s
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` for safety boundaries.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for garment, scene, camera, and variation controls.
-3. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
-4. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词** as garment-fit, whole-body silhouette, lookbook posture, and bright interior styling direction, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add the swimwear Lookbook anchor whenever the user asks for swimwear, beach/pool, resort, summer vacation, or swim catalog imagery.
-5. Convert risky private or soft-porn cues into commercial fashion context: catalog, lookbook, fitting appointment, product confirmation, studio, boutique fitting room, resort swimwear, or editorial styling.
-6. Make the model an original adult East Asian woman by default, not a real person or celebrity, and render this in Chinese prompts as "原创成年东方女性，20岁及以上".
-7. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
-8. Respect explicit safe user-specified posture and camera direction. If missing, default to a front-facing or slight three-quarter camera-facing model, an eye-level or slight high editorial camera, and half-body or three-quarter-body Lookbook framing.
-9. Keep the frame broad enough to show the face, garment, posture, and setting. Default to half-body or three-quarter-body composition unless the user explicitly asks for full-body/full-length framing or a catalog need requires it. Do not crop around private body areas or use low-angle body-gaze framing.
-10. Produce the output contract below.
+3. Load `../_shared/references/image2-canvas-parameters.md` for aspect ratio, orientation, resolution/quality, image count, and output format defaults.
+4. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
+5. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词** as garment-fit, whole-body silhouette, lookbook posture, and bright interior styling direction, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add the swimwear Lookbook anchor whenever the user asks for swimwear, beach/pool, resort, summer vacation, or swim catalog imagery.
+6. Convert risky private or soft-porn cues into commercial fashion context: catalog, lookbook, fitting appointment, product confirmation, studio, boutique fitting room, resort swimwear, or editorial styling.
+7. Make the model an original adult East Asian woman by default, not a real person or celebrity, and render this in Chinese prompts as "原创成年东方女性，20岁及以上".
+8. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
+9. Respect explicit safe user-specified posture and camera direction. If missing, default to a front-facing or slight three-quarter camera-facing model, an eye-level or slight high editorial camera, and half-body or three-quarter-body Lookbook framing. For blank canvas parameters, apply defaults from `image2-canvas-parameters.md` and mark them as supplemental defaults.
+10. Keep the frame broad enough to show the face, garment, posture, and setting. Default to half-body or three-quarter-body composition unless the user explicitly asks for full-body/full-length framing or a catalog need requires it. Do not crop around private body areas or use low-angle body-gaze framing.
+11. Produce the output contract below.
 
 ## Garment-First Rules
 
