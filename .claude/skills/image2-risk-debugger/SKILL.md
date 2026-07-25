@@ -49,4 +49,11 @@ The **最终中文提示词** must fully carry the triggered required prompt anc
 
 Do not provide instructions to bypass safety checks. Do not repair a prompt by preserving explicit, soft-porn, minor-coded, real-person sexualized, coercive, voyeuristic, or private-leak intent. Redirect those requests toward mature, original, non-explicit fashion/editorial imagery.
 
+## 参考知识库
+
+生成提示词时可参考以下共享知识库模块（位于 `_shared/knowledge/`），根据用户需求选择合适的参数和表达方式：
+
+- **后期与质感**：`../_shared/knowledge/post-processing.md`
+- **光线与布光**：`../_shared/knowledge/lighting.md`
+- **构图法则**：`../_shared/knowledge/composition.md`
 

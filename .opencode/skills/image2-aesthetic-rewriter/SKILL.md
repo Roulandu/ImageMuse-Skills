@@ -55,4 +55,12 @@ The **最终中文提示词** must fully carry the triggered required prompt anc
 
 If the user asks to keep soft-porn, explicit, minor-coded, real-person sexualized, coercive, or safety-bypass intent, briefly refuse that part and offer a mature fashion/editorial alternative. Do not output a near-equivalent prompt that still centers sexual availability, exposed private body areas, humiliation, pressure, intoxication, private leaks, or voyeurism.
 
+## 参考知识库
+
+生成提示词时可参考以下共享知识库模块（位于 `_shared/knowledge/`），根据用户需求选择合适的参数和表达方式：
+
+- **风格与色调**：`../_shared/knowledge/styles.md`
+- **光线与布光**：`../_shared/knowledge/lighting.md`
+- **构图法则**：`../_shared/knowledge/composition.md`
+- **后期与质感**：`../_shared/knowledge/post-processing.md`
 

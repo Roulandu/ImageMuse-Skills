@@ -64,4 +64,15 @@ The **最终中文提示词** must fully carry the triggered required prompt anc
 
 Use relevant constraints only, written in Chinese: 露骨裸体、私密部位暴露、透明裸露、性化姿势、身体局部特写、低机位身体凝视、胁迫或窥视视角、未成年感、学生元素、真实名人相似、真实品牌 logo、水印、身体结构错误、手指畸形、界面文字乱码。
 
+## 参考知识库
+
+生成提示词时可参考以下共享知识库模块（位于 `_shared/knowledge/`），根据用户需求选择合适的参数和表达方式：
+
+- **人物特征**：`../_shared/knowledge/character-features.md`
+- **构图法则**：`../_shared/knowledge/composition.md`
+- **光线与布光**：`../_shared/knowledge/lighting.md`
+- **焦段与镜头语言**：`../_shared/knowledge/focal-length.md`
+- **姿势与体态**：`../_shared/knowledge/poses.md`
+- **服装与造型**：`../_shared/knowledge/fashion.md`
+- **风格与色调**：`../_shared/knowledge/styles.md`
 

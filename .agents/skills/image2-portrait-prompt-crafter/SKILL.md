@@ -1,6 +1,6 @@
 ---
 name: image2-portrait-prompt-crafter
-description: Use when 用户给出一句人像画面描述或零散需求，需要生成结构化、专业、可直接用于 Image2 / GPT Image 2 的中文人像摄影提示词，覆盖人物特征、构图、光线、焦段、姿势、场景、服装、风格和后期。
+description: 生成创意人像摄影提示词，用于用户给出一句话画面描述或零散灵感，需要结合专业摄影知识库（人物/构图/光线/焦段/姿势/场景/服装/风格/后期九大维度）输出创意性、画面感强的 Image2 中文提示词时。
 ---
 
 # image2-portrait-prompt-crafter
@@ -1290,3 +1290,18 @@ description: Use when 用户给出一句人像画面描述或零散需求，需�
 ---
 
 > **使用提示：** 构建 prompt 时从风格模块选 1-2 种整体风格，构图/光线/焦段各 1-2 个核心要素，姿势/服装/场景匹配细节，最后加 1-2 个后期质感关键词。
+
+## 参考知识库
+
+生成提示词时可参考以下共享知识库模块（位于 `_shared/knowledge/`），根据用户需求选择合适的参数和表达方式：
+
+- **人物特征**：`../_shared/knowledge/character-features.md`
+- **构图法则**：`../_shared/knowledge/composition.md`
+- **光线与布光**：`../_shared/knowledge/lighting.md`
+- **焦段与镜头语言**：`../_shared/knowledge/focal-length.md`
+- **姿势与体态**：`../_shared/knowledge/poses.md`
+- **场景与环境**：`../_shared/knowledge/scenes.md`
+- **服装与造型**：`../_shared/knowledge/fashion.md`
+- **风格与色调**：`../_shared/knowledge/styles.md`
+- **后期与质感**：`../_shared/knowledge/post-processing.md`
+

@@ -61,4 +61,15 @@ The **最终中文提示词** must fully carry the triggered required prompt anc
 
 Do not create prompts that center explicit sexual content, soft porn, real-person sexualization, coercion, voyeurism, intoxication, private leaks, minor-coded features, school/student cues, or body-part close-ups. If the request contains these, use `$image2-aesthetic-rewriter` style reframing before writing the final prompt.
 
+## 参考知识库
+
+生成提示词时可参考以下共享知识库模块（位于 `_shared/knowledge/`），根据用户需求选择合适的参数和表达方式：
+
+- **人物特征**：`../_shared/knowledge/character-features.md`
+- **构图法则**：`../_shared/knowledge/composition.md`
+- **光线与布光**：`../_shared/knowledge/lighting.md`
+- **焦段与镜头语言**：`../_shared/knowledge/focal-length.md`
+- **姿势与体态**：`../_shared/knowledge/poses.md`
+- **风格与色调**：`../_shared/knowledge/styles.md`
+- **后期与质感**：`../_shared/knowledge/post-processing.md`
 

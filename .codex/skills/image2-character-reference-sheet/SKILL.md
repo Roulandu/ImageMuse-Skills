@@ -81,4 +81,11 @@ The **负面限制词** must include relevant safety and quality constraints, in
 
 Do not create prompts that center explicit sexual content, soft porn, real-person sexualization, coercion, voyeurism, intoxication, private leaks, minor-coded features, school/student cues, or body-part close-ups. If the request contains these, use `$image2-aesthetic-rewriter` style reframing before writing the final prompt.
 
+## 参考知识库
+
+生成提示词时可参考以下共享知识库模块（位于 `_shared/knowledge/`），根据用户需求选择合适的参数和表达方式：
+
+- **人物特征**：`../_shared/knowledge/character-features.md`
+- **服装与造型**：`../_shared/knowledge/fashion.md`
+- **姿势与体态**：`../_shared/knowledge/poses.md`
 

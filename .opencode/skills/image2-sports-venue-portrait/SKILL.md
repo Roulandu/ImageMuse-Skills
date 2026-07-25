@@ -1,13 +1,13 @@
----
+﻿---
 name: image2-sports-venue-portrait
-description: 生成运动场馆人像提示词，用于需要体育场馆、赛场、球队配色、赛事故事感的成年原创人像时，结合运动项目、场馆环境、队色元素和事件叙事生成提示词。
+description: 鐢熸垚杩愬姩鍦洪浜哄儚鎻愮ず璇嶏紝鐢ㄤ簬闇€瑕佷綋鑲插満棣嗐€佽禌鍦恒€佺悆闃熼厤鑹层€佽禌浜嬫晠浜嬫劅鐨勬垚骞村師鍒涗汉鍍忔椂锛岀粨鍚堣繍鍔ㄩ」鐩€佸満棣嗙幆澧冦€侀槦鑹插厓绱犲拰浜嬩欢鍙欎簨鐢熸垚鎻愮ず璇嶃€?
 ---
 
 # Image2 Sports Venue Portrait
 
 ## Workflow
 
-Use this skill to create Image2 prompts for 球场宝贝写真、球队宝贝写真、啦啦队写真、体育场馆写真、篮球馆写真、足球场写真、比基尼球场写真, and other adult sports-themed portrait prompts. The output should be tasteful, adult, photorealistic, and non-explicit.
+Use this skill to create Image2 prompts for 鐞冨満瀹濊礉鍐欑湡銆佺悆闃熷疂璐濆啓鐪熴€佸暒鍟﹂槦鍐欑湡銆佷綋鑲插満棣嗗啓鐪熴€佺鐞冮鍐欑湡銆佽冻鐞冨満鍐欑湡銆佹瘮鍩哄凹鐞冨満鍐欑湡, and other adult sports-themed portrait prompts. The output should be tasteful, adult, photorealistic, and non-explicit.
 
 1. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
 2. Establish locked parameters: subject, expression, body prompt, outfit, image style, sport type, venue, team-color palette, event story, aspect ratio, and resolution.
@@ -17,20 +17,20 @@ Use this skill to create Image2 prompts for 球场宝贝写真、球队宝贝写
 
 ## Defaults And Overrides
 
-- Subject default: `20岁出头的中国清秀甜美美人。`
+- Subject default: `20宀佸嚭澶寸殑涓浗娓呯鐢滅編缇庝汉銆俙
 - Subject override: if the user enters another safe subject, replace the default subject with the user's subject description.
-- Expression default: `自然的笑容。`
+- Expression default: `鑷劧鐨勭瑧瀹广€俙
 - Expression override: if the user enters another safe expression, replace the default expression with the user's expression description.
-- Aspect ratio and resolution default: `3:4，照片分辨率8k`
+- Aspect ratio and resolution default: `3:4锛岀収鐗囧垎杈ㄧ巼8k`
 - Originality guard: keep the person original and adult. Do not generate prompts that imitate a real celebrity, public figure, influencer, private person, uploaded face, or social-profile identity.
 
 ## Outfit Rules
 
 Default outfit options:
 
-1. `球队宝贝服装`
-2. `比基尼`
-3. `啦啦队服装`
+1. `鐞冮槦瀹濊礉鏈嶈`
+2. `姣斿熀灏糮
+3. `鍟﹀暒闃熸湇瑁卄
 
 If the user chooses one of the default outfit options, expand it into a complete outfit prompt with color, fabric, fit, accessories, team-themed details, and sports venue suitability.
 
@@ -40,7 +40,7 @@ If the user specifies another safe outfit, preserve the user's outfit direction 
 
 Every outfit description must end with this exact sentence:
 
-`女性穿着得体，衣着设计大方性感展现魅力。`
+`濂虫€х┛鐫€寰椾綋锛岃。鐫€璁捐澶ф柟鎬ф劅灞曠幇榄呭姏銆俙
 
 Treat the outfit suffix as tasteful adult fashion language, not as an instruction for nudity, exposure, private-area emphasis, voyeurism, or body-part close-ups.
 
@@ -48,8 +48,8 @@ Treat the outfit suffix as tasteful adult fashion language, not as an instructio
 
 If the user does not specify an image style, ask the user to choose one of these two exact options:
 
-1. `整张照片必须呈现着iPhone手机直出的拍摄质感，不要出现AI痕迹，不要过度磨皮，不要美颜滤镜`
-2. `整张照片必须呈现着专业单反相机的写真拍摄质感，不要出现AI痕迹，不要过度磨皮，不要过度美颜滤镜`
+1. `鏁村紶鐓х墖蹇呴』鍛堢幇鐫€iPhone鎵嬫満鐩村嚭鐨勬媿鎽勮川鎰燂紝涓嶈鍑虹幇AI鐥曡抗锛屼笉瑕佽繃搴︾（鐨紝涓嶈缇庨婊ら暅`
+2. `鏁村紶鐓х墖蹇呴』鍛堢幇鐫€涓撲笟鍗曞弽鐩告満鐨勫啓鐪熸媿鎽勮川鎰燂紝涓嶈鍑虹幇AI鐥曡抗锛屼笉瑕佽繃搴︾（鐨紝涓嶈杩囧害缇庨婊ら暅`
 
 If the user specifies another safe image style, use the user's style description instead of the two defaults.
 
@@ -57,14 +57,14 @@ If the user specifies another safe image style, use the user's style description
 
 Default body prompt:
 
-`身材:人物拥有完美的身材。上围尺寸正常，腰也十分的纤细。`
+`韬潗:浜虹墿鎷ユ湁瀹岀編鐨勮韩鏉愩€備笂鍥村昂瀵告甯革紝鑵颁篃鍗佸垎鐨勭氦缁嗐€俙
 
 Offer these bust-size options when the user asks for body choices or does not specify the body prompt:
 
-- 正常：`身材:人物拥有完美的身材。上围尺寸正常，腰也十分的纤细。`
-- 偏大：`身材:人物拥有完美的身材。上围尺寸偏大，腰也十分的纤细。`
-- 很大：`身材:人物拥有完美的身材。上围尺寸很大，腰也十分的纤细。`
-- 巨大：`身材:人物拥有极度夸张的身材。上围尺寸巨大并且自然下垂，绝对不是圆球假体胸型，腰也十分的纤细。`
+- 姝ｅ父锛歚韬潗:浜虹墿鎷ユ湁瀹岀編鐨勮韩鏉愩€備笂鍥村昂瀵告甯革紝鑵颁篃鍗佸垎鐨勭氦缁嗐€俙
+- 鍋忓ぇ锛歚韬潗:浜虹墿鎷ユ湁瀹岀編鐨勮韩鏉愩€備笂鍥村昂瀵稿亸澶э紝鑵颁篃鍗佸垎鐨勭氦缁嗐€俙
+- 寰堝ぇ锛歚韬潗:浜虹墿鎷ユ湁瀹岀編鐨勮韩鏉愩€備笂鍥村昂瀵稿緢澶э紝鑵颁篃鍗佸垎鐨勭氦缁嗐€俙
+- 宸ㄥぇ锛歚韬潗:浜虹墿鎷ユ湁鏋佸害澶稿紶鐨勮韩鏉愩€備笂鍥村昂瀵稿法澶у苟涓旇嚜鐒朵笅鍨傦紝缁濆涓嶆槸鍦嗙悆鍋囦綋鑳稿瀷锛岃叞涔熷崄鍒嗙殑绾ょ粏銆俙
 
 If the user enters a custom body prompt or body description, generate the body prompt according to the user's description.
 
@@ -72,11 +72,11 @@ Use body descriptions only as adult whole-person silhouette, sports portrait sty
 
 ## Team And Background Rules
 
-Lock the sport type (for example basketball, football, baseball, volleyball, tennis, or athletics), venue, and a team-color palette of two or three colors. Treat color as atmosphere, clothing trim, and lighting direction only—never as a claim of affiliation.
+Lock the sport type (for example basketball, football, baseball, volleyball, tennis, or athletics), venue, and a team-color palette of two or three colors. Treat color as atmosphere, clothing trim, and lighting direction only鈥攏ever as a claim of affiliation.
 
-Choose or preserve one event-story beat: **赛前**（arrival, warm-up, tunnel, calm anticipation）, **赛中**（sideline energy, performance break, crowd atmosphere, no implied participation), or **赛后**（cool-down, emptying stands, reflective arena light). Keep the story beat consistent with lighting, crowd density, outfit practicality, and pose.
+Choose or preserve one event-story beat: **璧涘墠**锛坅rrival, warm-up, tunnel, calm anticipation锛? **璧涗腑**锛坰ideline energy, performance break, crowd atmosphere, no implied participation), or **璧涘悗**锛坈ool-down, emptying stands, reflective arena light). Keep the story beat consistent with lighting, crowd density, outfit practicality, and pose.
 
-Ask or encourage the user to enter a favorite team when the team is missing, for example `NBA-马刺队` or `西甲-巴塞罗那`.
+Ask or encourage the user to enter a favorite team when the team is missing, for example `NBA-椹埡闃焋 or `瑗跨敳-宸村缃楅偅`.
 
 If the user specifies a team, generate a corresponding venue background description based on the sport and team context:
 
@@ -104,23 +104,36 @@ Return all user-facing content in Simplified Chinese unless the user explicitly 
 
 If image style is missing, return only:
 
-1. **需要选择图片风格**
-2. **可选风格**
+1. **闇€瑕侀€夋嫨鍥剧墖椋庢牸**
+2. **鍙€夐鏍?*
 
 When image style is available, return:
 
-1. **意图摘要**
-2. **已锁定参数**
-3. **最终中文提示词**
-4. **负面限制词**
-5. **可选变化参数**
+1. **鎰忓浘鎽樿**
+2. **宸查攣瀹氬弬鏁?*
+3. **鏈€缁堜腑鏂囨彁绀鸿瘝**
+4. **璐熼潰闄愬埗璇?*
+5. **鍙€夊彉鍖栧弬鏁?*
 
-The **最终中文提示词** must include the locked subject, expression, body prompt, outfit description with the required suffix, team or venue background, selected or user-provided image style, and `3:4，照片分辨率8k` unless the user explicitly overrides the aspect ratio or resolution.
+The **鏈€缁堜腑鏂囨彁绀鸿瘝** must include the locked subject, expression, body prompt, outfit description with the required suffix, team or venue background, selected or user-provided image style, and `3:4锛岀収鐗囧垎杈ㄧ巼8k` unless the user explicitly overrides the aspect ratio or resolution.
 
-## 负面限制词起点
+## 璐熼潰闄愬埗璇嶈捣鐐?
 
-Use relevant constraints only, written in Chinese: 未成年感、幼态、学生元素、真实名人相似、真实人物肖像、真实品牌 logo、可读商标文字、露骨裸体、私密部位暴露、透明裸露、性化姿势、身体局部特写、低机位身体凝视、胁迫或偷窥视角、偷拍感、AI痕迹、过度磨皮、美颜滤镜、塑料皮肤、蜡像感、身体结构错误、手指畸形、水印、乱码文字。
+Use relevant constraints only, written in Chinese: 鏈垚骞存劅銆佸辜鎬併€佸鐢熷厓绱犮€佺湡瀹炲悕浜虹浉浼笺€佺湡瀹炰汉鐗╄倴鍍忋€佺湡瀹炲搧鐗?logo銆佸彲璇诲晢鏍囨枃瀛椼€侀湶楠ㄨ８浣撱€佺瀵嗛儴浣嶆毚闇层€侀€忔槑瑁搁湶銆佹€у寲濮垮娍銆佽韩浣撳眬閮ㄧ壒鍐欍€佷綆鏈轰綅韬綋鍑濊銆佽儊杩垨鍋风瑙嗚銆佸伔鎷嶆劅銆丄I鐥曡抗銆佽繃搴︾（鐨€佺編棰滄护闀溿€佸鏂欑毊鑲ゃ€佽湣鍍忔劅銆佽韩浣撶粨鏋勯敊璇€佹墜鎸囩暩褰€佹按鍗般€佷贡鐮佹枃瀛椼€?
 
 ## Boundaries
 
 Do not create prompts that center explicit sexual content, soft porn, real-person sexualization, coercion, voyeurism, intoxication, private leaks, minor-coded features, school/student cues, or body-part close-ups. If the request contains these, reframe the supported parts into mature, original, tasteful, non-explicit sports portrait photography language.
+
+## 参考知识库
+
+生成提示词时可参考以下共享知识库模块（位于 `_shared/knowledge/`），根据用户需求选择合适的参数和表达方式：
+
+- **构图法则**：`../_shared/knowledge/composition.md`
+- **光线与布光**：`../_shared/knowledge/lighting.md`
+- **焦段与镜头语言**：`../_shared/knowledge/focal-length.md`
+- **姿势与体态**：`../_shared/knowledge/poses.md`
+- **场景与环境**：`../_shared/knowledge/scenes.md`
+- **风格与色调**：`../_shared/knowledge/styles.md`
+- **后期与质感**：`../_shared/knowledge/post-processing.md`
+
