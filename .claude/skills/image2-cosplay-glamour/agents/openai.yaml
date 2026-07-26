@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 Cosplay 魅惑写真"
+  short_description: "生成性感魅惑cosplay正片提示词"
+  default_prompt: "使用 $image2-cosplay-glamour 生成中文cosplay写真提示词；可指定角色路线（游戏/国风/动漫/科幻）、主体、表情、身材、服装、场景和风格，默认比例为 3:4，照片分辨率8k。"
