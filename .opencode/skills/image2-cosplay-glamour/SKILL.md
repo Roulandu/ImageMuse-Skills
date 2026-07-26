@@ -35,8 +35,8 @@ Four internal routes. Load exactly one route file from `./routes/{routeId}.md`.
 | Route ID | 中文名 | 触发关键词 |
 | --- | --- | --- |
 | `game-vixen` | 游戏性感女角色 | 游戏、战士、法师、刺客、战斗服、皮甲、旗袍战服、比基尼盔甲 |
-| `gufeng-seductress` | 国风仙侠妖媚 | 国风、仙侠、古风、汉服、狐妖、妲己、妖后、薄纱、古典 |
-| `anime-vixen` | 动漫萌系魅惑 | 动漫、二次元、兔女郎、女仆、JK、猫耳、兽耳、萌系、魔女 |
+| `gufeng-seductress` | 国风仙侠妖媚 | 国风、仙侠、古风、汉服、狐妖、狐妖系、妖后、薄纱、古典 |
+| `anime-vixen` | 动漫萌系魅惑 | 动漫、二次元、兔女郎、女仆、学院风改良制服、猫耳、兽耳、萌系、魔女 |
 | `scifi-domina` | 科幻机甲御姐 | 科幻、机甲、赛博朋克、机械姬、乳胶、未来、御姐、特工 |
 
 If the user does not specify a route or the intent is unclear, return only the route options for the user to choose.
@@ -59,7 +59,7 @@ Offer these bust-size options:
 - 正常：`身材:人物拥有完美的身材。上围尺寸正常，腰也十分的纤细。`
 - 偏大：`身材:人物拥有完美的身材。上围尺寸偏大，腰也十分的纤细。`
 - 很大：`身材:人物拥有完美的身材。上围尺寸很大，腰也十分的纤细。`
-- 巨大：`身材:人物拥有极度夸张的身材。上围尺寸巨大并且自然下垂，绝对不是圆球假体胸型，腰也十分的纤细。`
+- 巨大：`身材:人物拥有极度夸张的身材。上围尺寸巨大，腰也十分的纤细。`
 
 Use body descriptions only as adult whole-person silhouette and outfit fit direction. Do not turn body wording into body-part fixation, private-area focus, low-angle body gaze, exposed nudity, transparent nudity, or close-up framing.
 
@@ -68,8 +68,8 @@ Use body descriptions only as adult whole-person silhouette and outfit fit direc
 Default outfit directions per route (expand into complete descriptions with color, fabric, fit, accessories, and route-specific details):
 
 - game-vixen: 紧身战斗服、露肩皮甲、高开叉旗袍式战服、比基尼盔甲、刺客紧身衣
-- gufeng-seductress: 薄纱汉服、丝绸肚兜外披、高开叉襦裙、狐妖妲己风、魔女妖后装
-- anime-vixen: 兔女郎、女仆装变种、JK制服改良、魔女巫女服、猫咪娘装
+- gufeng-seductress: 薄纱汉服、丝绸肚兜外披、高开叉襦裙、狐妖系、魔女妖后装
+- anime-vixen: 兔女郎、女仆装变种、学院风改良制服、魔女巫女服、猫咪娘装
 - scifi-domina: 紧身机甲战衣、赛博朋克机能装、乳胶质感连体衣、机械姬外骨骼、未来特工服
 
 If the user specifies another safe outfit, preserve the user's direction and refine it into a complete prompt.
