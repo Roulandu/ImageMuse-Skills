@@ -18,7 +18,7 @@ Use this skill when the user provides a rejected prompt, a poor result descripti
 
 ## Diagnosis Buckets
 
-Classify each issue with one or more of these labels: **拒绝、构图、解剖、年龄、服装、文字、一致性、风格漂移**. Explain the smallest change that clears the identified failure; do not rewrite unrelated locked parameters.
+Classify each issue with one or more of these labels: **拒绝、构图、解剖、年龄、服装、文字、一致性、风格漂移、发型**. Explain the smallest change that clears the identified failure; do not rewrite unrelated locked parameters.
 
 - **Rejected before generation**: remove direct red terms, real-person sexualization, explicit content, minor-coded sexualization, coercive framing, or body-part close-up language.
 - **Generated too conservative**: increase fashion expression, silhouette design, garment fit, lighting richness, camera clarity, and styling specificity; do not ask for "more sexy".

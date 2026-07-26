@@ -26,12 +26,11 @@ Use this skill to create Image2 prompts for 球场宝贝写真、球队宝贝写
 - Originality guard: keep the person original and adult. Do not generate prompts that imitate a real celebrity, public figure, influencer, private person, uploaded face, or social-profile identity.
 - Hairstyle override: if the user specifies a safe hairstyle, preserve the user's hairstyle direction exactly.
 - Hairstyle default: if the user does not specify a hairstyle, randomly pick one sports hairstyle from the athletic subset below. Sports-venue portraits always use a sport-appropriate hairstyle as part of the scene identity:
-  1. **高马尾** — 经典运动发型，利落不挡脸，青春活力
-  2. **丸子头** — 清爽干净，减龄运动感
-  3. **三股麻花辫 / 拳击辫** — 双辫利落，运动感最强，街头酷飒
-  4. **高马尾+发带** — 运动发带搭配高马尾，元气十足
-  5. **湿发高马尾** — 赛后/运动中质感，真实感强
-  6. **低马尾** — 低调日常运动感
+  1. **高马尾**（标准预设）— 经典运动发型，利落不挡脸，青春活力
+  2. **丸子头**（标准预设）— 清爽干净，减龄运动感
+  3. **三股麻花辫**（标准预设）— 双辫利落，运动感强，学院文艺
+  4. **荷兰编发**（标准预设）— 双辫立体凸出，酷飒运动感，类似拳击辫
+  5. **低马尾**（标准预设）— 低调日常运动感
 - Sports hairstyle keywords: 利落、不挡脸、有运动感、碎发自然、有活力。
 - Reference the full hairstyle presets in `../_shared/knowledge/hairstyles.md` when expanding the chosen hairstyle into a detailed description.
 

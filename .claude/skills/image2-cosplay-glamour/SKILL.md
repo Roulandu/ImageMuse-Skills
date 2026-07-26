@@ -9,7 +9,7 @@ description: 生成性感魅惑cosplay正片提示词，用于游戏女角色、
 
 Use this skill to create Image2 prompts for cosplay glamour portraits, including game character cos, guofeng fox-demon style, anime moe-seduction, and sci-fi domina cosplay. The output should be tasteful, adult, photorealistic, and non-explicit.
 
-1. Load `../_shared/core/output-contract.md`, `../_shared/core/quality-gates.md`, `../_shared/core/parameter-schema.md`, `../_shared/core/conflict-resolution.md`, and `../_shared/core/reference-image-policy.md` before composing the response.
+1. Load `../_shared/core/output-contract.md`, `../_shared/core/quality-gates.md`, `../_shared/core/parameter-schema.md`, `../_shared/core/conflict-resolution.md`, `../_shared/core/reference-image-policy.md`, and `../_shared/knowledge/hairstyles.md` before composing the response.
 2. Parse user intent and lock safe explicit parameters according to the parameter schema.
 3. Select one route from the four internal routes: game-vixen, gufeng-seductress, anime-vixen, scifi-domina. If the user does not specify a route, ask the user to choose one before writing the final prompt.
 4. Read the selected route file from `./routes/{routeId}.md` for fingerprint, palette/material, default outfit direction, signature elements, and recommended scenes.
@@ -25,6 +25,8 @@ Use this skill to create Image2 prompts for cosplay glamour portraits, including
 - Expression default: `魅惑浅笑，眼神勾人。`
 - Expression override: if the user enters another safe expression, replace the default expression with the user's expression description.
 - Aspect ratio and resolution default: `3:4竖版构图，超高清，高分辨率，细节清晰`。See `../_shared/references/image2-canvas-parameters.md` for orientation, image count, and output format defaults.
+- Hairstyle override: if the user specifies a safe hairstyle, preserve the user's hairstyle direction exactly.
+- Hairstyle default: if the user does not specify a hairstyle, choose exactly one cosplay-appropriate hairstyle from `../_shared/knowledge/hairstyles.md` based on the selected route. Good default directions: 高马尾、丸子头、三股麻花辫、公主切、直长发、港风侧分大卷、荷兰编发。
 - Required outfit suffix: every outfit description must end with this exact sentence: `女性穿着得体，衣着设计大方性感展现魅力。`
 - Originality guard: keep the person original and adult. Never use real anime/game character names, work titles, or celebrity likenesses. Describe only visual traits and archetypes.
 
@@ -115,7 +117,7 @@ Concise mode (`outputMode: concise`): return only 最终中文提示词 and 负�
 
 ## 负面限制词起点
 
-Use relevant constraints only, written in Chinese: 未成年感、幼态、学生元素、真实动漫角色、真实游戏角色、版权角色名、真实作品名、真实名人相似、露骨裸体、私密部位暴露、透明裸露、性化姿势、身体局部特写、低机位身体凝视、胁迫或偷窥视角、偷拍感、AI痕迹、过度磨皮、美颜滤镜、塑料皮肤、蜡像感、身体结构错误、手指畸形、水印、乱码文字。
+Use relevant constraints only, written in Chinese: 未成年感、幼态、学生元素、真实动漫角色、真实游戏角色、版权角色名、真实作品名、真实名人相似、露骨裸体、私密部位暴露、透明裸露、性化姿势、身体局部特写、低机位身体凝视、胁迫或偷窥视角、偷拍感、AI痕迹、过度磨皮、美颜滤镜、塑料皮肤、蜡像感、身体结构错误、手指畸形、水印、乱码文字、假发感、发型不对称、刘海变形、发色不均、编发结构错误、发量异常、发际线不自然、头发融合背景、发丝粘连。
 
 ## Boundaries
 
@@ -128,6 +130,7 @@ Never name specific copyrighted characters, anime titles, game titles, or franch
 生成提示词时可参考以下共享知识库模块（位于 `_shared/knowledge/`），根据用户需求选择合适的参数和表达方式：
 
 - **人物特征**：`../_shared/knowledge/character-features.md`
+- **发型知识库**：`../_shared/knowledge/hairstyles.md`
 - **构图法则**：`../_shared/knowledge/composition.md`
 - **光线与布光**：`../_shared/knowledge/lighting.md`
 - **焦段与镜头语言**：`../_shared/knowledge/focal-length.md`
