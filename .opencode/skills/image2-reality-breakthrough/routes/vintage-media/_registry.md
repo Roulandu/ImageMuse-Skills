@@ -6,10 +6,10 @@
 
 | 子路线 ID | 中文名 | 核心触发关键词 |
 | --- | --- | --- |
-| `polaroid` | 宝丽来·拍立得 | 宝丽来、拍立得、polaroid、拍立得照片 |
+| `polaroid` | 宝丽来/拍立得 | 宝丽来、拍立得、polaroid、拍立得照片 |
 | `film-negative` | 胶片底片 | 胶片、底片、film negative、胶卷 |
 | `crt-tv` | 显像管老电视 | CRT、老电视、显像管、crt tv、老式电视 |
-| `cd-cover` | CD·磁带封面 | CD封面、磁带、cd cover、cassette、唱片封面 |
+| `cd-cover` | CD/磁带封面 | CD封面、磁带、cd cover、cassette、唱片封面 |
 | `vhs-tape` | VHS录像带 | VHS、录像带、vhs tape、录影带 |
 
 ## 匹配规则
