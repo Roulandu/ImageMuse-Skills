@@ -10,10 +10,11 @@ description: 生成运动场馆人像提示词，用于需要体育场馆、赛�
 Use this skill to create Image2 prompts for 球场宝贝写真、球队宝贝写真、啦啦队写真、体育场馆写真、篮球馆写真、足球场写真、比基尼球场写真, and other adult sports-themed portrait prompts. The output should be tasteful, adult, photorealistic, and non-explicit.
 
 1. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
-2. Establish locked parameters: subject, expression, body prompt, outfit, image style, sport type, venue, team-color palette, event story, aspect ratio, and resolution.
-3. Respect safe user-specified subject, expression, body, outfit, team, venue, and style. Use defaults only when the user leaves those fields blank, unspecified, or automatic.
-4. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
-5. If image style is specified, generate the output contract below.
+2. Load `../_shared/knowledge/hairstyles.md` and `../_shared/knowledge/character-features.md` for hairstyle and facial feature references.
+3. Establish locked parameters: subject, expression, body prompt, outfit, hairstyle, image style, sport type, venue, team-color palette, event story, aspect ratio, and resolution.
+4. Respect safe user-specified subject, expression, body, outfit, hairstyle, team, venue, and style. Use defaults only when the user leaves those fields blank, unspecified, or automatic.
+5. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
+6. If image style is specified, generate the output contract below.
 
 ## Defaults And Overrides
 
@@ -21,8 +22,18 @@ Use this skill to create Image2 prompts for 球场宝贝写真、球队宝贝写
 - Subject override: if the user enters another safe subject, replace the default subject with the user's subject description.
 - Expression default: `自然的笑容。`
 - Expression override: if the user enters another safe expression, replace the default expression with the user's expression description.
-- Aspect ratio and resolution default: `3:4，照片分辨率8k`
+- Aspect ratio and resolution default: `3:4竖版构图，超高清，高分辨率，细节清晰`。See `../_shared/references/image2-canvas-parameters.md` for orientation, image count, and output format defaults.
 - Originality guard: keep the person original and adult. Do not generate prompts that imitate a real celebrity, public figure, influencer, private person, uploaded face, or social-profile identity.
+- Hairstyle override: if the user specifies a safe hairstyle, preserve the user's hairstyle direction exactly.
+- Hairstyle default: if the user does not specify a hairstyle, randomly pick one sports hairstyle from the athletic subset below. Sports-venue portraits always use a sport-appropriate hairstyle as part of the scene identity:
+  1. **高马尾** — 经典运动发型，利落不挡脸，青春活力
+  2. **丸子头** — 清爽干净，减龄运动感
+  3. **三股麻花辫 / 拳击辫** — 双辫利落，运动感最强，街头酷飒
+  4. **高马尾+发带** — 运动发带搭配高马尾，元气十足
+  5. **湿发高马尾** — 赛后/运动中质感，真实感强
+  6. **低马尾** — 低调日常运动感
+- Sports hairstyle keywords: 利落、不挡脸、有运动感、碎发自然、有活力。
+- Reference the full hairstyle presets in `../_shared/knowledge/hairstyles.md` when expanding the chosen hairstyle into a detailed description.
 
 ## Outfit Rules
 
@@ -92,6 +103,7 @@ If the user does not specify a team, randomly generate one sports venue backgrou
 
 - Keep the subject adult, original, and photorealistic.
 - Prioritize face realism, natural expression, full outfit visibility, confident posture, stadium atmosphere, team-color styling, and realistic camera feel.
+- Use a sport-appropriate hairstyle by default (from the athletic subset) — clean, out of the face, with natural flyaways — so the hair matches the active venue energy.
 - Default to a natural camera-facing or slight three-quarter portrait with face, outfit, posture, and venue visible.
 - Use eye-level or slightly elevated camera language by default. Avoid low-angle body-gaze framing.
 - Keep framing broad enough to show the whole person or at least a three-quarter-body portrait. Do not crop around chest, waist, hips, legs, or private body areas.
@@ -115,11 +127,11 @@ When image style is available, return:
 4. **负面限制词**
 5. **可选变化参数**
 
-The **最终中文提示词** must include the locked subject, expression, body prompt, outfit description with the required suffix, team or venue background, selected or user-provided image style, and `3:4，照片分辨率8k` unless the user explicitly overrides the aspect ratio or resolution.
+The **最终中文提示词** must include the locked subject, expression, body prompt, outfit description with the required suffix, team or venue background, selected or user-provided image style, and canvas parameters (aspect ratio + orientation + resolution/quality + image count) unless the user explicitly overrides them. Default canvas wording: `3:4竖版构图，超高清，高分辨率，细节清晰，生成1张独立图片，不要合并，不要拼图`。
 
 ## 负面限制词起点
 
-Use relevant constraints only, written in Chinese: 未成年感、幼态、学生元素、真实名人相似、真实人物肖像、真实品牌 logo、可读商标文字、露骨裸体、私密部位暴露、透明裸露、性化姿势、身体局部特写、低机位身体凝视、胁迫或偷窥视角、偷拍感、AI痕迹、过度磨皮、美颜滤镜、塑料皮肤、蜡像感、身体结构错误、手指畸形、水印、乱码文字。
+Use relevant constraints only, written in Chinese: 未成年感、幼态、学生元素、真实名人相似、真实人物肖像、真实品牌 logo、可读商标文字、露骨裸体、私密部位暴露、透明裸露、性化姿势、身体局部特写、低机位身体凝视、胁迫或偷窥视角、偷拍感、AI痕迹、过度磨皮、美颜滤镜、塑料皮肤、蜡像感、身体结构错误、手指畸形、水印、乱码文字、假发感、发型不对称、刘海变形、发色不均、编发结构错误、发量异常、发际线不自然、头发融合背景、发丝粘连。
 
 ## Boundaries
 
@@ -136,4 +148,6 @@ Do not create prompts that center explicit sexual content, soft porn, real-perso
 - **场景与环境**：`../_shared/knowledge/scenes.md`
 - **风格与色调**：`../_shared/knowledge/styles.md`
 - **后期与质感**：`../_shared/knowledge/post-processing.md`
+- **发型知识库**：`../_shared/knowledge/hairstyles.md`
+- **人物特征**：`../_shared/knowledge/character-features.md`
 

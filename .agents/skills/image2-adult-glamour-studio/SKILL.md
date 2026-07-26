@@ -16,7 +16,7 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 1. Load `../_shared/references/adult-glamour-boundaries.md` if the user request includes risk-sensitive elements.
   2. Load `../_shared/references/portrait-fashion-parameters.md` for parameter choices when the user wants a structured prompt or provides multiple controls.
   3. Load `../_shared/references/image2-canvas-parameters.md` for aspect ratio, orientation, resolution/quality, image count, and output format defaults.
-  4. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the user asks for sweet/maid styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
+  4. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/knowledge/hairstyles.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the user asks for sweet/maid styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
   5. Establish locked parameters: subject, age/adult status, originality, style, scene, garment, posture, camera, lighting, aspect ratio, and quality target.
   6. Fill missing parameters conservatively with mature, non-explicit defaults. For blank posture or camera direction, default to a front-facing or slight three-quarter camera-facing subject, an eye-level or slight high editorial camera, and half-body or three-quarter-body portrait framing. For blank canvas parameters, apply defaults from `image2-canvas-parameters.md` and mark them as supplemental defaults.
   7. Produce the shared output contract. In complete mode, use its fixed order; this skill's glamour-specific decisions belong in **导演扩展**. In concise mode, return only the contracted prompt and negative constraints.
@@ -34,7 +34,7 @@ Use this skill to create Image2 prompts for adult glamour portraits where the ma
 - Visual emphasis: face, expression, styling, garment fit, light, silhouette, color harmony, and overall composition.
 - Prompt anchors: always include age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the random default clothing anchor from `required-prompt-anchors.md` when clothing is unspecified; add maid/sweet fantasy styling, over-the-shoulder gaze, and soft S-curve figure only when requested or useful for the user's stated intent.
 - Figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include exactly one randomly chosen mature-figure anchor from `required-prompt-anchors.md`.
-- Hairstyle: do not add a default or random hairstyle unless the user explicitly specifies a safe hairstyle/hair direction or asks for a random hairstyle. When hairstyle is triggered, preserve the user's safe hairstyle or choose exactly one hairstyle prompt from `hairstyle-reference.md`.
+- Hairstyle: do not add a default or random hairstyle unless the user explicitly specifies a safe hairstyle/hair direction or asks for a random hairstyle. When hairstyle is triggered, preserve the user's safe hairstyle or choose exactly one hairstyle from `../_shared/knowledge/hairstyles.md`, prioritizing presets with mature/glamour/high-end style tags (such as 港风侧分大卷, 低盘发, 湿发造型, 直长发, 温柔大卷, etc.). Dimension keyword combinations (length, curl, bangs, hair color, etc.) are also supported without requiring a full preset name.
 
 ## Quality Guidance
 
@@ -57,7 +57,11 @@ In complete mode, return exactly this order:
 5. **负面限制词**
 6. **可选变化参数**: offer 3-6 safe adjustments such as palette, lens, material, setting, pose, or canvas.
 
-The **最终中文提示词** must fully carry the triggered required prompt anchors. Include hairstyle from `hairstyle-reference.md` only when the user explicitly triggers hairstyle. Other sections may summarize them briefly.
+The **最终中文提示词** must fully carry the triggered required prompt anchors. Include hairstyle from `../_shared/knowledge/hairstyles.md` only when the user explicitly triggers hairstyle. Other sections may summarize them briefly.
+
+## 负面限制词起点
+
+Use relevant constraints only, written in Chinese: 露骨裸体、性化姿势、身体局部特写、低机位身体凝视、胁迫或窥视视角、未成年感、学生元素、真实名人相似、真实品牌 logo、水印、身体结构错误、手指畸形、界面文字乱码、假发感、发型不对称、刘海变形、发色不均、编发结构错误、发量异常、发际线不自然、头发融合背景、发丝粘连。
 
 ## Boundaries
 

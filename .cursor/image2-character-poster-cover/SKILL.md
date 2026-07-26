@@ -15,13 +15,14 @@ Use this skill to create Image2 prompts whose final image is a finished characte
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes sexuality, lingerie, swimwear, private settings, real people, celebrity likeness, age-coded wording, coercive framing, or platform/social identity.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for subject, garment, scene, camera, lighting, style, and aspect-ratio choices.
-3. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the user asks for swimwear, maid/sweet fantasy styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
-4. Establish locked parameters: output type, subject, age/adult status, originality, poster/cover genre, garment, posture, camera, lighting, text system, layout density, aspect ratio, and quality target.
-5. When the user has not specified cover/poster text, generate random original text: fictional magazine or poster name, main title, subtitle, cover lines, column tags, issue number, date, price-like decorative string, and a short slogan. Do not leave blank title areas.
-6. Make all text fictional and copyright-safe. Do not use real magazine names, real brand names, real logos, real copyright IDs, real ISSN/ISBN numbers, real celebrity names, or real campaign slogans.
-7. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
-8. Respect explicit safe user-specified posture and camera direction. If missing, default to a front-facing or slight three-quarter camera-facing subject and an eye-level or slight high editorial camera.
-9. Produce the shared output contract, including both delivery alternatives when `outputMode` is `complete`.
+3. Load `../_shared/references/image2-canvas-parameters.md` for aspect ratio, orientation, resolution/quality, image count, and output format defaults.
+4. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/knowledge/hairstyles.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the user asks for swimwear, maid/sweet fantasy styling, over-the-shoulder gaze, S-curve figure, or another matching intent.
+5. Establish locked parameters: output type, subject, age/adult status, originality, poster/cover genre, garment, posture, camera, lighting, text system, layout density, aspect ratio, and quality target.
+6. When the user has not specified cover/poster text, generate random original text: fictional magazine or poster name, main title, subtitle, cover lines, column tags, issue number, date, price-like decorative string, and a short slogan. Do not leave blank title areas.
+7. Make all text fictional and copyright-safe. Do not use real magazine names, real brand names, real logos, real copyright IDs, real ISSN/ISBN numbers, real celebrity names, or real campaign slogans.
+8. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
+9. Respect explicit safe user-specified posture and camera direction. If missing, default to a front-facing or slight three-quarter camera-facing subject and an eye-level or slight high editorial camera. For blank canvas parameters, apply defaults from `image2-canvas-parameters.md` and mark them as supplemental defaults.
+10. Produce the shared output contract, including both delivery alternatives when `outputMode` is `complete`.
 
 ## Defaults
 
@@ -32,11 +33,11 @@ Use this skill to create Image2 prompts whose final image is a finished characte
 - Scene: bright studio, tasteful interior, city apartment, editorial set, campaign backdrop, fashion studio, or other non-private/non-voyeuristic context.
 - Clothing: if the user has not specified clothing, randomly choose one of these fixed Chinese clothing phrases each time: "服装为剪裁优雅的吊带睡裙，材质细腻，版型合身，贴合身体，吊带一侧肩部自然滑落。" or "服装为剪裁优雅的短款深V款高级精致浅白色吊带背心，材质细腻，版型合身，贴合身体，腰部自然漏出，吊带两侧肩部自然滑落，下半身穿着白色蕾丝边内裤，精致且高级。"; if the user explicitly specifies safe clothing, preserve that garment instead.
 - Camera: portrait lens, eye-level or slightly elevated editorial angle by default, half-body or three-quarter-body cover framing unless a full-body poster is requested.
-- Aspect ratio: default to vertical `2:3` or `3:4`; use `9:16`, `1:1`, `16:9`, or other ratios only when requested or useful for the poster format.
+- Aspect ratio: default to vertical `2:3` or `3:4`; use `9:16`, `1:1`, `16:9`, or other ratios only when requested or useful for the poster format. Always pair aspect ratio with orientation wording (e.g. `3:4竖版构图`, `16:9横版电影级宽画幅`). Add resolution/quality wording (`超高清，高分辨率，细节清晰`), image count (`生成1张独立图片，不要合并，不要拼图`), and format/purpose when relevant. See `image2-canvas-parameters.md`.
 - Visual emphasis: face, expression, styling, garment fit, silhouette, cover hierarchy, readable fictional typography, color harmony, and finished print-design composition.
 - Prompt anchors: always include age, mature figure, natural posture, bright interior scene, and explicit safe clothing when provided or the random default clothing anchor when clothing is unspecified.
 - Figure anchor: unless the user provides another safe body/figure description, the **最终中文提示词** must include exactly one randomly chosen mature-figure anchor from `required-prompt-anchors.md`.
-- Hairstyle: do not add a default or random hairstyle unless the user explicitly specifies a safe hairstyle/hair direction or asks for a random hairstyle. When hairstyle is triggered, preserve the user's safe hairstyle or choose exactly one hairstyle prompt from `hairstyle-reference.md`.
+- Hairstyle: do not add a default or random hairstyle unless the user explicitly specifies a safe hairstyle/hair direction or asks for a random hairstyle. When hairstyle is triggered, preserve the user's safe hairstyle or choose exactly one hairstyle from `../_shared/knowledge/hairstyles.md`, matching the hairstyle to the poster/cover style (magazine feel → 港风侧分大卷 or 温柔大卷; minimalist → 精灵短发 or 锁骨内扣; fashion editorial → 湿发造型; retro → 港风侧分大卷; etc.). Dimension keyword combinations (length, curl, bangs, hair color, etc.) are also supported without requiring a full preset name.
 
 ## Poster And Cover Text Rules
 
@@ -68,7 +69,11 @@ In complete mode, return exactly this order:
 5. **负面限制词**
 6. **可选变化参数**: offer 3-6 safe adjustments such as hierarchy, palette, lens, setting, pose, or canvas.
 
-The **最终中文提示词** must fully carry the triggered required prompt anchors and the generated fictional poster/cover text. Include hairstyle from `hairstyle-reference.md` only when the user explicitly triggers hairstyle. Other sections may summarize them briefly.
+The **最终中文提示词** must fully carry the triggered required prompt anchors and the generated fictional poster/cover text. Include hairstyle from `../_shared/knowledge/hairstyles.md` only when the user explicitly triggers hairstyle. Other sections may summarize them briefly.
+
+## 负面限制词起点
+
+Use relevant constraints only, written in Chinese: 露骨裸体、性化姿势、身体局部特写、低机位身体凝视、胁迫或窥视视角、未成年感、学生元素、真实名人相似、真实品牌 logo、真实杂志名、真实 ISSN/ISBN、水印、身体结构错误、手指畸形、界面文字乱码、假发感、发型不对称、刘海变形、发色不均、编发结构错误、发量异常、发际线不自然、头发融合背景、发丝粘连。
 
 ## Boundaries
 

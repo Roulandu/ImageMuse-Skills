@@ -11,11 +11,12 @@ Use this skill to create Image2 prompts for wedding dress photography, bridal po
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes adult attractiveness, body-shape emphasis, private settings, real people, age-coded wording, or risk-sensitive styling.
 2. Load `../_shared/references/portrait-fashion-parameters.md` when the user asks for structured choices, varied camera language, scene options, or fashion/photo quality controls.
-3. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
-4. Establish locked parameters: subject, expression, body description, wedding dress clothing, image style, scene, camera/framing, aspect ratio, and resolution.
-5. Respect safe user-specified subject, expression, body, clothing, and style. Use the defaults only when the user leaves those fields blank, unspecified, or automatic.
-6. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
-7. If image style is specified, generate the output contract below.
+3. Load `../_shared/knowledge/hairstyles.md` for bridal hairstyle presets, dimensional vocabulary, and hair negative constraints.
+4. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
+5. Establish locked parameters: subject, expression, body description, wedding dress clothing, hairstyle, image style, scene, camera/framing, aspect ratio, and resolution.
+6. Respect safe user-specified subject, expression, body, clothing, hairstyle, and style. Use the defaults only when the user leaves those fields blank, unspecified, or automatic.
+7. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
+8. If image style is specified, generate the output contract below.
 
 ## Defaults And Overrides
 
@@ -27,6 +28,14 @@ Use this skill to create Image2 prompts for wedding dress photography, bridal po
 - Wedding dress clothing: if the user specifies wedding dress clothing, preserve the user's clothing description. If unspecified, randomly generate a bridal dress description each time, including silhouette, neckline, fabric, embroidery or lace, veil, accessories, train length, fit, and scene-appropriate styling.
 - Required clothing suffix: every wedding dress clothing description must end with this exact sentence: `女性穿着得体，衣着设计大方性感展现魅力。`
 - Treat the clothing suffix as tasteful adult bridal fashion language, not as an instruction for nudity, exposure, private-area emphasis, or body-part close-ups.
+- Hairstyle default: if the user specifies a hairstyle, fully preserve it. If unspecified, auto-match by wedding dress silhouette:
+  - **大拖尾婚纱 / 宫廷感** → 低盘发（经典优雅，突出肩颈和婚纱后背设计，预留头纱位置）
+  - **轻纱 A 字裙 / 森系** → 半扎发公主头（披发+编发元素，浪漫自然）
+  - **鱼尾修身婚纱** → 侧分低盘发或侧分大卷（凸显颈部线条，成熟优雅）
+  - **中式秀禾 / 龙凤褂** → 盘发配簪（整齐精致，配合中式头饰）
+  - **短款 / 轻婚纱** → 低马尾或半扎发（清爽年轻）
+- Hairstyle source: select from the wedding/bridal subset of `hairstyles.md` presets — at least 8 options: 低盘发、半扎发、三股麻花辫（侧边）、花环编发、丸子头（新娘花苞头）、温柔大卷（侧分披发）、直长发（披纱）、高马尾（轻婚纱）。
+- Hairstyle compatibility: the chosen hairstyle must work with veil and headpieces — updos reserve veil anchoring at the crown, and down styles account for veil coverage.
 
 ## Image Style Rules
 
@@ -51,6 +60,7 @@ When a default is needed, use: `体态比例自然匀称，站姿舒展；礼服
 - Use eye-level or slightly elevated camera language by default. Avoid low-angle body-gaze framing.
 - Good default scenes include bright wedding studio, white chapel interior, garden wedding venue, seaside wedding walkway, hotel bridal suite with bright window light, or minimalist editorial studio.
 - Good random bridal dress directions include satin A-line wedding dress, lace mermaid wedding dress, off-shoulder tulle wedding dress, square-neck minimalist silk wedding dress, long-sleeve lace cathedral bridal look, or modern Chinese bridal-inspired white gown.
+- Bridal hairstyle is a core element of wedding portraiture — select it to complement the dress silhouette, veil, and headpieces, and ensure it reads natural and well-groomed in the final image.
 
 ## 叙事路线
 
@@ -78,7 +88,7 @@ The **最终中文提示词** must include the locked subject, expression, body 
 
 ## 负面限制词起点
 
-Use relevant constraints only, written in Chinese: 未成年感、幼态、学生元素、真实名人相似、真实人物肖像、露骨裸体、私密部位暴露、透明裸露、性化姿势、身体局部特写、低机位身体凝视、胁迫或窥视视角、偷拍感、泄露感、AI痕迹、过度磨皮、美颜滤镜、塑料皮肤、蜡像感、身体结构错误、手指畸形、水印、乱码文字。
+Use relevant constraints only, written in Chinese: 未成年感、幼态、学生元素、真实名人相似、真实人物肖像、露骨裸体、私密部位暴露、透明裸露、性化姿势、身体局部特写、低机位身体凝视、胁迫或窥视视角、偷拍感、泄露感、AI痕迹、过度磨皮、美颜滤镜、塑料皮肤、蜡像感、身体结构错误、手指畸形、水印、乱码文字、假发感、发型不对称、刘海变形、发色不均、编发结构错误、发量异常、发际线不自然、头发融合背景、发丝粘连。
 
 ## Boundaries
 
@@ -89,6 +99,7 @@ Do not create prompts that center explicit sexual content, soft porn, real-perso
 生成提示词时可参考以下共享知识库模块（位于 `_shared/knowledge/`），根据用户需求选择合适的参数和表达方式：
 
 - **人物特征**：`../_shared/knowledge/character-features.md`
+- **发型**：`../_shared/knowledge/hairstyles.md`
 - **构图法则**：`../_shared/knowledge/composition.md`
 - **光线与布光**：`../_shared/knowledge/lighting.md`
 - **焦段与镜头语言**：`../_shared/knowledge/focal-length.md`

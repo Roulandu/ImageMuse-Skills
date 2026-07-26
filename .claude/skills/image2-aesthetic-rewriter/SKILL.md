@@ -17,7 +17,7 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 2. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes sexuality, nudity, lingerie, swimwear, private settings, real people, celebrity likeness, age-coded wording, coercive framing, or platform/social identity.
   3. Load `../_shared/references/rewrite-vocabulary.md` when rewriting crude wording into aesthetic language.
   4. Load `../_shared/references/image2-canvas-parameters.md` for aspect ratio, orientation, resolution/quality, image count, and output format defaults.
-  5. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the original request explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the original request or safe rewrite target matches swimwear, maid/sweet styling, over-the-shoulder gaze, or S-curve figure.
+  5. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/knowledge/hairstyles.md`. Include required basic anchors in **最终中文提示词**, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the original request explicitly specifies that direction or asks for a random face shape/hairstyle; add intent anchors only when the original request or safe rewrite target matches swimwear, maid/sweet styling, over-the-shoulder gaze, or S-curve figure.
   6. Refuse or redirect any request whose core target is explicit sexual content, soft porn, real-person sexualization, non-consensual framing, or minor-coded sexualization.
   7. If the request is supportable, rewrite it using the shared output contract and offer exactly three safe prompt variants: **保守**, **平衡**, and **表现力**. They must keep the same locked safe intent; only styling intensity, composition, and lighting may vary.
 
@@ -34,7 +34,7 @@ Use this skill to transform rough adult-attraction intent into a mature visual d
 - Keep camera language neutral or editorial: eye-level, slight high editorial angle, natural perspective, fashion portrait, front-facing or slight three-quarter view toward camera, half-body, full-body, catalog composition.
 - Add negative constraints when risk is present, but keep them concise and relevant.
 - Preserve supportable mature body-proportion, natural posture, bright interior, explicit safe clothing when provided, or the default elegant slip-dress clothing anchor when clothing is unspecified, plus matching intent anchors by using the required prompt anchors.
-- Do not add a default or random hairstyle unless the original request explicitly specifies a safe hairstyle/hair direction or asks for a random hairstyle. When hairstyle is triggered, preserve the user's safe hairstyle or choose exactly one hairstyle prompt from `hairstyle-reference.md`.
+- Do not add a default or random hairstyle unless the original request explicitly specifies a safe hairstyle/hair direction or asks for a random hairstyle. When hairstyle is triggered, preserve the user's safe hairstyle or choose exactly one hairstyle from `../_shared/knowledge/hairstyles.md`. If the original hairstyle carries obvious young-coding cues (such as double ponytails, blunt bangs with double braids, airy bangs with high ponytail, etc.), rewrite them into more mature and restrained versions (such as 低盘发, 侧分大卷, 锁骨内扣, etc.). Dimension keyword combinations (length, curl, bangs, hair color, etc.) are also supported without requiring a full preset name.
 - Do not turn mature figure, chest contour, S-curve, or fit language into body-part close-ups, low-angle body gaze, or isolated anatomy emphasis.
 - When the original request is too explicit, too young-coded, or too suggestive, keep only the safe anchor-compatible intent and rewrite the rest into mature, original, non-explicit editorial/fashion language.
 
@@ -51,7 +51,11 @@ In concise mode, return only the shared concise sections. In complete mode, retu
 5. **负面限制词**: 中文逗号分隔列表。
 6. **可选变化参数**: 3-6 个中文可调项，例如色调、镜头、服装材质、场景、姿态或画幅比例。
 
-The **最终中文提示词** must fully carry the triggered required prompt anchors. Include hairstyle from `hairstyle-reference.md` only when the user explicitly triggers hairstyle. Other sections may summarize them briefly.
+The **最终中文提示词** must fully carry the triggered required prompt anchors. Include hairstyle from `../_shared/knowledge/hairstyles.md` only when the user explicitly triggers hairstyle. Other sections may summarize them briefly.
+
+## 负面限制词起点
+
+Use relevant constraints only, written in Chinese: 露骨裸体、性化姿势、身体局部特写、低机位身体凝视、胁迫或窥视视角、未成年感、学生元素、真实名人相似、真实品牌 logo、水印、身体结构错误、手指畸形、界面文字乱码、假发感、发型不对称、刘海变形、发色不均、编发结构错误、发量异常、发际线不自然、头发融合背景、发丝粘连。
 
 ## Refusal And Redirection
 
