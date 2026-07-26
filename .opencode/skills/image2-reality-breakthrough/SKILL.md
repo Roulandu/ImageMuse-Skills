@@ -16,7 +16,7 @@ description: 生成「人物从媒介中破壁而出」的超现实人像提示�
 
 **不做什么：**
 - 不生成纯 2D 插画、纯屏幕截图、纯平面设计稿
-- 不生成未成年、不露骨、不用真人/真品牌/真角色名
+- 不生成未成年、不生成露骨内容、不用真人/真品牌/真角色名
 - 不生成暴力、血腥、恐怖主题的破壁内容
 
 ## Required load order
@@ -29,6 +29,10 @@ description: 生成「人物从媒介中破壁而出」的超现实人像提示�
 4. `../_shared/core/quality-gates.md`
 5. `../_shared/core/output-contract.md`
 6. `../_shared/references/image2-canvas-parameters.md`
+7. `../_shared/knowledge/hairstyles.md`
+8. `../_shared/references/face-shape-hairstyle-guide.md`
+9. `../_shared/routes/route-registry.md`
+10. Exactly one matching file from `../_shared/routes/{routeId}.md`.
 
 ## 八大路线总览
 
@@ -82,6 +86,7 @@ description: 生成「人物从媒介中破壁而出」的超现实人像提示�
 - **主体覆盖**：用户指定安全主体时，完全替换默认主体描述
 - **画幅默认**：`3:4竖版构图，超高清，高分辨率，细节清晰`；子路线有指定画幅时优先使用子路线画幅
 - **画幅覆盖**：用户指定画幅时，以用户指定为准
+- **子路线默认主体优先于全局默认**：子路线文件中的「默认主体气质」优先于全局默认主体描述，用户指定主体时仍完全覆盖
 - **图片风格默认**：无默认值，必须由用户二选一
 - **图片风格覆盖**：用户指定其他安全风格时，使用用户风格描述
 - **服装默认**：根据子路线默认主体气质搭配得体服装
@@ -116,6 +121,8 @@ description: 生成「人物从媒介中破壁而出」的超现实人像提示�
 6. **可选变化参数**
 
 简洁模式（`outputMode: concise`）：仅返回「最终中文提示词」+「负面限制词」。
+
+破壁设定卡即本技能的导演扩展段，对应共享输出契约中的「导演扩展」位置。
 
 直接出图门：仅当用户说「直接出图」且交互模式为 `direct-image` 时生成图片，其他情况均返回文本。
 
