@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 创意人像摄影"
+  short_description: "生成创意人像摄影提示词"
+  default_prompt: "使用 $image2-portrait-prompt-crafter 生成中文创意人像摄影提示词；可提供一句话画面描述或零散灵感，结合人物/构图/光线/焦段/姿势/场景/服装/风格/后期九大维度输出创意性画面感强的提示词，默认比例为 3:4，照片分辨率8k。"
