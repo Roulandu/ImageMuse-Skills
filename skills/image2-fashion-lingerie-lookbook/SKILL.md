@@ -13,7 +13,7 @@ Use this skill for adult fashion prompts involving lingerie, bralette styling, s
 2. Load `../_shared/references/portrait-fashion-parameters.md` for garment, scene, camera, and variation controls.
 3. Load `../_shared/references/image2-canvas-parameters.md` for aspect ratio, orientation, resolution/quality, image count, and output format defaults.
 4. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
-5. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`. Include required basic anchors in **最终中文提示词** as garment-fit, whole-body silhouette, lookbook posture, and bright interior styling direction, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add the swimwear Lookbook anchor whenever the user asks for swimwear, beach/pool, resort, summer vacation, or swim catalog imagery.
+5. Load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/knowledge/hairstyles.md`. Include required basic anchors in **最终中文提示词** as garment-fit, whole-body silhouette, lookbook posture, and bright interior styling direction, randomly choose one mature-figure anchor as instructed, and use the face-shape or hairstyle references only when the user explicitly specifies that direction or asks for a random face shape/hairstyle; add the swimwear Lookbook anchor whenever the user asks for swimwear, beach/pool, resort, summer vacation, or swim catalog imagery.
 6. Convert risky private or soft-porn cues into commercial fashion context: catalog, lookbook, fitting appointment, product confirmation, studio, boutique fitting room, resort swimwear, or editorial styling.
 7. Make the model an original adult East Asian woman by default, not a real person or celebrity, and render this in Chinese prompts as "原创成年东方女性，20岁及以上".
 8. Respect explicit safe user-specified subject identities; use the East Asian default only when the subject is blank, unspecified, automatic, or unsafe.
@@ -38,13 +38,13 @@ Use this skill for adult fashion prompts involving lingerie, bralette styling, s
 
 ## Required Prompt Anchors
 
-- Always load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/references/hairstyle-reference.md`; include required basic anchors in the **最终中文提示词**.
+- Always load `../_shared/references/required-prompt-anchors.md`, `../_shared/references/face-shape-reference.md`, and `../_shared/knowledge/hairstyles.md`; include required basic anchors in the **最终中文提示词**.
 - Apply the basic anchors as garment-fit, mature whole-person silhouette, natural lookbook posture, bright commercial or interior scene, explicit safe clothing when provided, or the default elegant slip-dress clothing anchor when clothing is unspecified.
 - Add intent anchors only when the user request matches them: swimwear/resort/pool/beach catalog imagery, maid or sweet fantasy styling, over-the-shoulder gaze, S-curve figure, or an explicit repair need.
 - Keep any explicitly triggered hairstyle and anchors subordinate to the garment-first Lookbook purpose. Do not turn age, mature figure, posture, or clothing anchors into chest, waist, hip, private-area, or lingerie-detail close-ups.
 - Unless the user provides another safe body/figure description, the **最终中文提示词** must include exactly one randomly chosen mature-figure anchor from `required-prompt-anchors.md`.
 - Default framing is half-body or three-quarter-body. Use full-body/full-length Lookbook framing only when the user explicitly requests it or when a safe product catalog requirement genuinely needs the full outfit.
-- Do not add a default or random hairstyle unless the user explicitly specifies a safe hairstyle/hair direction or asks for a random hairstyle. When hairstyle is triggered, preserve the user's safe hairstyle or choose exactly one hairstyle prompt from `hairstyle-reference.md`.
+- Do not add a default or random hairstyle unless the user explicitly specifies a safe hairstyle/hair direction or asks for a random hairstyle. When hairstyle is triggered, preserve the user's safe hairstyle or choose exactly one hairstyle from `../_shared/knowledge/hairstyles.md`, prioritizing presets suitable for lingerie/swimwear/resort scenes (such as 海浪卷, 低马尾, 湿发造型, 半扎发, 温柔大卷, etc.). Dimension keyword combinations (length, curl, bangs, hair color, etc.) are also supported without requiring a full preset name.
 
 ## Output Format
 
@@ -59,11 +59,11 @@ Return:
 5. **负面限制词**
 6. **可选变化参数**
 
-The **最终中文提示词** must fully carry the triggered required prompt anchors. Include hairstyle from `hairstyle-reference.md` only when the user explicitly triggers hairstyle. Other sections may summarize them briefly.
+The **最终中文提示词** must fully carry the triggered required prompt anchors. Include hairstyle from `../_shared/knowledge/hairstyles.md` only when the user explicitly triggers hairstyle. Other sections may summarize them briefly.
 
 ## 负面限制词起点
 
-Use relevant constraints only, written in Chinese: 露骨裸体、私密部位暴露、透明裸露、性化姿势、身体局部特写、低机位身体凝视、胁迫或窥视视角、未成年感、学生元素、真实名人相似、真实品牌 logo、水印、身体结构错误、手指畸形、界面文字乱码。
+Use relevant constraints only, written in Chinese: 露骨裸体、私密部位暴露、透明裸露、性化姿势、身体局部特写、低机位身体凝视、胁迫或窥视视角、未成年感、学生元素、真实名人相似、真实品牌 logo、水印、身体结构错误、手指畸形、界面文字乱码、假发感、发型不对称、刘海变形、发色不均、编发结构错误、发量异常、发际线不自然、头发融合背景、发丝粘连。
 
 ## 参考知识库
 
