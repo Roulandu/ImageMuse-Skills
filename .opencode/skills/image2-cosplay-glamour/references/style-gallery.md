@@ -1,6 +1,6 @@
 # Style Gallery
 
-24张cos风格参考图索引。用户可指定"用第N张的风格"，skill提取对应风格关键词注入提示词。
+24张cos风格参考图索引。图片文件位于 `../style-images/` 目录下。用户可指定"用第N张的风格"，skill提取对应风格关键词注入提示词。
 
 ## 索引表
 
@@ -20,8 +20,8 @@
 | 12 | style-12.jpg | gufeng-seductress | 黑色古风、暗黑仙侠、羽毛装饰、高对比、御姐 |
 | 13 | style-13.jpg | anime-vixen | 粉色兔女郎、甜酷风、影棚柔光、双马尾、网袜 |
 | 14 | style-14.jpg | anime-vixen | 女仆装、黑白配、蕾丝、萌系、室内场景、可爱 |
-| 15 | style-15.jpg | anime-vixen | 猫耳娘、兽耳、紫色色片、萌系魅惑、跪坐姿态 |
-| 16 | style-16.jpg | anime-vixen | 学院风改良制服、青春感、过膝袜、教室场景、甜美 |
+| 15 | style-15.jpg | anime-vixen | 猫耳娘、兽耳、紫色色片、萌系魅惑、单腿屈膝站姿 |
+| 16 | style-16.jpg | anime-vixen | 偶像舞台装、青春感、亮面漆皮腿环、聚光灯下、甜美 |
 | 17 | style-17.jpg | anime-vixen | 魔女服、黑色尖帽、万圣节风、魔法扫帚、神秘可爱 |
 | 18 | style-18.jpg | anime-vixen | 蓝发双马尾、亮色系、偶像风、舞台光、闪耀 |
 | 19 | style-19.jpg | scifi-domina | 赛博朋克、霓虹蓝、乳胶紧身、城市夜景、冷光、未来感 |
