@@ -9,7 +9,7 @@
 | `wechat-moments` | 微信朋友圈 | 朋友圈、微信朋友圈、moments、pyq |
 | `xiaohongshu` | 小红书 | 小红书、xiaohongshu、red note、小红薯 |
 | `weibo` | 微博 | 微博、weibo |
-| `douyin` | 抖音 | 抖音、douyin、tiktok |
+| `douyin` | 短视频（闪拍） | 抖音、douyin、tiktok、短视频、视频号 |
 | `kuaishou` | 快手 | 快手、kuaishou |
 | `taobao` | 淘宝详情页 | 淘宝、taobao、详情页、商品页、宝贝详情 |
 
