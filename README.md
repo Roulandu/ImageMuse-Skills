@@ -2,7 +2,7 @@
 
 面向 Image2 / GPT Image 2 的中文人像提示词 Skill 集合，用于把人物、五官、身形、服装、场景、动作、光线、镜头和画幅整理成稳定、清晰、可直接使用的生图提示词。
 
-仓库当前提供 **11 个 Skill**，覆盖通用人像导演、创意提示词生成、固定字段 Prompt、成人魅力写真、美学改写、服装 Lookbook、婚纱、体育场馆、人物海报、人物设定图和失败修复。默认处理原创、成年、非露骨的人像需求；用户提供安全的明确设定时，优先保留用户设定。
+仓库当前提供 **13 个 Skill**，覆盖通用人像导演、创意提示词生成、固定字段 Prompt、成人魅力写真、Cosplay 魅惑、美学改写、服装 Lookbook、婚纱、体育场馆、人物海报、人物设定图、破壁超现实和失败修复。默认处理原创、成年、非露骨的人像需求；用户提供安全的明确设定时，优先保留用户设定。
 
 ## 快速开始
 
@@ -28,15 +28,17 @@
 | [`$image2-portrait-prompt-crafter`](skills/image2-portrait-prompt-crafter/SKILL.md) | 一句话描述 → 创意人像提示词，含九大维度知识库与专业摄影参数 |
 | [`$image2-structured-portrait-prompt`](skills/image2-structured-portrait-prompt/SKILL.md) | 把完整或零散方向整理成固定 16 字段清单和一段完整 Prompt |
 | [`$image2-adult-glamour-studio`](skills/image2-adult-glamour-studio/SKILL.md) | 高级女性人像、魅力写真、时尚 editorial、商业肖像、电影感人像 |
+| [`$image2-cosplay-glamour`](skills/image2-cosplay-glamour/SKILL.md) | 游戏角色、国风妖媚、动漫萌系、科幻御姐等性感魅惑 cosplay 正片 |
 | [`$image2-aesthetic-rewriter`](skills/image2-aesthetic-rewriter/SKILL.md) | 把粗糙、低俗、风险高或容易失败的想法改成成熟高级版本 |
 | [`$image2-fashion-lingerie-lookbook`](skills/image2-fashion-lingerie-lookbook/SKILL.md) | 内衣、泳装、试穿确认、fit check、商品展示和服装 Lookbook |
 | [`$image2-wedding-portrait`](skills/image2-wedding-portrait/SKILL.md) | 婚纱照、bridal portrait、婚礼纪实和婚纱时尚 editorial |
 | [`$image2-sports-venue-portrait`](skills/image2-sports-venue-portrait/SKILL.md) | 体育馆、球场、球队配色、赛事故事和运动场馆主题人像 |
 | [`$image2-character-poster-cover`](skills/image2-character-poster-cover/SKILL.md) | 杂志封面、人物海报、宣传主视觉和带虚构标题的成品版式 |
 | [`$image2-character-reference-sheet`](skills/image2-character-reference-sheet/SKILL.md) | 人物三视图、全身转面、面部特写和服装材质设定板 |
+| [`$image2-reality-breakthrough`](skills/image2-reality-breakthrough/SKILL.md) | 人物从纸/屏幕/画作/印刷品等媒介「破壁而出」的超现实人像 |
 | [`$image2-risk-debugger`](skills/image2-risk-debugger/SKILL.md) | 提示词被拒、结果太保守、脸偏幼、构图太擦边、身体或手部变形 |
 
-## 11 个 Skill
+## 13 个 Skill
 
 ### `$image2-portrait-director`｜人像导演
 
@@ -98,6 +100,14 @@
 使用 $image2-adult-glamour-studio，生成一张原创成年东方女性高级人像，清冷成熟、银灰低饱和、窗边自然光、三分之四身、9:16。
 ```
 
+### `$image2-cosplay-glamour`｜Cosplay 魅惑写真
+
+生成游戏女角色、国风妖媚、动漫萌系、科幻御姐四条路线的性感魅惑 cosplay 正片提示词，主打精致服化道、高级光影和魅惑气质，避免真实 IP 角色名、幼态审美和露骨内容。
+
+```text
+使用 $image2-cosplay-glamour，生成一张原创成年东方女性的游戏角色 cos 正片，魅惑狐妖风格，古风庭院夜景，红黑配色，3:4。
+```
+
 ### `$image2-aesthetic-rewriter`｜美学改写器
 
 把表达粗糙、审美低、风险高或容易触发拒绝的想法，改写成服装、姿态、灯光、构图和氛围更成熟的版本。支持保守、平衡和表现力三个安全变体。
@@ -146,6 +156,14 @@
 使用 $image2-character-reference-sheet，生成原创成年东方女性角色设定图，包含全身正面、侧面、背面和面部服装细节框，浅灰设计板背景，16:9。
 ```
 
+### `$image2-reality-breakthrough`｜破壁超现实人像
+
+生成「人物从 2D 媒介破壁进入现实世界」的超现实人像提示词，覆盖纸上成真、屏幕成真、社交 App、印刷品、艺术画作、复古媒介、数字界面、装置场景八大路线，制造 2D→3D 过渡错觉与真实人物质感融合。
+
+```text
+使用 $image2-reality-breakthrough，生成一张从杂志封面破壁而出的超现实人像，人物一半在纸面内一半在纸面外，强烈视觉冲击，3:4。
+```
+
 ### `$image2-risk-debugger`｜风险调试器
 
 诊断提示词被拒、过度保守、人物偏幼、构图太擦边、风格丢失、身体结构错误、手指畸形或摄影质感不足的原因，并给出可直接重试的修复提示词。
@@ -176,6 +194,8 @@
 - `$image2-risk-debugger`：增加诊断结果与修复策略。
 - `$image2-character-poster-cover`：增加原创海报／封面文字和版式说明。
 - `$image2-character-reference-sheet`：增加设定图版面说明。
+- `$image2-cosplay-glamour`：增加角色设定卡与服装/妆容/道具拆解。
+- `$image2-reality-breakthrough`：增加破壁设定卡与过渡效果描述。
 
 其中“最终中文提示词”可直接复制到 Image2 / GPT Image 2 使用。
 
