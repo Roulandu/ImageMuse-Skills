@@ -11,37 +11,48 @@ Use this skill to create Image2 prompts for cosplay glamour portraits, including
 
 1. Load `../_shared/core/output-contract.md`, `../_shared/core/quality-gates.md`, `../_shared/core/parameter-schema.md`, `../_shared/core/conflict-resolution.md`, `../_shared/core/reference-image-policy.md`, and `../_shared/knowledge/hairstyles.md` before composing the response.
 2. Parse user intent and lock safe explicit parameters according to the parameter schema.
-3. Select one route from the four internal routes: game-vixen, gufeng-seductress, anime-vixen, scifi-domina. If the user does not specify a route, ask the user to choose one before writing the final prompt.
-4. Read the selected route file from `./routes/{routeId}.md` for fingerprint, palette/material, default outfit direction, signature elements, and recommended scenes.
-5. Establish locked parameters: subject, expression, body prompt, outfit, image style, scene, lighting, camera, aspect ratio, and resolution.
-6. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
-7. Compose cosplay-specific expansion fields: character profile card and costume/makeup/prop breakdown.
-8. Apply quality gates (including IP-check: no real character names, no real work titles), then return the output contract in Simplified Chinese unless another language is requested.
+3. **Select one route** from the four main routes: game-vixen, gufeng-seductress, anime-vixen, scifi-domina. If the user does not specify a route, ask the user to choose one before writing the final prompt.
+4. **Select one sub-template** from the selected route's sub-template directory (`./routes/{routeId}/`). If the user does not specify a sub-template, recommend the most matching one based on the user's intent. If the intent is unclear, list available sub-templates for the user to choose.
+5. Read the selected sub-template file for fingerprint, palette/material, camera, light, default outfit, signature elements, recommended scenes, makeup, and enhancement-override.
+6. **Parameterized fill**: Replace `[[占位符]]` in the sub-template with actual values. Priority order: user explicit input > reference image extraction > sub-template default. See `./references/parameter-mappings.md` for the full placeholder system.
+7. **Reference image processing** (if the user uploaded a reference image):
+   - If the user specifies a usage scope (e.g., "只参考服装"), extract features only within that scope.
+   - If the user does not specify scope, extract all 5 dimensions: face, hairstyle/hair color, outfit, props, overall color tone.
+   - Map extracted features to the corresponding `[[占位符]]`.
+   - Follow the mapping rules in `./references/parameter-mappings.md`.
+   - Anime reference → photorealistic cos with anime character traits preserved.
+   - Real person reference → preserve face features, replace outfit with sub-template's cosplay design.
+8. **Detail enhancement**: After parameterized fill, look up `./references/detail-enhancer.md` with the selected `routeId` and `sub-template-id`, and insert fabric/lighting/makeup/scene enhancements into the prompt. Skip enhancement if the sub-template has `Enhancement-override`.
+9. Establish locked parameters: subject, expression, body prompt, outfit, image style, scene, lighting, camera, aspect ratio, and resolution.
+10. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
+11. Compose cosplay-specific expansion fields: character profile card and costume/makeup/prop breakdown.
+12. Apply quality gates (including IP-check: no real character names, no real work titles), then return the output contract in Simplified Chinese unless another language is requested.
 
 ## Defaults And Overrides
 
+- Sub-template default: if the user selects a sub-template, use the sub-template's default values for all `[[占位符]]` that are not overridden by user input or reference image extraction.
 - Subject default: `20岁出头的中国清秀美人，五官精致立体，气质魅惑。`
 - Subject override: if the user enters another safe subject, replace the default subject with the user's subject description.
 - Expression default: `魅惑浅笑，眼神勾人。`
 - Expression override: if the user enters another safe expression, replace the default expression with the user's expression description.
 - Aspect ratio and resolution default: `3:4竖版构图，超高清，高分辨率，细节清晰`。See `../_shared/references/image2-canvas-parameters.md` for orientation, image count, and output format defaults.
 - Hairstyle override: if the user specifies a safe hairstyle, preserve the user's hairstyle direction exactly.
-- Hairstyle default: if the user does not specify a hairstyle, choose exactly one cosplay-appropriate hairstyle from `../_shared/knowledge/hairstyles.md` based on the selected route. Good default directions: 高马尾、丸子头、三股麻花辫、公主切、直长发、港风侧分大卷、荷兰编发。
+- Hairstyle default: if the user does not specify a hairstyle, use the sub-template's `[[hairstyle]]` default. If the sub-template has no hairstyle default, choose exactly one cosplay-appropriate hairstyle from `../_shared/knowledge/hairstyles.md` based on the selected route.
 - Required outfit suffix: every outfit description must end with this exact sentence: `女性穿着得体，衣着设计大方性感展现魅力。`
 - Originality guard: keep the person original and adult. Never use real anime/game character names, work titles, or celebrity likenesses. Describe only visual traits and archetypes.
 
 ## Route Selection
 
-Four internal routes. Load exactly one route file from `./routes/{routeId}.md`.
+Four main routes. Each route contains 3-5 sub-templates in `./routes/{routeId}/`. Load exactly one sub-template file.
 
-| Route ID | 中文名 | 触发关键词 |
-| --- | --- | --- |
-| `game-vixen` | 游戏性感女角色 | 游戏、战士、法师、刺客、战斗服、皮甲、旗袍战服、比基尼盔甲 |
-| `gufeng-seductress` | 国风仙侠妖媚 | 国风、仙侠、古风、汉服、狐妖、狐妖系、妖后、薄纱、古典 |
-| `anime-vixen` | 动漫萌系魅惑 | 动漫、二次元、兔女郎、女仆、偶像舞台、猫耳、兽耳、萌系、魔女 |
-| `scifi-domina` | 科幻机甲御姐 | 科幻、机甲、赛博朋克、机械姬、乳胶、未来、御姐、特工 |
+| Route ID | 中文名 | 子模板数量 | 触发关键词 |
+| --- | --- | --- | --- |
+| `game-vixen` | 游戏性感女角色 | 5个（战士/法师/刺客/弓手/女王） | 游戏、战士、法师、刺客、战斗服、皮甲、弓手、女王 |
+| `gufeng-seductress` | 国风仙侠妖媚 | 4个（狐妖/仙子/魔女/贵女） | 国风、仙侠、古风、汉服、狐妖、仙子、魔女、宫廷 |
+| `anime-vixen` | 动漫萌系魅惑 | 5个（兔女郎/女仆/魔女/偶像/猫耳） | 动漫、二次元、兔女郎、女仆、偶像、猫耳、魔女 |
+| `scifi-domina` | 科幻机甲御姐 | 4个（赛博/机甲/特工/机械姬） | 科幻、机甲、赛博朋克、机械姬、特工、未来 |
 
-If the user does not specify a route or the intent is unclear, return only the route options for the user to choose.
+If the user does not specify a route or the intent is unclear, first return only the route options for the user to choose. After selecting a route, if the sub-template is unclear, return the available sub-templates for the user to choose.
 
 ## Image Style Rules
 
@@ -64,6 +75,37 @@ Offer these bust-size options:
 - 巨大：`身材:人物拥有极度夸张的身材。上围尺寸巨大，腰也十分的纤细。`
 
 Use body descriptions only as adult whole-person silhouette and outfit fit direction. Do not turn body wording into body-part fixation, private-area focus, low-angle body gaze, exposed nudity, transparent nudity, or close-up framing.
+
+## Reference Image Processing
+
+When the user uploads a reference image, follow the rules in this section and the parameter mapping rules in `./references/parameter-mappings.md`.
+
+### Usage Scope
+
+- Default (no scope specified): extract all 5 dimensions — face, hairstyle/hair color, outfit, props, overall color tone
+- User-specified scope: extract only the specified dimensions
+
+### Supported User Commands
+
+- "只参考服装" — extract only outfit features
+- "只参考面部" — extract only face features
+- "只参考发型" — extract only hairstyle and hair color
+- "只参考道具" — extract only prop features
+- "参考服装和发型，面部自己描述" — combined scope
+
+### Image Type Handling
+
+- **Anime/2D reference**: Describe as "类动漫风格的五官比例，但呈现真人肌肤质感和光影". Preserve character design traits (hair color, outfit silhouette, signature items) but rewrite materials as real fabric descriptions.
+- **Real person reference**: Preserve face features as the character base. Replace outfit with the selected sub-template's cosplay design. Keep hairstyle as close as possible, adjust only if needed for the cosplay character.
+- **Style reference (style images)**: Continue to support the existing 24 style images via the style gallery system.
+
+### Priority
+
+User explicit input > reference image extraction > sub-template default.
+
+### Originality Guard
+
+Never generate real character names, work titles, or celebrity likenesses from reference images. Describe only visual traits and archetypes.
 
 ## Outfit Rules
 
