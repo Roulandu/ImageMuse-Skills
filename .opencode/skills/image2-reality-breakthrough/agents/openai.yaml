@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image2 破壁超现实人像"
+  short_description: "生成人物从媒介中破壁而出的超现实人像提示词"
+  default_prompt: "使用 $image2-reality-breakthrough 生成超现实破壁人像提示词；支持八大路线（纸上成真/屏幕成真/社交App/印刷品/艺术画作/复古媒介/数字界面/装置场景），可指定媒介类型、破壁方向（2D→3D/3D→2D）、主体、服装和场景，默认比例为 3:4，照片分辨率8k。"
