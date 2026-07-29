@@ -13,7 +13,11 @@ All final user-facing output is Simplified Chinese unless the user asks otherwis
 5. `负面限制词`
 6. `可选变化参数`
 
-The final prompt includes all locked safe parameters, route additions, and supplemental defaults. Negative constraints are relevant, concise, and written in Chinese.
+The final prompt includes all locked safe parameters and only the route additions or supplemental defaults that affect the visible image. Negative constraints are relevant, concise, and written in Chinese.
+
+`导演扩展` is a concise art-direction brief derived from `art-direction-engine.md`. Summarize the visual thesis, motif, decisive moment, viewer position, spatial plan, three-level reading, color/material relationship, counter-expectation, and the element removed. Do not dump raw identifiers or repeat the final prompt.
+
+The final Chinese prompt (最终中文提示词) uses `prompt-compiler.md`. It must start with a compact canvas parameters block that covers five dimensions: aspect ratio, orientation, resolution/image quality, image count, and output format/purpose. Use the template from `../references/image2-canvas-parameters.md`. At minimum, include 比例 + 方向 + 画质描述 + 图片数量；根据场景补充用途/格式说明。After that compact prefix, order visual content by thesis/moment, subject-environment relation, spatial camera logic, motivated light, color/material, and visible styling detail. Do not mechanically replay every brief field.
 
 Machine-readable fixed-order identifiers are `intent-summary`, `locked-parameters`, `director-expansion`, `final-chinese-prompt`, `negative-constraints`, and `variation-knobs`.
 

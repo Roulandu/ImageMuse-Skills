@@ -1,4 +1,4 @@
-﻿---
+---
 name: image2-character-poster-cover
 description: 生成角色海报与杂志封面提示词，用于需要完整原创角色海报、杂志封面、时尚大片封面、商业主视觉时，包含虚构标题文字、封面文案、刊期价格等商业版式元素，避免真实品牌、真实杂志名和真人相似。
 ---
@@ -7,7 +7,7 @@ description: 生成角色海报与杂志封面提示词，用于需要完整原�
 
 ## Shared Contract And Delivery Alternatives
 
-Read `../_shared/core/parameter-schema.md` and `../_shared/core/output-contract.md` before writing. Create the parameter-lock record and select one compatible `routeId` from `../_shared/routes/route-registry.md`. In complete mode, **导演扩展** must provide two clearly labelled deliverables: a copy-bearing poster prompt with fictional readable copy, and a **text-free blank-layout** alternative that preserves the hierarchy, safe margins, and reserved text zones but contains no text. In concise mode, return only the contracted final prompt and negative constraints; default to the copy-bearing version unless the user explicitly requests the blank layout.
+Read `../_shared/core/parameter-schema.md`, `../_shared/core/art-direction-engine.md`, `../_shared/core/spatial-photography-engine.md`, `../_shared/core/prompt-compiler.md`, and `../_shared/core/output-contract.md` before writing. Create the parameter-lock and art-direction records and select one compatible `routeId`. Treat typography, portrait, and negative space as one reading hierarchy: copy must not compete with the first-read subject, and the second read must reveal one narrative or material clue. In complete mode, **导演扩展** must provide copy-bearing and **text-free blank-layout** alternatives with matching hierarchy and safe margins.
 
 ## Workflow
 

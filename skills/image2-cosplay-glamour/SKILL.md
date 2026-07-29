@@ -9,14 +9,15 @@ description: 生成性感魅惑cosplay正片提示词，用于游戏女角色、
 
 Use this skill to create Image2 prompts for cosplay glamour portraits, including game character cos, guofeng fox-demon style, anime moe-seduction, and sci-fi domina cosplay. The output should be tasteful, adult, photorealistic, and non-explicit.
 
-1. Load `../_shared/core/output-contract.md`, `../_shared/core/quality-gates.md`, `../_shared/core/parameter-schema.md`, `../_shared/core/conflict-resolution.md`, `../_shared/core/reference-image-policy.md`, and `../_shared/knowledge/hairstyles.md` before composing the response.
+1. Load `../_shared/core/output-contract.md`, `../_shared/core/quality-gates.md`, `../_shared/core/parameter-schema.md`, `../_shared/core/art-direction-engine.md`, `../_shared/core/spatial-photography-engine.md`, `../_shared/core/prompt-compiler.md`, `../_shared/core/conflict-resolution.md`, `../_shared/core/reference-image-policy.md`, and `../_shared/knowledge/hairstyles.md` before composing the response.
 2. Parse user intent and lock safe explicit parameters according to the parameter schema.
 3. Select one route from the four internal routes: game-vixen, gufeng-seductress, anime-vixen, scifi-domina. If the user does not specify a route, ask the user to choose one before writing the final prompt.
 4. Read the selected route file from `./routes/{routeId}.md` for fingerprint, palette/material, default outfit direction, signature elements, and recommended scenes.
-5. Establish locked parameters: subject, expression, body prompt, outfit, image style, scene, lighting, camera, aspect ratio, and resolution.
-6. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
-7. Compose cosplay-specific expansion fields: character profile card and costume/makeup/prop breakdown.
-8. Apply quality gates (including IP-check: no real character names, no real work titles), then return the output contract in Simplified Chinese unless another language is requested.
+5. Establish locked parameters, then create one original-character thesis, one motif, one decisive action beat, and one restrained counter-expectation. Make costume parts, props, wind, light, floor contact, and set geometry participate in the same physical scene; use at most two cultural signals and one effect family.
+6. Derive scene depth, body support and contact, camera position, perspective, focal length, motivated light, color roles, material dialogue, and only then the visible styling details.
+7. If the user does not specify image style, ask the user to choose exactly one of the two default style options before writing the final prompt.
+8. Compose cosplay-specific expansion fields: character profile card and costume/makeup/prop breakdown.
+9. Apply quality gates (including IP-check: no real character names, no real work titles), compile by visual priority, then return the output contract in Simplified Chinese unless another language is requested.
 
 ## Defaults And Overrides
 

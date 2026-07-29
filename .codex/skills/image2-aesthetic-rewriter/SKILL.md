@@ -1,4 +1,4 @@
-﻿---
+---
 name: image2-aesthetic-rewriter
 description: 改写低俗性感人像需求为高端合规版本，用于用户提出的想法过于直白、低俗、性感、风险高或品味不佳，需要改写为成熟、原创、非露骨、时尚化、可安全用于 Image2 的提示词时。
 ---
@@ -7,7 +7,7 @@ description: 改写低俗性感人像需求为高端合规版本，用于用户�
 
 ## Shared Contract And Risk Classification
 
-Read `../_shared/core/parameter-schema.md` and `../_shared/core/output-contract.md` before writing. Create the parameter-lock record, classify the request as `low`, `medium`, or `high` risk, and state the classification plus any reframe in **导演扩展**. Select one compatible `routeId` from `../_shared/routes/route-registry.md`; never use variants to bypass a safety reframe.
+Read `../_shared/core/parameter-schema.md`, `../_shared/core/art-direction-engine.md`, `../_shared/core/spatial-photography-engine.md`, `../_shared/core/prompt-compiler.md`, and `../_shared/core/output-contract.md` before writing. Create the parameter-lock and art-direction records, classify risk, and state the classification plus any reframe in **导演扩展**. When the source is safe but bland, rewrite relationships and hierarchy rather than adding adjectives: establish thesis, motif, spatial causality, motivated light, color/material roles, and one element cut. Select one compatible `routeId`; never use variants to bypass a safety reframe.
 
 ## Workflow
 

@@ -9,6 +9,8 @@ description: 生成婚纱新娘人像提示词，用于需要中式西式婚纱�
 
 Use this skill to create Image2 prompts for wedding dress photography, bridal portraits, bridal fashion editorials, and wedding studio portrait prompts. The output should be tasteful, adult, photorealistic, and non-explicit.
 
+Read `../_shared/core/art-direction-engine.md`, `../_shared/core/spatial-photography-engine.md`, and `../_shared/core/prompt-compiler.md`. Build the image around a specific ceremonial or private turning point, such as the breath before entering, the release after the ritual, or a garment editorial pause. Use one restrained departure from bridal cliché. Tie veil, train, jewelry, flowers, stairs, wind, and light to physical interaction; do not list them as independent decoration.
+
 1. Load `../_shared/references/adult-glamour-boundaries.md` when the request includes adult attractiveness, body-shape emphasis, private settings, real people, age-coded wording, or risk-sensitive styling.
 2. Load `../_shared/references/portrait-fashion-parameters.md` when the user asks for structured choices, varied camera language, scene options, or fashion/photo quality controls.
 3. Load `../_shared/knowledge/hairstyles.md` for bridal hairstyle presets, dimensional vocabulary, and hair negative constraints.

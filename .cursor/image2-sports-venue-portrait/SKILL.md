@@ -9,6 +9,8 @@ description: 生成运动场馆人像提示词，用于需要体育场馆、赛�
 
 Use this skill to create Image2 prompts for 球场宝贝写真、球队宝贝写真、啦啦队写真、体育场馆写真、篮球馆写真、足球场写真、比基尼球场写真, and other adult sports-themed portrait prompts. The output should be tasteful, adult, photorealistic, and non-explicit.
 
+Read `../_shared/core/art-direction-engine.md`, `../_shared/core/spatial-photography-engine.md`, and `../_shared/core/prompt-compiler.md`. Convert pre-game, in-game, or post-game timing into a decisive moment with a before/current/next beat. Specify the subject's relation to boundary lines, goal/hoop, tunnel, bench, scoreboard, and crowd; prevent landmark tangencies with the head. Define bearing foot, motion direction, floor contact/reflection, venue axis, camera axis, vanishing point, and consistent arena-light projection.
+
 1. Load `../_shared/core/output-contract.md` and `../_shared/core/quality-gates.md` before composing the response.
 2. Load `../_shared/knowledge/hairstyles.md` and `../_shared/knowledge/character-features.md` for hairstyle and facial feature references.
 3. Establish locked parameters: subject, expression, body prompt, outfit, hairstyle, image style, sport type, venue, team-color palette, event story, aspect ratio, and resolution.

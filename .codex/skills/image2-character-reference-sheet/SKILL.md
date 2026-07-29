@@ -1,4 +1,4 @@
-﻿---
+---
 name: image2-character-reference-sheet
 description: 生成角色参考表与三视图提示词，用于需要一张图包含原创成年角色全身正面、侧面、背面及面部特写的设定参考时，保持服装、发型、比例、材质、配饰一致，采用设计稿版式布局。
 ---
@@ -7,7 +7,7 @@ description: 生成角色参考表与三视图提示词，用于需要一张图�
 
 ## Shared Contract And Identity Lock
 
-Read `../_shared/core/parameter-schema.md` and `../_shared/core/output-contract.md` before writing. Create the parameter-lock record and select one compatible `routeId` from `../_shared/routes/route-registry.md`. In **导演扩展**, define identity anchors for face structure, skin details, hairstyle, body proportions, outfit colors/materials, and accessories; every view must repeat those anchors. Add explicit outfit, expression, and prop callouts. Provide a **typography fallback**: if labels may render poorly, use numbered callouts with a compact legend rather than long text labels.
+Read `../_shared/core/parameter-schema.md`, `../_shared/core/art-direction-engine.md`, `../_shared/core/spatial-photography-engine.md`, `../_shared/core/prompt-compiler.md`, and `../_shared/core/output-contract.md` before writing. Identity consistency and view completeness outrank narrative or counter-expectation. Apply only the engine's color/material hierarchy, spatial clarity, visibility-driven detail, and element editing. In **导演扩展**, define identity anchors for face structure, skin details, hairstyle, body proportions, outfit colors/materials, footwear, and accessories; every applicable view must repeat them. Use numbered callouts with a compact legend when long labels may fail.
 
 ## Workflow
 

@@ -1,4 +1,4 @@
-﻿---
+---
 name: image2-risk-debugger
 description: 诊断并修复有问题的人像提示词，用于 Image2 拒绝生成、输出过于保守、人物显幼态、提示词过于暴露、人体结构畸形、风格丢失或需要更安全的高端修订版本时。
 ---
@@ -8,6 +8,8 @@ description: 诊断并修复有问题的人像提示词，用于 Image2 拒绝�
 ## Workflow
 
 Use this skill when the user provides a rejected prompt, a poor result description, or a requested fix such as "被拒了", "太保守", "脸太幼", "太擦边", "身材变形", "不够高级", or "不像真实摄影".
+
+Read `../_shared/core/art-direction-engine.md`, `../_shared/core/spatial-photography-engine.md`, and `../_shared/core/prompt-compiler.md`. Add a `完整但寡淡` diagnosis when a prompt has many fields but lacks thesis, decisive moment, reading hierarchy, spatial causality, motivated light, color/material relationships, or element editing. Repair by rewriting relationships and deleting redundant elements; do not merely append “高级、电影感、杂志感、8K”.
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` for red lines and gray zones.
 2. Load `../_shared/references/failure-repair-recipes.md` for diagnosis and repair patterns.

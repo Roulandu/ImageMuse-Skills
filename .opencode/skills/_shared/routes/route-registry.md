@@ -2,6 +2,18 @@
 
 The director selects exactly one Route ID as `routeId`. Each route may use compatible overlays but must follow the shared contracts.
 
+Before applying a route, derive the shared art-direction record. Treat each route's existing fingerprint, palette/material, camera, light, photographed moment, and exclusions as a starting vocabulary, then compile these route-level decisions:
+
+- `thesisSeed`: a task-specific mild tension; never reuse the route name as the thesis;
+- `motifVariation`: one motif expressed in at least three dimensions;
+- `narrativeTurn`: before/current/next action and one unresolved consequence;
+- `spatialPlan`: subject zone, support, scene axis, camera position, projection, and key occlusion;
+- `colorMaterialRelation`: color roles plus two or three principal materials;
+- `counterExpectation`: one restrained departure from the route cliché;
+- `elementCut`: one attractive but nonfunctional element to omit.
+
+Do not apply a route as a fixed prop bundle. Cultural routes use at most two cultural signals by default.
+
 | Route ID | Direction |
 | --- | --- |
 | `clean-lifestyle` | Clean, natural everyday lifestyle photography. |
@@ -19,4 +31,4 @@ The director selects exactly one Route ID as `routeId`. Each route may use compa
 
 ## Specialty delegation
 
-Delegate requests for a fixed Chinese portrait field list, structured portrait brief, or the field sequence “摄影风格 / 写真方向 / 场景方向 / 服装方向” to `image2-structured-portrait-prompt`; it uses its own fixed output contract. Delegate bridal requests to `image2-wedding-portrait`. Delegate fashion lookbook requests to `image2-fashion-lingerie-lookbook`. Delegate sports venue, team-babe, cheerleader, stadium, basketball, or football requests to `image2-sports-venue-portrait` (the sports specialty target). Delegate cosplay, 二次元角色扮演, cos正片, game character cos, guofeng fox demon, anime moe cosplay, or sci-fi mecha cosplay requests to `image2-cosplay-glamour` (the cosplay glamour specialty target). Delegate requests for "破壁而出"、"纸上成真"、"从屏幕里出来"、"从画里走出来"、"come to life"、"reality breakthrough" or any medium-emergence portrait concept to `image2-reality-breakthrough` (the reality-breakthrough specialty target). The specialty skill constraints outrank the selected route under the conflict-resolution contract.
+Delegate requests for a fixed Chinese portrait field list, structured portrait brief, or the field sequence “摄影风格 / 写真方向 / 场景方向 / 服装方向” to `image2-structured-portrait-prompt`; it uses its own fixed output contract. Delegate bridal requests to `image2-wedding-portrait`. Delegate fashion lookbook requests to `image2-fashion-lingerie-lookbook`. Delegate sports venue, team-babe, cheerleader, stadium, basketball, or football requests to `image2-sports-venue-portrait` (the sports specialty target). The specialty skill constraints outrank the selected route under the conflict-resolution contract.

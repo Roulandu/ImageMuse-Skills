@@ -1,4 +1,4 @@
-﻿---
+---
 name: image2-fashion-lingerie-lookbook
 description: 生成内衣泳装时尚画册提示词，用于内衣、泳装、试穿、家居服等贴身服饰的产品级人像时，主打面料质感、版型剪裁、目录式陈列和商业呈现，避免身体部位凝视、真人相似和私拍感。
 ---
@@ -8,6 +8,8 @@ description: 生成内衣泳装时尚画册提示词，用于内衣、泳装、�
 ## Workflow
 
 Use this skill for adult fashion prompts involving lingerie, bralette styling, swimwear, fit checks, dressing-room product confirmation, or lookbook imagery. The image must be garment-first and non-explicit.
+
+Read `../_shared/core/art-direction-engine.md`, `../_shared/core/spatial-photography-engine.md`, and `../_shared/core/prompt-compiler.md`. Use the commerce adaptation: garment silhouette, fit, construction, material, coverage, and color accuracy outrank metaphor. Build a restrained thesis and reading hierarchy that lead the eye through the garment; add a counter-expectation only when it preserves product legibility. Describe body lines only as needed to explain fit, and remove props or effects that compete with the garment.
 
 1. Load `../_shared/references/adult-glamour-boundaries.md` for safety boundaries.
 2. Load `../_shared/references/portrait-fashion-parameters.md` for garment, scene, camera, and variation controls.

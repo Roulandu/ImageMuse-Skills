@@ -1,4 +1,4 @@
-﻿---
+---
 name: image2-adult-glamour-studio
 description: 生成高端成人魅力人像提示词，用于需要时尚杂志、电影感、商业肖像、氛围感路线的成年原创人像时，主打精致光影、高级质感和时尚化身体表达，避免软色情、真人相似和幼态审美。
 ---
@@ -7,7 +7,7 @@ description: 生成高端成人魅力人像提示词，用于需要时尚杂志�
 
 ## Shared Contract And Route Selection
 
-Read `../_shared/core/parameter-schema.md` and `../_shared/core/output-contract.md` before writing. Create the parameter-lock record, then choose a **single compatible route** from `../_shared/routes/route-registry.md`; record its `routeId` in the director expansion. Do not blend or list multiple primary routes. Use overlays only when they preserve the selected route and locked parameters.
+Read `../_shared/core/parameter-schema.md`, `../_shared/core/art-direction-engine.md`, `../_shared/core/spatial-photography-engine.md`, `../_shared/core/prompt-compiler.md`, and `../_shared/core/output-contract.md` before writing. Create the parameter-lock and art-direction records, then choose a **single compatible route** from `../_shared/routes/route-registry.md`; record its `routeId` in the director expansion. Use a mature editorial thesis and one restrained counter-expectation; do not equate glamour with body-part emphasis. Do not blend multiple primary routes.
 
 ## Workflow
 

@@ -12,28 +12,32 @@ Before making a decision, load these documents in order:
 1. `../_shared/core/parameter-schema.md`
 2. `../_shared/core/reference-image-policy.md`
 3. `../_shared/core/conflict-resolution.md`
-4. `../_shared/core/quality-gates.md`
-5. `../_shared/core/output-contract.md`
-6. `../_shared/references/image2-canvas-parameters.md`
-7. `../_shared/knowledge/hairstyles.md`
-8. `../_shared/references/face-shape-hairstyle-guide.md`
-9. `../_shared/routes/route-registry.md`
-10. Exactly one matching file from `../_shared/routes/{routeId}.md`.
+4. `../_shared/core/art-direction-engine.md`
+5. `../_shared/core/spatial-photography-engine.md`
+6. `../_shared/core/prompt-compiler.md`
+7. `../_shared/core/quality-gates.md`
+8. `../_shared/core/output-contract.md`
+9. `../_shared/references/image2-canvas-parameters.md`
+10. `../_shared/knowledge/hairstyles.md`
+11. `../_shared/references/face-shape-hairstyle-guide.md`
+12. `../_shared/routes/route-registry.md`
+13. Exactly one matching file from `../_shared/routes/{routeId}.md`.
 
 ## Direction workflow
 
 1. Parse user intent and lock safe explicit parameters according to the parameter schema.
 2. Apply reference-image roles and conflict precedence before visual choices.
-3. Select **一个 Route** (one primary Route) from the registry. Do not blend two main routes; compatible overlays may only add detail under the conflict-resolution contract.
-4. Read the selected route and use its fingerprint, palette/material, camera, light, photographed-moment rule, and exclusions.
-5. Delegate requests that explicitly ask for a fixed Chinese field list, structured portrait brief, or the field sequence "摄影风格 / 写真方向 / 场景方向 / 服装方向" to `image2-structured-portrait-prompt`. This specialist uses its own fixed output contract instead of the shared six-section contract.
-6. Delegate other specialty work that the registry marks to `image2-wedding-portrait`, `image2-fashion-lingerie-lookbook`, `image2-sports-venue-portrait`, `image2-character-poster-cover`, `image2-character-reference-sheet`, or `image2-risk-debugger`. Their constraints outrank route styling.
-7. Perform hairstyle routing based on user input and selected route:
+3. Build the art-direction record before route selection: one mild visual thesis, one motif, one decisive moment, viewer position, and three-level reading. Use the balanced-editorial default and preserve every lock.
+4. Select **一个 Route** (one primary Route) from the registry. Do not blend two main routes; compatible overlays may only add detail under the conflict-resolution contract.
+5. Read the selected route, then convert its fingerprint, palette/material, camera, light, and photographed moment into a task-specific `spatialPlan`, color/material relationship, one restrained counter-expectation, and one element cut. Do not apply the route as a fixed prop bundle.
+6. Delegate requests that explicitly ask for a fixed Chinese field list, structured portrait brief, or the field sequence "摄影风格 / 写真方向 / 场景方向 / 服装方向" to `image2-structured-portrait-prompt`. This specialist uses its own fixed output contract instead of the shared six-section contract.
+7. Delegate other specialty work that the registry marks to `image2-wedding-portrait`, `image2-fashion-lingerie-lookbook`, `image2-sports-venue-portrait`, `image2-character-poster-cover`, `image2-character-reference-sheet`, or `image2-risk-debugger`. Their constraints outrank route styling.
+8. Perform hairstyle routing based on user input and selected route:
    - If the user explicitly specifies a hairstyle, preserve the user's description; verify style compatibility with the selected route, and add a gentle note in the director expansion if mismatched.
    - If the user does not specify a hairstyle but mentions a face shape, recommend 1-2 hairstyles from `../_shared/references/face-shape-hairstyle-guide.md` that best match both the face shape and the route style.
    - If the user specifies neither hairstyle nor face shape, recommend 1-2 hairstyles from the style route recommendation index in `../_shared/knowledge/hairstyles.md`.
    - Hairstyle recommendations appear only as "造型建议" in the 导演扩展 section; do not add them to the final prompt by default unless the user says "加上" or the delegated specialist skill itself fills in hairstyles.
-8. Apply quality gates, then return the selected skill's output contract in Simplified Chinese unless another language is requested.
+9. Apply spatial-photography causality, compile the final prompt by visual priority, apply quality gates, then return the selected skill's output contract in Simplified Chinese unless another language is requested.
 
 ## 导演扩展中的发型推荐
 
